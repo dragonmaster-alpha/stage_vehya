@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  </link>
+  <link rel="stylesheet" href="https://code.jquery.com/jquery-1.12.0.min.js">
+  </link>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js">
+  </link>
+  <link rel="stylesheet" href="css/style1.css" type="text/css">
+  <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&family=Russo+One&display=swap"
+    rel="stylesheet">
+  <title>VEHYA</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+  </style>
+
+</head>
+
+<body>
+  <!-- *------------------Header Start-----------------* -->
+  <div style="width: 100vw;" class=" header ">
+
+    <nav class="navbar navbar-expand-lg navbar-light ">
+      <a class="navbar-brand " href="index.html"><img src="images/logo.svg" class="image-fluid logo" alt="logoimg"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div style="opacity: 1;" class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav d-flex  m-auto mx-1">
+
+
+          <li class="nav-item active flex-direction-col ">
+            <a class="nav-link menu_option isactive " style="width: fit-content;" aria-current="page"
+              onclick="homeactive()" href="index.html">HOME</a><span class="sr-only">(current)</span>
+            <p id="home_active" class="dot_active"></p>
+          </li>
+
+
+
+          <li class="nav-item  flex-direction-col">
+            <a class="nav-link menu_option" style="width: fit-content;" onclick="pricingactive()"
+              href="pricing.html">PRICING</a>
+            <span></span>
+            <p id="pricing_active" class=""></p>
+          </li>
+
+
+
+
+          <li class="nav-item  flex-direction-col  ">
+            <a class="nav-link menu_option" onclick="blogactive()" style="width: fit-content;" href="#">BLOG</a>
+            <span></span>
+            <p id="blog_active" class="dot"></p>
+          </li>
+          <li class="nav-item  flex-direction-col  ">
+            <a class="nav-link menu_option" onclick="taxactive()" style="width: fit-content;"> TAX CREDITS</a>
+            <span></span>
+            <p id="tax_active" class="dot"></p>
+          </li>
+          <li class="nav-item  flex-direction-col  ">
+            <a class="nav-link menu_option" onclick="applactive()" style="width: fit-content;"> APPLICATIONS+</a>
+            <span></span>
+            <p id="appl_active" class="dot"></p>
+          </li>
+          <li class="nav-item  flex-direction-col  ">
+            <a class="nav-link menu_option" onclick="aboutactive()" style="width: fit-content;"> ABOUT US</a>
+            <span></span>
+            <p id="about_active" class="dot"></p>
+          </li>
+          <li class="nav-item  flex-direction-col  ">
+            <a class="nav-link menu_option" onclick="careeractive()" style="width: fit-content;"> CAREERS</a>
+            <span></span>
+            <p id="career_active" class="dot"></p>
+          </li>
+        </ul>
+        <span class="navbar-text">
+          <form class="d-flex ml-auto">
+            <button class="btn btn1   py-3 btn-white" type="submit">GET A QUOTE</button>
+          </form>
+        </span>
+      </div>
+    </nav>
+  </div>
+  <!-- *------------------Header End-----------------*   -->
+
+
+
+  <!-- *------------------Box1 Start-----------------*   -->
+  <div style="position:relative;margin-top: 7em;" class="">
+
+    <div class="box1  col-12  ">
+      <div class="row d-flex flex-row">
+        <div class=" m- col-md-5 col-sm-8  d-flex flex-column pl-5 ">
+          <div class="vehyaaa mb-5 ">
+            <h2 class="mt-2">
+              Your Turnkey <br> EV Charging Solution</h2>
+            <p class="mt-1" style=" color: #F4CD1E;">Vehya</p>
+            <h1>
+              VEHYA
+            </h1>
+          </div>
+          <div class="">
+            <p class="co-w mx-4 mt-4 mb-5" style="color: rgba(255, 255, 255, 0.3);">Vehya makes it simple to find and
+              install
+              the EV
+              charger that’s right for your vehicle.</p>
+            <button class="btn btn1 mx-2 px-4 py-3 btn-white" type="submit">GET A QUOTE <span><i
+                  class='fa fa-caret-right mx-2'></i></span></button>
+          </div>
+        </div>
+        <div class="col-md-7 col-sm-8 d-flex   ">
+          <div class="bg_sec"
+            style="height:100%;width:100%;background-image: url('images/box1.jpg');background-size:cover;padding-left: 2em; ">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="box2 d-flex  " style="height: fit-content;">
+      <div class="row">
+        <div class="col-md-8 col-sm-12 sec1">
+          <div class="row ">
+            <div class="col-md-6 col-sm-12  ">
+              <h5 style="color: #FFFFFF; font-family:Russo One;">Lorem ipsum dolor</h5>
+              <p style="color: rgba(255, 255, 255, 0.3)">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+            </div>
+            <div class="col-md-6 col-sm-12 ">
+              <h5 style="color: #FFFFFF;font-family:Russo One;">Lorem ipsum dolor</h5>
+              <p style="color: rgba(255, 255, 255, 0.3)">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-0 sec2 bg_sec"
+          style="background-image: url('images/box2.png');background-repeat: no-repeat;">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="box3  container-fluid ">
+    <div class="col-12 ">
+      <div class="row py-5">
+        <div class=" col-md-6 col-sm-12 pl-5">
+          <p style="font-size:23px; font-weight: 800;font-family: Roboto; color: #595959;">ABOUT US</p>
+          <h2 class="">Why Vehya?</h2>
+          <ul class="ml-4">
+            <li> All-inclusive pricing for EV charger installation.</li>
+            <li> Licensed electricians experienced in EV chargers.</li>
+            <li> A one stop shop for EV products and service.</li>
+          </ul>
+          <button class="btn btn1 mx-2 px-3 py-2 btn-yellow" type="submit">VIEW MORE <span><i
+                class='fa fa-caret-right mx-2'></i></span></button>
+        </div>
+        <div class=" col-md-6 col-sm-12 bg_sec "
+          style="background-image:url('images/box3.svg');background-repeat: no-repeat;">
+        </div>
+      </div>
+    </div>
+    <div class="col-12 d-flex m-auto p-5 flex-column our_partners" style="background-color: #FFFFFF;">
+
+      <h3 class="mb-4"> Our Partners</h3>
+      <div class="d-flex col-12">
+        <div class="row">
+          <img class="col-md-2 col-sm-4 col-xs-6 mb-4" src="images/ABB.svg" alt="">
+          <img class="col-md-2 col-sm-4 col-xs-6" src="images/blink.svg" alt="">
+          <img class="col-md-2 col-sm-4 col-xs-6" src="images/charge.svg" alt="">
+          <img class="col-md-2 col-sm-4 col-xs-6" src="images/consumer.svg" alt="">
+          <img class="col-md-2 col-sm-4 col-xs-6" src="images/DTE.svg" alt="">
+          <img class="col-md-2 col-sm-4 col-xs-6" src="images/enel.svg" alt="">
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="box4 mb-5 p-5">
+    <div class="d-flex m-auto flex-column ">
+      <h3 class="heading_russoone text-center"> How Can We Help?</h3>
+      <h4 class="subheading_roboto" style="margin:auto;text-align: center; padding:1em">Whether you need a 240v outlet
+        or a DC fastbr <br> charger installed, we can help.</h4>
+    </div>
+
+    <!-- -----------------Card Container start---------------- -->
+    <div class="container-fluid">
+      <div class="col-12 content d-flex p-5 ">
+        <div class="row">
+          <div class="container-fluid d-flex flex-column col-md-4 col-sm-8">
+            <form class="" action="">
+              <fieldset>
+                <div style="position: absolute;z-index: 1111;" class=" m-2 ">
+                  <p class="co-w"> 4.0</p>
+                  <div class="d-flex">
+                    <img class="mr-1" src="images/star000.svg" alt="">
+                    <img class="mr-1" src="images/star000.svg" alt="">
+                    <img class="mr-1" src="images/star000.svg" alt="">
+                    <img class="mr-1" src="images/star000.svg" alt="">
+                  </div>
+                </div>
+                <div class="image-fluid card_img">
+                  <img class="image-fluid" width="100%" src="images/card1.svg" alt="">
+                </div>
+                <div class="btn-yellow  price_tag m-auto">
+                  $540.299</div>
+              </fieldset>
+            </form>
+            <div class=" card_content d-flex flex-column  ">
+              <h4>240V OUTLET</h4>
+              <div class=" col-12  card_data d-flex flex-column">
+                <div class="d-flex mt-1 w-25vw">
+                  <div class="col-md-4 col-sm-8 d-flex flex-column">
+                    <p class="p_head">Lorem ipsum</p>
+                    <p class="p_detail">lorem Ipsum </p>
+                  </div>
+                  <div class="col-md-4 col-sm-8 d-flex flex-column">
+                    <p class="p_head">Lorem ipsum</p>
+                    <p class="p_detail">lorem Ipsum </p>
+                  </div>
+                </div>
+                <div class="d-flex mt-1 w-25vw">
+                  <div class="col-md-4 col-sm-8 d-flex flex-column">
+                    <p class="p_head">Lorem ipsum</p>
+                    <p class="p_detail">lorem Ipsum </p>
+                  </div>
+                  <div class="col-md-4 col-sm-8 d-flex flex-column">
+                    <p class="p_head">Lorem ipsum</p>
+                    <p class="p_detail">lorem Ipsum </p>
+                  </div>
+                  <div class="col-md-4 col-sm-8 d-flex flex-column">
+                    <p class="p_head">Lorem ipsum</p>
+                    <p class="p_detail">lorem Ipsum </p>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex">
+
+              </div>
+            </div>
+          </div>
+          <div class=" container-fluid d-flex flex-column col-md-4 col-sm-8">
+            <form class="" action="">
+              <fieldset>
+                <div style="position: absolute;z-index: 1111;" class=" m-2 ">
+                  <p class="co-w"> 4.0</p>
+                  <div class="d-flex">
+                    <img class="mr-1" src="images/star000.svg" alt="">
+                    <img class="mr-1" src="images/star000.svg" alt="">
+                    <img class="mr-1" src="images/star000.svg" alt="">
+                    <img class="mr-1" src="images/star000.svg" alt="">
+                  </div>
+                </div>
+                <div class="image-fluid card_img">
+                  <img class="image-fluid" width="100%" src="images/box4ii.svg" alt="">
+                </div>
+                <div class="btn-yellow  price_tag m-auto">
+                  $540.299 </div>
+              </fieldset>
+            </form>
+            <div class=" card_content d-flex flex-column  ">
+              <h4>LEVEL2 CHARGER</h4>
+              <div class=" col-12  card_data d-flex flex-column">
+                <div class="d-flex mt-1 w-25vw">
+                  <div class="col-md-4 col-sm-8 d-flex flex-column">
+                    <p class="p_head">Lorem ipsum</p>
+                    <p class="p_detail">lorem Ipsum </p>
+                  </div>
+                  <div class="col-md-4 col-sm-8 d-flex flex-column">
+                    <p class="p_head">Lorem ipsum</p>
+                    <p class="p_detail">lorem Ipsum </p>
+                  </div>
+                </div>
+                <div class="d-flex mt-1 w-25vw">
+                  <div class="col-md-4 col-sm-8 d-flex flex-column">
+                    <p class="p_head">Lorem ipsum</p>
+                    <p class="p_detail">lorem Ipsum </p>
+                  </div>
+                  <div class="col-md-4 col-sm-8 d-flex flex-column">
+                    <p class="p_head">Lorem ipsum</p>
+                    <p class="p_detail">lorem Ipsum </p>
+                  </div>
+                  <div class="col-md-4 col-sm-8 d-flex flex-column">
+                    <p class="p_head">Lorem ipsum</p>
+                    <p class="p_detail">lorem Ipsum </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="d-flex">
+
+              </div>
+            </div>
+          </div>
+          <div class="container-fluid d-flex flex-column col-md-4 col-sm-8">
+            <form class="" action="">
+              <fieldset>
+                <div style="position: absolute;z-index: 1111;" class=" m-2 ">
+                  <p class="co-w"> 4.0</p>
+                  <div class="d-flex">
+                    <img class="mr-1" src="images/star000.svg" alt="">
+                    <img class="mr-1" src="images/star000.svg" alt="">
+                    <img class="mr-1" src="images/star000.svg" alt="">
+                    <img class="mr-1" src="images/star000.svg" alt="">
+                  </div>
+                </div>
+                <div class="image-fluid card_img">
+                  <img class="image-fluid" width="100%" src="images/box4iii.svg" alt="">
+                </div>
+                <div class=" btn-yellow price_tag m-auto ">$540.299</div>
+              </fieldset>
+            </form>
+            <div class=" card_content d-flex flex-column  ">
+              <h4>LEVEL3 CHARGER</h4>
+              <div class=" col-12  card_data d-flex flex-column">
+                <div class="d-flex mt-1 w-25vw">
+                  <div class="col-md-4 col-sm-8 d-flex flex-column">
+                    <p class="p_head">Lorem ipsum</p>
+                    <p class="p_detail">lorem Ipsum </p>
+                  </div>
+                  <div class="col-md-4 col-sm-8 d-flex flex-column">
+                    <p class="p_head">Lorem ipsum</p>
+                    <p class="p_detail">lorem Ipsum </p>
+                  </div>
+                </div>
+                <div class="d-flex mt-1 w-25vw">
+                  <div class="col-md-4 col-sm-8 d-flex flex-column">
+                    <p class="p_head">Lorem ipsum</p>
+                    <p class="p_detail">lorem Ipsum </p>
+                  </div>
+                  <div class="col-md-4 col-sm-8 d-flex flex-column">
+                    <p class="p_head">Lorem ipsum</p>
+                    <p class="p_detail">lorem Ipsum </p>
+                  </div>
+                  <div class="col-md-4 col-sm-8 d-flex flex-column">
+                    <p class="p_head">Lorem ipsum</p>
+                    <p class="p_detail">lorem Ipsum </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="d-flex">
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- -----------------Card Container End---------------- -->
+      </div>
+    </div>
+    <button class="btn btn1 m-auto d-flex btn-yellow" style="position:relative; top: 2em!important;" type="submit">VIEW
+      MORE <span><i class='fa fa-caret-right mx-2'></i></span></button>
+
+  </div>
+
+  <div class="box5  ">
+
+    <div style="text-align: center;" class="d-flex m-auto flex-column">
+      <h3 class="heading_russoone">EV Charger Applications</h3>
+      <h4 class="subheading_roboto" style="margin:auto;text-align: center; padding:1em; width: 60vw;">Explore the
+        different applications and benefits of installing EV Chargers.</h4>
+    </div>
+
+    <!-- ---------------------------------Box5 Cards start------------------------ -->
+    <div class="col-12   d-flex  pl-5 ">
+      <div class="row container-fluid">
+
+
+        <div class=" col-md-6 col-lg-4 col-sm-8   text-center">
+          <div class=" my-4 bg_img" style="background-image: url(images/automotive.svg); background-size: cover;">
+            <div>
+              <h4 class="co-w">Automotive</h4>
+              <button style="width: fit-content;border:none;padding:0.5em 2em;" class="btn-yellow ">learn More</button>
+            </div>
+          </div>
+        </div>
+        <div class=" col-md-6 col-lg-4 col-sm-8   text-center">
+          <div class=" my-4 bg_img" style="background-image: url(images/municipal.svg); background-size: cover;">
+            <div>
+              <h4 class="co-w">Municipal</h4>
+              <button style="width: fit-content;border:none;padding:0.5em 2em;" class="btn-yellow ">learn More</button>
+            </div>
+          </div>
+        </div>
+        <div class=" col-md-6 col-lg-4 col-sm-8   text-center">
+          <div class=" my-4 bg_img" style="background-image: url(images/office.svg); background-size: cover;">
+            <div>
+              <h4 class="co-w">Office</h4>
+              <button style="width: fit-content;border:none;padding:0.5em 2em;" class="btn-yellow ">learn More</button>
+            </div>
+          </div>
+        </div>
+        <div class=" col-md-6 col-lg-4 col-sm-8   text-center">
+          <div class=" my-4 bg_img" style="background-image: url(images/ev-board.svg); background-size: cover;">
+            <div>
+              <h4 class="co-w">Parking</h4>
+              <button style="width: fit-content;border:none;padding:0.5em 2em;" class="btn-yellow ">learn More</button>
+            </div>
+          </div>
+        </div>
+        <div class=" col-md-6 col-lg-4 col-sm-8   text-center">
+          <div class=" my-4 bg_img" style="background-image: url(images/residential.svg); background-size: cover;">
+            <div>
+              <h4 class="co-w">Residental</h4>
+              <button style="width: fit-content;border:none;padding:0.5em 2em;" class="btn-yellow ">learn More</button>
+            </div>
+          </div>
+        </div>
+        <div class=" col-md-6 col-lg-4 col-sm-8    text-center">
+          <div class=" my-4 bg_img" style="background-image: url(images/retail.svg); background-size: cover;">
+            <div>
+              <h4 class="co-w">Retail</h4>
+              <button style="width: fit-content;border:none;padding:0.5em 2em;" class="btn-yellow ">learn More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+  <!-- ---------------------------------Box5 Cards End------------------------ -->
+
+
+
+
+  <div class="box6">
+    <div class="container-fluid d-flex m-auto flex-column">
+      <h3 class="text-center heading_russoone">Turnkey EV Charging Solutions</h3>
+      <div class="px-5 d-flex col-sm-12 m-auto ">
+        <div class="row ml-5 pl-5  container-fluid ">
+          <!-- <p><a href="">sds</a></p>
+          <p><a href="">sdsd</a></p>
+          <p><a href="">dsds</a></p>
+          <p><a href="">sds</a></p> -->
+
+          <!-- ----column start--------- -->
+          <div class=" resp my-5 col-md-3 col-sm-8 d-flex flex-column">
+            <div class="mb-5 btn-yellow p-3 rounded">
+              <img src="images/Vector.svg" alt="">
+            </div>
+            <h3 class="h3_header">All-Inclusive</h5>
+              <h3 class="h3_options">Review Ev Chargers</h3>
+              <h3 class="h3_options">Get Permits</h3>
+              <h3 class="h3_options">Total Pricing</h3>
+          </div>
+          <div class=" resp my-5 col-md-3 col-sm-8 d-flex flex-column">
+            <div class="mb-5 btn-yellow p-3 rounded">
+              <img src="images/headfon.svg" alt="">
+            </div>
+            <h3 class="h3_header">Electricians</h5>
+              <h3 class="h3_options">Verified in good standing </h3>
+              <h3 class="h3_options">Certified in EV chargers</h3>
+              <h3 class="h3_options"> Fully insured</h3>
+          </div>
+          <div class="resp my-5 col-md-3 col-sm-8 d-flex flex-column">
+            <div class="mb-5 btn-yellow p-3 rounded">
+              <img src="images/star.svg" alt="">
+            </div>
+            <h3 class="h3_header">One Stop</h5>
+              <h3 class="h3_options">EV charging products </h3>
+              <h3 class="h3_options">Complete installation</h3>
+              <h3 class="h3_options"> Service & Maintenance</h3>
+          </div>
+          <div class=" resp my-5 col-md-3 col-sm-8 d-flex flex-column">
+            <div class="mb-5 btn-yellow p-3 rounded">
+              <img src="images/star.svg" alt="">
+            </div>
+            <h3 class="h3_header">All-Inclusive</h5>
+              <h3 class="h3_options">Review Ev Chargers</h3>
+              <h3 class="h3_options">Get Permits</h3>
+              <h3 class="h3_options">Total Pricing</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  
+
+
+  <!-- *------------------Footer Start-----------------*   -->
+
+  <div class="footer  d-flex"
+    style="background-image: url('images/bg_footer.png'); background-repeat: no-repeat;background-size: cover;">
+    <div class="row ">
+
+      <div class="resp_content col-lg-7 col-md-7 col-sm-12 d-flex flex-column  pt-3">
+        <!-- <h1 style="left:5em;font-family:Russo One;font-size:5em!important;color: white; top:5rem!important">Have a query?</h1>  -->
+        <h3 class="footer_h3">Have Questions?</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat iure quia vel quisquam error. Corrupti
+          enim
+          quod fugit? </p>
+        <div class="btns   d-flex">
+          <div class="">
+            <button style="filter:invert(100%)" class=" btn btn1 m-2 px-3 py-2 btn-white" type="submit">GET A
+              QUOTE<span><i class='fa fa-caret-right mx-2'></i></span></button>
+            <button class="btn btn1 m-2 px-3 py-2 btn-white" type="submit"><span style="margin-right: 1em;"><i
+                  class='fa fa-phone'></i></span>+224 011 8998</button>
+          </div>
+        </div>
+
+      </div>
+      <div style="left: 0.95em;" class=" col-lg-5 col-md-5 col-sm-0  bg-dark px-0">
+        <div class="resp"
+          style="height:100%;width:100%;background-image: url(images/coverage.svg); background-repeat: no-repeat;background-size: cover;">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- *------------------Footer End-----------------*   -->
+
+
+  <!-- *------------------Footer1 Start-----------------*   -->
+
+  <div class="container-fluid footer1 px-5 py-5">
+    <div class="footer1content col-12">
+      <div class="row">
+        <div class=" col-md-4 col-sm-8 p-3 ">
+          <a href=""><img src="images/logo.svg" width="260px" height="76px" alt="" class="f1_logo"></a>
+          <p>Your Turnkey EV Charging Solution. Vehya makes it simple to find and install the EV charger that’s right
+            for your vehicle </p> <br>
+          <p style="color: white;">FOLLOW US</p>
+          <div class="icons d-flex">
+            <div class="iconplate mr-2"><a href="#"><img src="images/utubeicon.png" alt=""></a></div>
+            <div class="iconplate mr-2"><a href="#"><img src="images/linkedinicon.png" alt=""></a></div>
+            <div class="iconplate mr-2"><a href="#"><img src="images/twittericon.png" alt=""></a></div>
+            <div class="iconplate mr-2"><a href="#"><img src="images/facebookicon.png" alt=""></a></div>
+            <div class="iconplate mr-2"><a href="#"><img src="images/instaicon.png" alt=""></a></div>
+          </div>
+        </div>
+        <div class="col-md-2 col-sm-8 p-3  mt-5">
+          <h4 class="f1_logo" style="font-weight: bold; font-size: 20px;color:#FFFFFF">QUICK LINKS</h4>
+          <a href="">
+            <P>About us</P>
+          </a>
+          <a href="">
+            <P>Careers</P>
+          </a>
+          <a href="">
+            <P>Pricing</P>
+          </a>
+          <a href="">
+            <P>Tax Credits</P>
+          </a>
+
+          <a href="">
+            <P>Contact us</P>
+          </a>
+
+        </div>
+        <div class="col-md-2 col-sm-8 p-3 mt-5 ">
+          <h4 class="f1_logo" style="font-weight: bold; font-size: 20px;color:#FFFFFF">APPLICATIONS</h4>
+          <a href="">
+            <P>Automotive</P>
+          </a>
+          <a href="">
+            <P>Municipal</P>
+          </a>
+          <a href="">
+            <P>Office</P>
+          </a>
+          <a href="">
+            <P>Parking</P>
+          </a>
+          <a href="">
+            <P>Residencial</P>
+          </a>
+          <a href="">
+            <P>Retail</P>
+          </a>
+
+        </div>
+        <div class="col-md-4 col-sm-8 p-3 mt-5 ">
+          <h4 class="f1_logo" style="font-weight: bold; font-size: 20px;color:#FFFFFF;">STAY UPDATED WITH OUR NEWSLETTER
+          </h4>
+          <a href="">
+            <p style="color: white;" class="co-w">Get alerts on upcoming EV products, installation information, and
+              upcoming events sent directly to your inbox</p>
+          </a>
+          <div class="input-group mb-3 ">
+            <input type="text" class="form-control" placeholder="Enter your email here"
+              aria-label="Recipient's username" aria-describedby="basic-addon2" style="border-radius: 1px!important;">
+            <div class="input-group-append">
+              <button type="submit" class="input-group-text subscribe" id="basic-addon2">SEND</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- *------------------Footer1 END---------------* -->
+
+
+
+  <!-- *------------------Footer2 START---------------* -->
+  <div class="footer2 ">
+    <p class="py-4">VEHYA - &copy 2021 All Rights Reserved</p>
+  </div>
+  <!-- *------------------Footer2 END---------------* -->
+
+
+  </div>
+</body>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="js/header.js"></script>
+
+<script>
+  let j = document.querySelectorAll('.slide').length;
+  let slide_container = document.querySelector('.slides_container');
+  function slidesmove(){
+
+    const slideshow = (j)=>{
+      for(i=0;i<=j;)
+      slide_container.style.transform  = "translateX(" + (-100) * (i) + "%)";
+      slide_container.style.transition  = "all 3s ";
+      i++;
+    }
+  }
+  
+  
+  
+  // function slideshow(){
+  //   let i=1;
+  //   if(i<=j){
+  //   slide_container.style.transform  = "translateX(" + (-100) * (i) + "%)"
+  //   slide_container.style.transition  = "all 3s ";
+  //   i++;}
+  //   if(i>j){
+  //        slide_container.style.transform  = "translateX(" + (100) * (3) + "%)"
+  //        slide_container.style.transition  = "all 3s ";  
+  //     i=1;
+  //    }
+  // }
+
+  
+  setInterval( slideshow,2000);
+
+
+
+
+</script>

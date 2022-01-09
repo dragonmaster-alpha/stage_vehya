@@ -1,0 +1,1195 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  </link>
+  <link rel="stylesheet" href="https://code.jquery.com/jquery-1.12.0.min.js">
+  </link>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js">
+  </link>
+  <link rel="stylesheet" href="css/style1.css" type="text/css">
+  <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&family=Russo+One&display=swap"
+    rel="stylesheet">
+  <title>VEHYA</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+  </style>
+
+</head>
+
+<body>
+  <!-- *------------------Header Start-----------------* -->
+  <div style="width: 100vw;"class=" header ">
+
+    <nav class="navbar navbar-expand-lg navbar-light ">
+      <a class="navbar-brand " href="index.html"><img src="images/logo.svg" class="image-fluid logo"
+          alt="logoimg"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav d-flex  m-auto mx-1">
+
+
+          <li class="nav-item active flex-direction-col ">
+            <a class="nav-link menu_option isactive " style="width: fit-content;" aria-current="page"
+              onclick="homeactive()" href="index.html">HOME</a><span class="sr-only">(current)</span>
+            <p id="home_active" class="dot_active"></p>
+          </li>
+
+
+
+          <li class="nav-item  flex-direction-col">
+            <a class="nav-link menu_option" style="width: fit-content;" onclick="pricingactive()"
+              href="pricing.html">PRICING</a>
+            <span></span>
+            <p id="pricing_active" class=""></p>
+          </li>
+
+
+
+
+          <li class="nav-item  flex-direction-col  ">
+            <a class="nav-link menu_option" onclick="blogactive()" style="width: fit-content;" href="#">BLOG</a>
+            <span></span>
+            <p id="blog_active" class="dot"></p>
+          </li>
+          <li class="nav-item  flex-direction-col  ">
+            <a class="nav-link menu_option" onclick="taxactive()" style="width: fit-content;"> TAX CREDITS</a>
+            <span></span>
+            <p id="tax_active" class="dot"></p>
+          </li>
+          <li class="nav-item  flex-direction-col  ">
+            <a class="nav-link menu_option" onclick="applactive()" style="width: fit-content;"> APPLICATIONS+</a>
+            <span></span>
+            <p id="appl_active" class="dot"></p>
+          </li>
+          <li class="nav-item  flex-direction-col  ">
+            <a class="nav-link menu_option" onclick="aboutactive()" style="width: fit-content;"> ABOUT US</a>
+            <span></span>
+            <p id="about_active" class="dot"></p>
+          </li>
+          <li class="nav-item  flex-direction-col  ">
+            <a class="nav-link menu_option" onclick="careeractive()" style="width: fit-content;"> CAREERS</a>
+            <span></span>
+            <p id="career_active" class="dot"></p>
+          </li>
+        </ul>
+        <span class="navbar-text">
+          <form class="d-flex ml-auto">
+            <button class="btn btn1   py-3 btn-white" type="submit">GET A QUOTE</button>
+          </form>
+        </span>
+      </div>
+    </nav>
+  </div>
+
+
+  <!-- *------------------Header End-----------------*   -->
+  <div style="margin-top: 3em;" class="">
+
+    <div class="price_sec1 d-flex flex-column text-center">
+      <div class="mt-5">
+        <h3 style="filter: invert(100%);" class="heading_russoone">PRICING</h3>
+        <h4 style="filter: invert(100%);" class="subheading_roboto" style="margin:auto;text-align: center; padding:1em">
+          At Vehya, we took the guesswork out of getting an EV charger. Our pricing for EV chargers is transparent, and
+          so is the cost for installation.</h4>
+      </div>
+    </div>
+
+
+
+    <div class="price_sec2 d-flex flex-column">
+      <h3 class="heading_russoone">Level 2 EV Chargers</h3>
+
+      <!-- -----------------Card Container start---------------- -->
+      <div class="container-fluid">
+        <div class="col-12 content d-flex p-4 ">
+          <div class="  d-flex flex-column  col-sm-4 col-xs-6      ">
+            <form class="" action="">
+              <!-- <legend  class="p-2 btn-yellow">$540.299</legend> -->
+              <fieldset>
+                <div style="position: absolute;" class=" m-2 ">
+                  <p class="co-w"> 4.0</p>
+                  <div class="d-flex">
+                    <img class="mr-1" src="images/star000.svg" alt="">
+                    <img class="mr-1" src="images/star000.svg" alt="">
+                    <img class="mr-1" src="images/star000.svg" alt="">
+                    <img class="mr-1" src="images/star000.svg" alt="">
+
+                  </div>
+
+                </div>
+                <div class="image-fluid card_img">
+                  <img class="image-fluid" width="100%" src="images/p1.svg" alt="">
+                </div>
+                <div class="btn-yellow p-2 price_tag">
+                  $540.299</div>
+              </fieldset>
+            </form>
+            <div class=" card_content d-flex flex-column  ">
+              <h4>Blink Home Level 2</h4>
+              <div class=" col-12  card_data d-flex flex-column">
+                <div class="d-flex mt-1 w-25vw">
+                  <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                    <p class="p_head">Max. Charge</p>
+                    <p class="p_detail"> 11.5 kW </p>
+                  </div>
+                  <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                    <p class="p_head">Amperage </p>
+                    <p class="p_detail"> 60 amp
+                    </p>
+                  </div>
+                  <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                    <p class="p_head">Input Voltage</p>
+                    <p class="p_detail"> 240v
+                    </p>
+                  </div>
+                </div>
+                <div class="d-flex mt-1 w-25vw">
+                  <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                    <p class="p_head">Safety </p>
+                    <p class="p_detail"> UL Listed </p>
+                  </div>
+                  <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                    <p class="p_head">3- years</p>
+                    <p class="p_detail"> 240v </p>
+                  </div>
+                  <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                    <p class="p_head">Cable Length </p>
+                    <p class="p_detail"> 25+ </p>
+                  </div>
+                </div>
+                <div class="d-flex mt-1 w-25vw">
+                  <div class="col-6 d-flex flex-column">
+                    <p class="p_head">Connectivity </p>
+                    <p class="p_detail"> Wi-Fi/ Smartphone </p>
+                  </div>
+
+                  <div class="col-6 d-flex flex-column">
+                    <p class="p_head">Efficiency </p>
+                    <p class="p_detail"> Energy Star Certified </p>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="d-flex">
+
+              </div>
+            </div>
+          </div>
+          <div class=" d-flex flex-column  col-sm-4 col-xs-6     ">
+            <form class="" action="">
+              <!-- <legend  class="p-2 btn-yellow">$540.299</legend> -->
+              <fieldset>
+                <div style="position: absolute;" class=" m-2 ">
+                  <p class="co-w"> 4.0</p>
+                  <div class="d-flex">
+                    <img class="mr-1" src="images/star000.svg" alt="">
+                    <img class="mr-1" src="images/star000.svg" alt="">
+                    <img class="mr-1" src="images/star000.svg" alt="">
+                    <img class="mr-1" src="images/star000.svg" alt="">
+
+                  </div>
+
+                </div>
+                <div style="background: rgba(100,100,100,0.8);" class="image-fluid card_img">
+                  <img class="image-fluid" width="100%" src="images/p3.svg" alt="">
+                </div>
+                <div class="btn-yellow p-2 price_tag">
+                  $540.299</div>
+              </fieldset>
+            </form>
+            <div class=" card_content d-flex flex-column  ">
+              <h4>Charge Point Homeflex</h4>
+              <div class=" col-12  card_data d-flex flex-column">
+                <div class="d-flex mt-1 w-25vw">
+                  <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                    <p class="p_head">Max. Charge</p>
+                    <p class="p_detail"> 11.5 kW </p>
+                  </div>
+                  <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                    <p class="p_head">Amperage </p>
+                    <p class="p_detail"> 60 amp
+                    </p>
+                  </div>
+                  <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                    <p class="p_head">Input Voltage</p>
+                    <p class="p_detail"> 240v
+                    </p>
+                  </div>
+                </div>
+                <div class="d-flex mt-1 w-25vw">
+                  <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                    <p class="p_head">Safety </p>
+                    <p class="p_detail"> UL Listed </p>
+                  </div>
+                  <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                    <p class="p_head">Safety</p>
+                    <p class="p_detail"> 3- years </p>
+                  </div>
+                  <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                    <p class="p_head">Cable Length </p>
+                    <p class="p_detail"> 25+ </p>
+                  </div>
+                </div>
+                <div class="d-flex mt-1 w-25vw">
+                  <div class="col-6 d-flex flex-column">
+                    <p class="p_head">Connectivity </p>
+                    <p class="p_detail"> Wi-Fi/ Smartphone </p>
+                  </div>
+
+                  <div class="col-6 d-flex flex-column">
+                    <p class="p_head">Efficiency </p>
+                    <p class="p_detail"> Energy Star Certified </p>
+                  </div>
+                </div>
+              </div>
+
+
+
+            </div>
+          </div>
+          <div class="d-flex flex-column  col-sm-4 col-xs-6     ">
+            <form class="" action="">
+              <fieldset>
+                <div style="position: absolute;" class=" m-2 ">
+                  <p class="co-w"> 4.0</p>
+                  <div class="d-flex">
+                    <img class="mr-1" src="images/star000.svg" alt="">
+                    <img class="mr-1" src="images/star000.svg" alt="">
+                    <img class="mr-1" src="images/star000.svg" alt="">
+                    <img class="mr-1" src="images/star000.svg" alt="">
+                  </div>
+                </div>
+                <div class="image-fluid card_img">
+                  <img class="image-fluid" width="100%" src="images/p2.svg" alt="">
+                </div>
+                <div class="btn-yellow p-2 price_tag">
+                  $540.299</div>
+              </fieldset>
+            </form>
+            <div class=" card_content d-flex flex-column  ">
+              <h4>Enel X Juicebox</h4>
+              <div class=" col-12  card_data d-flex flex-column">
+                <div class="d-flex mt-1 w-25vw">
+                  <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                    <p class="p_head">Max. Charge</p>
+                    <p class="p_detail"> 11.5 kW </p>
+                  </div>
+                  <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                    <p class="p_head">Amperage </p>
+                    <p class="p_detail"> 60 amp
+                    </p>
+                  </div>
+                  <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                    <p class="p_head">Input Voltage</p>
+                    <p class="p_detail"> 240v
+                    </p>
+                  </div>
+                </div>
+                <div class="d-flex mt-1 w-25vw">
+                  <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                    <p class="p_head">Safety </p>
+                    <p class="p_detail"> UL Listed </p>
+                  </div>
+                  <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                    <p class="p_head">3- years</p>
+                    <p class="p_detail"> 240v </p>
+                  </div>
+                  <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                    <p class="p_head">Cable Length </p>
+                    <p class="p_detail"> 25+ </p>
+                  </div>
+                </div>
+                <div class="d-flex mt-1 w-25vw">
+                  <div class="col-6 d-flex flex-column">
+                    <p class="p_head">Connectivity </p>
+                    <p class="p_detail"> Wi-Fi/ Smartphone </p>
+                  </div>
+
+                  <div class="col-6 d-flex flex-column">
+                    <p class="p_head">Efficiency </p>
+                    <p class="p_detail"> Energy Star Certified </p>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="d-flex">
+
+              </div>
+            </div>
+          </div>
+          <!-- -----------------Card Container End---------------- -->
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="pricing_bg3 d-flex flex-column">
+      <h3 class="heading_russoone">Level 2+/ High Power EV Chargers</h3>
+
+      <!-- -----------------Card Container start---------------- -->
+      <div class="container-fluid">
+        <div class="col-12 content d-flex p-4 ">
+          <div class="  d-flex flex-column  col-sm-4 col-xs-6      ">
+            <form class="" action="">
+              <fieldset>
+                <!-- <div style="position: absolute;" class=" m-2 ">
+                  <p class="co-w"> 4.0</p>
+                  <div class="d-flex">
+                    <img class="mr-1" src="images/star000.svg" alt="">
+                    <img class="mr-1" src="images/star000.svg" alt="">
+                    <img class="mr-1" src="images/star000.svg" alt="">
+                    <img class="mr-1" src="images/star000.svg" alt="">
+
+                  </div>
+
+                </div> -->
+                <div class="image-fluid card_img">
+                  <img class="image-fluid" width="100%" src="images/ABB-22kW 1.svg" alt="">
+                </div>
+                <div class="btn-yellow p-2 price_tag">
+                  $540.299</div>
+              </fieldset>
+            </form>
+            <div class=" card_content d-flex flex-column  ">
+              <h4>ABB Terra AC Wallbox</h4>
+              <div class=" col-12  card_data d-flex flex-column">
+                <div class="d-flex mt-1 w-25vw">
+                  <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                    <p class="p_head">Max. Charge</p>
+                    <p class="p_detail"> 22.5kW </p>
+                  </div>
+                  <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                    <p class="p_head">Amperage </p>
+                    <p class="p_detail"> 80a
+                    </p>
+                  </div>
+                  <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                    <p class="p_head">Input Voltage</p>
+                    <p class="p_detail"> 240v
+                    </p>
+                  </div>
+                </div>
+                <div class="d-flex mt-1 w-25vw">
+                  <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                    <p class="p_head">Safety </p>
+                    <p class="p_detail"> UL Listed </p>
+                  </div>
+                  <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                    <p class="p_head">UL Listed</p>
+                    <p class="p_detail"> 2- years </p>
+                  </div>
+                  <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                    <p class="p_head">Cable Length </p>
+                    <p class="p_detail"> 24+ </p>
+                  </div>
+                </div>
+                <div class="d-flex mt-1 w-25vw">
+                  <div class="col-6 d-flex flex-column">
+                    <p class="p_head">Connectivity </p>
+                    <p class="p_detail"> Wi-Fi/ Smartphone </p>
+                  </div>
+
+                  <div class="col-6 d-flex flex-column">
+                    <p class="p_head">Efficiency </p>
+                    <p class="p_detail"> Energy Star Certified </p>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="d-flex">
+
+              </div>
+            </div>
+          </div>
+          <div class=" d-flex flex-column  col-sm-4 col-xs-6     ">
+            <form class="" action="">
+              <!-- <legend  class="p-2 btn-yellow">$540.299</legend> -->
+              <fieldset>
+                <!-- <div style="position: absolute;" class=" m-2 ">
+                  <p class="co-w"> 4.0</p>
+                  <div class="d-flex">
+                    <img class="mr-1" src="images/star000.svg" alt="">
+                    <img class="mr-1" src="images/star000.svg" alt="">
+                    <img class="mr-1" src="images/star000.svg" alt="">
+                    <img class="mr-1" src="images/star000.svg" alt="">
+
+                  </div>
+
+                </div> -->
+                <div style="background: rgba(100,100,100,0.8);" class="image-fluid card_img">
+                  <img class="image-fluid" width="100%" src="images/Blink-IQ-200-Level-2-1 1.svg" alt="">
+                </div>
+                <div class="btn-yellow p-2 price_tag">
+                  $540.299</div>
+              </fieldset>
+            </form>
+            <div class=" card_content d-flex flex-column  ">
+              <h4>Blink IQ 200 Level 2</h4>
+              <div class=" col-12  card_data d-flex flex-column">
+                <div class="d-flex mt-1 w-25vw">
+                  <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                    <p class="p_head">Max. Charge</p>
+                    <p class="p_detail"> 19.2kW </p>
+                  </div>
+                  <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                    <p class="p_head">Amperage </p>
+                    <p class="p_detail"> 100a
+                    </p>
+                  </div>
+                  <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                    <p class="p_head">Input Voltage</p>
+                    <p class="p_detail"> 240v
+                    </p>
+                  </div>
+                </div>
+                <div class="d-flex mt-1 w-25vw">
+                  <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                    <p class="p_head">Safety </p>
+                    <p class="p_detail"> UL Listed </p>
+                  </div>
+                  <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                    <p class="p_head">Security</p>
+                    <p class="p_detail"> 3- years </p>
+                  </div>
+                  <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                    <p class="p_head">Cable Length </p>
+                    <p class="p_detail"> 25+ </p>
+                  </div>
+                </div>
+                <div class="d-flex mt-1 w-25vw">
+                  <div class="col-6 d-flex flex-column">
+                    <p class="p_head">Connectivity </p>
+                    <p class="p_detail"> Wi-Fi/ Smartphone </p>
+                  </div>
+
+                  <div class="col-6 d-flex flex-column">
+                    <p class="p_head">Efficiency </p>
+                    <p class="p_detail"> Energy Star Certified </p>
+                  </div>
+                </div>
+              </div>
+
+
+
+            </div>
+          </div>
+          <div class="d-flex flex-column  col-sm-4 col-xs-6     ">
+            <form class="" action="">
+              <fieldset>
+                <!-- <div style="position: absolute;" class=" m-2 ">
+                  <p class="co-w"> 4.0</p>
+                  <div class="d-flex">
+                    <img class="mr-1" src="images/star000.svg" alt="">
+                    <img class="mr-1" src="images/star000.svg" alt="">
+                    <img class="mr-1" src="images/star000.svg" alt="">
+                    <img class="mr-1" src="images/star000.svg" alt="">
+                  </div>
+                </div> -->
+                <div class="image-fluid card_img">
+                  <img class="image-fluid" width="100%" src="images/Enel-X-80-Pro 1.svg" alt="">
+                </div>
+                <div class="btn-yellow p-2 price_tag">
+                  $540.299</div>
+              </fieldset>
+            </form>
+            <div class=" card_content d-flex flex-column  ">
+              <h4>Enel X Juicebox</h4>
+              <div class=" col-12  card_data d-flex flex-column">
+                <div class="d-flex mt-1 w-25vw">
+                  <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                    <p class="p_head">Max. Charge</p>
+                    <p class="p_detail"> 19.2kW </p>
+                  </div>
+                  <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                    <p class="p_head">Amperage </p>
+                    <p class="p_detail"> 80a
+                    </p>
+                  </div>
+                  <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                    <p class="p_head">Input Voltage</p>
+                    <p class="p_detail"> 240v
+                    </p>
+                  </div>
+                </div>
+                <div class="d-flex mt-1 w-25vw">
+                  <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                    <p class="p_head">Safety </p>
+                    <p class="p_detail"> UL Listed </p>
+                  </div>
+                  <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                    <p class="p_head">Security</p>
+                    <p class="p_detail"> 2- years </p>
+                  </div>
+                  <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                    <p class="p_head">Cable Length </p>
+                    <p class="p_detail"> 24+ </p>
+                  </div>
+                </div>
+                <div class="d-flex mt-1 w-25vw">
+                  <div class="col-6 d-flex flex-column">
+                    <p class="p_head">Connectivity </p>
+                    <p class="p_detail"> Wi-Fi/ Smartphone </p>
+                  </div>
+
+                  <div class="col-6 d-flex flex-column">
+                    <p class="p_head">Efficiency </p>
+                    <p class="p_detail"> Energy Star Certified </p>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="d-flex">
+
+              </div>
+            </div>
+          </div>
+          <!-- -----------------Card Container End---------------- -->
+        </div>
+      </div>
+    </div>
+
+    <div class="pricing_bg3 d-flex flex-column">
+      <h3 class="heading_russoone">Level 3 / DCFC EV Charger</h3>
+      
+      <!-- -----------------Card Container start---------------- -->
+      <div class="container-fluid">
+        <div style="height: fit-content;" class="col-12 content d-flex p-4  ">
+          <div class="row">
+            <div class="  d-flex flex-column  col-sm-4 col-xs-6      ">
+              <form class="" action="">
+                <fieldset>
+                  <!-- <div style="position: absolute;" class=" m-2 ">
+                  <p class="co-w"> 4.0</p>
+                  <div class="d-flex">
+                    <img class="mr-1" src="images/star000.svg" alt="">
+                    <img class="mr-1" src="images/star000.svg" alt="">
+                    <img class="mr-1" src="images/star000.svg" alt="">
+                    <img class="mr-1" src="images/star000.svg" alt="">
+
+                  </div>
+                  
+                </div> -->
+                  <div class="image-fluid card_img">
+                    <img class="image-fluid" width="100%" src="images/ABB-24kW 1.svg" alt="">
+                  </div>
+                  <div class="btn-yellow p-2 price_tag">
+                    $19308</div>
+                  </fieldset>
+                </form>
+              <div class=" card_content d-flex flex-column  ">
+                <h4>ABB Terra DC Wallbox</h4>
+                <div class=" col-12  card_data d-flex flex-column">
+                  <div class="d-flex mt-1 w-25vw">
+                    <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                      <p class="p_head">Max. Charge</p>
+                      <p class="p_detail"> 24kW </p>
+                    </div>
+                    <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                      <p class="p_head">Amperage </p>
+                      <p class="p_detail"> 60a
+                      </p>
+                    </div>
+                    <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                      <p class="p_head">Input Voltage</p>
+                      <p class="p_detail"> 480v
+                      </p>
+                    </div>
+                  </div>
+                  <div class="d-flex mt-1 w-25vw">
+                    <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                      <p class="p_head">Safety </p>
+                      <p class="p_detail"> UL Listed </p>
+                    </div>
+                    <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                      <p class="p_head">UL Listed</p>
+                      <p class="p_detail"> 2- years </p>
+                    </div>
+                    <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                      <p class="p_head">Cable Length </p>
+                      <p class="p_detail"> 23+ </p>
+                    </div>
+                  </div>
+                  <div class="d-flex mt-1 w-25vw">
+                    <div class="col-6 d-flex flex-column">
+                      <p class="p_head">Connectivity </p>
+                      <p class="p_detail"> Cellular Modem </p>
+                    </div>
+
+                    <div class="col-6 d-flex flex-column">
+                      <p class="p_head">Efficiency </p>
+                      <p class="p_detail"> Energy Star Certified </p>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="d-flex">
+                  
+                </div>
+              </div>
+            </div>
+            <div class=" d-flex flex-column  col-sm-4 col-xs-6     ">
+              <form class="" action="">
+                <!-- <legend  class="p-2 btn-yellow">$540.299</legend> -->
+                <fieldset>
+                  <!-- <div style="position: absolute;" class=" m-2 ">
+                    <p class="co-w"> 4.0</p>
+                  <div class="d-flex">
+                    <img class="mr-1" src="images/star000.svg" alt="">
+                    <img class="mr-1" src="images/star000.svg" alt="">
+                    <img class="mr-1" src="images/star000.svg" alt="">
+                    <img class="mr-1" src="images/star000.svg" alt="">
+
+                  </div>
+                  
+                </div> -->
+                  <div style="background: rgba(100,100,100,0.8);" class="image-fluid card_img">
+                    <img class="image-fluid" width="100%" src="images/ABB-50kW 1.svg" alt="">
+                  </div>
+                  <div class="btn-yellow p-2 price_tag">
+                    $37640</div>
+                </fieldset>
+              </form>
+              <div class=" card_content d-flex flex-column  ">
+                <h4>ABB Terra DC 54</h4>
+                <div class=" col-12  card_data d-flex flex-column">
+                  <div class="d-flex mt-1 w-25vw">
+                    <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                      <p class="p_head">Max. Charge</p>
+                      <p class="p_detail"> 50kW </p>
+                    </div>
+                    <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                      <p class="p_head">Amperage </p>
+                      <p class="p_detail"> 125a
+                      </p>
+                    </div>
+                    <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                      <p class="p_head">Input Voltage</p>
+                      <p class="p_detail"> 480v
+                      </p>
+                    </div>
+                  </div>
+                  <div class="d-flex mt-1 w-25vw">
+                    <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                      <p class="p_head">Safety </p>
+                      <p class="p_detail"> UL Listed </p>
+                    </div>
+                    <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                      <p class="p_head">Security</p>
+                      <p class="p_detail"> 2- years </p>
+                    </div>
+                    <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                      <p class="p_head">Cable Length </p>
+                      <p class="p_detail"> 20+ </p>
+                    </div>
+                  </div>
+                  <div class="d-flex mt-1 w-25vw">
+                    <div class="col-6 d-flex flex-column">
+                      <p class="p_head">Connectivity </p>
+                      <p class="p_detail"> Cellular/Ethernet </p>
+                    </div>
+                    
+                    <div class="col-6 d-flex flex-column">
+                      <p class="p_head">Efficiency </p>
+                      <p class="p_detail"> Energy Star Certified </p>
+                    </div>
+                  </div>
+                </div>
+
+
+
+              </div>
+              
+            </div>
+            <div class="d-flex flex-column  col-sm-4 col-xs-6     ">
+              <form class="" action="">
+                <fieldset>
+                  <!-- <div style="position: absolute;" class=" m-2 ">
+                    <p class="co-w"> 4.0</p>
+                  <div class="d-flex">
+                    <img class="mr-1" src="images/star000.svg" alt="">
+                    <img class="mr-1" src="images/star000.svg" alt="">
+                    <img class="mr-1" src="images/star000.svg" alt="">
+                    <img class="mr-1" src="images/star000.svg" alt="">
+                  </div>
+                </div> -->
+                  <div class="image-fluid card_img">
+                    <img class="image-fluid" width="100%" src="images/blink-50kw 1.svg" alt="">
+                  </div>
+                  <div class="btn-yellow p-2 price_tag">
+                    $35,999.00</div>
+                </fieldset>
+              </form>
+              <div class=" card_content d-flex flex-column  ">
+                <h4>Blink DCFC 50kW</h4>
+                <div class=" col-12  card_data d-flex flex-column">
+                  <div class="d-flex mt-1 w-25vw">
+                    <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                      <p class="p_head">Max. Charge</p>
+                      <p class="p_detail"> 50kW </p>
+                    </div>
+                    <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                      <p class="p_head">Amperage </p>
+                      <p class="p_detail"> 120a
+                      </p>
+                    </div>
+                    <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                      <p class="p_head">Input Voltage</p>
+                      <p class="p_detail"> 480v
+                      </p>
+                    </div>
+                  </div>
+                  <div class="d-flex mt-1 w-25vw">
+                    <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                      <p class="p_head">Safety </p>
+                      <p class="p_detail"> UL Listed </p>
+                    </div>
+                    <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                      <p class="p_head">Security</p>
+                      <p class="p_detail"> 3- years </p>
+                    </div>
+                    <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                      <p class="p_head">Cable Length </p>
+                      <p class="p_detail"> 25+ </p>
+                    </div>
+                  </div>
+                  <div class="d-flex mt-1 w-25vw">
+                    <div class="col-6 d-flex flex-column">
+                      <p class="p_head">Connectivity </p>
+                      <p class="p_detail"> Cellular/Ethernet </p>
+                    </div>
+
+                    <div class="col-6 d-flex flex-column">
+                      <p class="p_head">Efficiency </p>
+                      <p class="p_detail"> Energy Star Certified </p>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="d-flex">
+
+                </div>
+              </div>
+            </div>
+            <div class="d-flex flex-column  col-sm-4 col-xs-6     ">
+              <form class="" action="">
+                <fieldset>
+                  <!-- <div style="position: absolute;" class=" m-2 ">
+                  <p class="co-w"> 4.0</p>
+                  <div class="d-flex">
+                    <img class="mr-1" src="images/star000.svg" alt="">
+                    <img class="mr-1" src="images/star000.svg" alt="">
+                    <img class="mr-1" src="images/star000.svg" alt="">
+                    <img class="mr-1" src="images/star000.svg" alt="">
+                  </div>
+                </div> -->
+                  <div class="image-fluid card_img">
+                    <img class="image-fluid" width="100%" src="images/chargepoint-250 1.svg" alt="">
+                  </div>
+                  <div class="btn-yellow p-2 price_tag">
+                    $36,999.00</div>
+                </fieldset>
+              </form>
+              <div class=" card_content d-flex flex-column  ">
+                <h4>ChargePoint 250 Express</h4>
+                <div class=" col-12  card_data d-flex flex-column">
+                  <div class="d-flex mt-1 w-25vw">
+                    <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                      <p class="p_head">Max. Charge</p>
+                      <p class="p_detail"> 62kW </p>
+                    </div>
+                    <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                      <p class="p_head">Amperage </p>
+                      <p class="p_detail"> 120a
+                      </p>
+                    </div>
+                    <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                      <p class="p_head">Input Voltage</p>
+                      <p class="p_detail"> 480v
+                      </p>
+                    </div>
+                  </div>
+                  <div class="d-flex mt-1 w-25vw">
+                    <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                      <p class="p_head">Safety </p>
+                      <p class="p_detail"> UL Listed </p>
+                    </div>
+                    <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                      <p class="p_head">Security</p>
+                      <p class="p_detail"> 3- years </p>
+                    </div>
+                    <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                      <p class="p_head">Cable Length </p>
+                      <p class="p_detail"> 25+ </p>
+                    </div>
+                  </div>
+                  <div class="d-flex mt-1 w-25vw">
+                    <div class="col-6 d-flex flex-column">
+                      <p class="p_head">Connectivity </p>
+                      <p class="p_detail"> Cellular/Ethernet </p>
+                    </div>
+
+                    <div class="col-6 d-flex flex-column">
+                      <p class="p_head">Efficiency </p>
+                      <p class="p_detail"> Energy Star Certified </p>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="d-flex">
+                  
+                </div>
+              </div>
+            </div>
+            <div class="d-flex flex-column  col-sm-4 col-xs-6     ">
+              <form class="" action="">
+                <fieldset>
+                  <!-- <div style="position: absolute;" class=" m-2 ">
+                  <p class="co-w"> 4.0</p>
+                  <div class="d-flex">
+                    <img class="mr-1" src="images/star000.svg" alt="">
+                    <img class="mr-1" src="images/star000.svg" alt="">
+                    <img class="mr-1" src="images/star000.svg" alt="">
+                    <img class="mr-1" src="images/star000.svg" alt="">
+                  </div>
+                </div> -->
+                  <div class="image-fluid card_img">
+                    <img class="image-fluid" width="100%" src="images/enel-x 1.svg" alt="">
+                  </div>
+                  <div class="btn-yellow p-2 price_tag">
+                    $29,999.00</div>
+                </fieldset>
+              </form>
+              <div class=" card_content d-flex flex-column  ">
+                <h4>Enel X JuicePump 50</h4>
+                <div class=" col-12  card_data d-flex flex-column">
+                  <div class="d-flex mt-1 w-25vw">
+                    <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                      <p class="p_head">Max. Charge</p>
+                      <p class="p_detail"> 50kW </p>
+                    </div>
+                    <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                      <p class="p_head">Amperage </p>
+                      <p class="p_detail"> 120a
+                      </p>
+                    </div>
+                    <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                      <p class="p_head">Input Voltage</p>
+                      <p class="p_detail"> 480v
+                      </p>
+                    </div>
+                  </div>
+                  <div class="d-flex mt-1 w-25vw">
+                    <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                      <p class="p_head">Safety </p>
+                      <p class="p_detail"> UL Listed </p>
+                    </div>
+                    <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                      <p class="p_head">Security</p>
+                      <p class="p_detail"> 3- years </p>
+                    </div>
+                    <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                      <p class="p_head">Cable Length </p>
+                      <p class="p_detail"> 25+ </p>
+                    </div>
+                  </div>
+                  <div class="d-flex mt-1 w-25vw">
+                    <div class="col-6 d-flex flex-column">
+                      <p class="p_head">Connectivity </p>
+                      <p class="p_detail"> Cellular/Ethernet </p>
+                    </div>
+
+                    <div class="col-6 d-flex flex-column">
+                      <p class="p_head">Efficiency </p>
+                      <p class="p_detail"> Energy Star Certified </p>
+                    </div>
+                  </div>
+                </div>
+
+                
+                <div class="d-flex">
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- -----------------Card Container End---------------- -->
+        </div>
+      </div>
+    </div>
+
+    <div class="pricing_bg3 d-flex flex-column">
+      <h3 class="heading_russoone">Level 4 / High Power EV Chargers</h3>
+
+      <!-- -----------------Card Container start---------------- -->
+      <div class="container-fluid">
+        <div style="height: fit-content;" class="col-12 content d-flex p-4  ">
+          <div class="row">
+            <div class="  d-flex flex-column  col-sm-4 col-xs-6      ">
+              <form class="" action="">
+                <fieldset>
+                  <!-- <div style="position: absolute;" class=" m-2 ">
+                  <p class="co-w"> 4.0</p>
+                  <div class="d-flex">
+                    <img class="mr-1" src="images/star000.svg" alt="">
+                    <img class="mr-1" src="images/star000.svg" alt="">
+                    <img class="mr-1" src="images/star000.svg" alt="">
+                    <img class="mr-1" src="images/star000.svg" alt="">
+
+                  </div>
+                  
+                </div> -->
+                  <div class="image-fluid card_img">
+                    <img class="image-fluid" width="100%" src="images/ABB-24kW 1.svg" alt="">
+                  </div>
+                  <div class="btn-yellow p-2 price_tag">
+                    $19308</div>
+                  </fieldset>
+                </form>
+              <div class=" card_content d-flex flex-column  ">
+                <h4>ABB Terra HP 175</h4>
+                <div class=" col-12  card_data d-flex flex-column">
+                  <div class="d-flex mt-1 w-25vw">
+                    <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                      <p class="p_head">Max. Charge</p>
+                      <p class="p_detail"> 175kW </p>
+                    </div>
+                    <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                      <p class="p_head">Amperage </p>
+                      <p class="p_detail"> 300a
+                      </p>
+                    </div>
+                    <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                      <p class="p_head">Input Voltage</p>
+                      <p class="p_detail"> 480v
+                      </p>
+                    </div>
+                  </div>
+                  <div class="d-flex mt-1 w-25vw">
+                    <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                      <p class="p_head">Safety </p>
+                      <p class="p_detail"> UL Listed </p>
+                    </div>
+                    <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                      <p class="p_head">UL Listed</p>
+                      <p class="p_detail"> 2- years </p>
+                    </div>
+                    <div class=" col-sm-4 col-xs-6      d-flex flex-column">
+                      <p class="p_head">Cable Length </p>
+                      <p class="p_detail"> 20 </p>
+                    </div>
+                  </div>
+                  <div class="d-flex mt-1 w-25vw">
+                    <div class="col-6 d-flex flex-column">
+                      <p class="p_head">Connectivity </p>
+                      <p class="p_detail"> Cellular Ethernet </p>
+                    </div>
+
+                    <div class="col-6 d-flex flex-column">
+                      <p class="p_head">Efficiency </p>
+                      <p class="p_detail"> Energy Star Certified </p>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="d-flex">
+                  
+                </div>
+              </div>
+            </div>
+          
+           
+          </div>
+          <!-- -----------------Card Container End---------------- -->
+        </div>
+      </div>
+    </div>
+    
+    <div class="box5 container-fluid">
+      <div class="d-flex m-auto flex-column">
+        <h3 class="heading_russoone">Installation</h3>
+        <!-- <h4 class="subheading_roboto" style="margin:auto;text-align: center; padding:1em">Explore the different
+          applications and benefits <br> of installing EV Chargers.</h4> -->
+      </div>
+
+      <!-- ---------------------------------Box5 Cards start------------------------ -->
+      <div  class="col-12 p-5 content d-flex ">
+          <div  style="margin-left: 5em!important;background-image: url(images/automotive.svg); background-size: cover;opacity:1.5;" class=" bg_img col-3  text-center bg-dark">
+            <div>
+              <h4 class="co-w">Automotive</h4>
+              <button style="width: fit-content;border:none;padding:0.5em 2em;" class="btn-yellow ">Select</button>
+            </div>
+          </div>
+          <div  style="margin-left: 5em!important;background-image: url(images/municipal.svg); background-size: cover;" class=" bg_img col-3  text-center bg-dark">
+            <div>
+              <h4 class="co-w">Municipal</h4>
+              <button style="width: fit-content;border:none;padding:0.5em 2em;" class="btn-yellow ">Select</button>
+            </div>
+          </div>
+          <div  style="margin-left: 5em!important;background-image: url(images/office.svg); background-size: cover;" class=" bg_img col-3  text-center bg-dark">
+            <div>
+              <h4 class="co-w">Office</h4>
+              <button style="width: fit-content;border:none;padding:0.5em 2em;" class="btn-yellow ">Select</button>
+            </div>
+          </div>
+
+      </div>
+
+    
+    </div>
+      
+
+
+
+
+    <!-- *------------------Footer Start-----------------*   -->
+
+    <div style="background-image: url('images/bg_footer.png'); background-repeat: no-repeat;background-size: cover;"
+    class="footer  d-flex ">
+    
+    <div style="padding:1em 12em; text-align: justify;" class="col-7 d-flex flex-column  ">
+        <!-- <h1 style="left:5em;font-family:Russo One;font-size:5em!important;color: white; top:5rem!important">Have a query?</h1>  -->
+        <h3 style="margin: 2px;" class="heading_russoone">Have Questions?</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat iure quia vel quisquam error. Corrupti enim
+          quod fugit? Earum quaerat quae magnam dolores dolorem voluptatem accusamus, accusantium enim placeat quas et.
+          Ad eligendi dolorum iste.</p>
+        <div class="btns">
+          <button style="filter:invert(100%)" class="btn btn1 mx-2 px-3 py-2 btn-white" type="submit">GET A
+            QUOTE<span><i class='fa fa-caret-right mx-2'></i></span></button>
+          <button class="btn btn1 mx-2 px-3 py-2 btn-white" type="submit"><span style="margin-right: 1em;"><i
+                class='fa fa-phone'></i></span>+224 011 8998</button>
+        </div>
+      </div>
+      <div style="background-image: url(images/coverage.svg); background-repeat: no-repeat;background-size: cover;"
+        class="col-5 d-flex bg-dark">
+
+      </div>
+
+    </div>
+
+    <!-- *------------------Footer End-----------------*   -->
+
+
+    <!-- *------------------Footer1 Start-----------------*   -->
+
+    <div class="container-fluid footer1 px-4 py-4">
+      <div class="footer1content col-12">
+        <div class=" col-sm-4 col-xs-6        ">
+          <a href=""><img src="images/logo.svg" alt=""></a>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem itaque accusantium laborum minima eum
+            ullam, architecto voluptas ipsam eaque odit atque velit non corrupti blanditiis aut rem inventore, sapiente
+            dolorum provident tempore! Accusantium culpa aperiam itaque, facere enim non consequatur, asperiores neque
+            commodi magni sit labore. Velit reiciendis corrupti accusamus.</p><br>
+          <p class="bold">FOLLOW US</p>
+          <div class="icons d-flex">
+            <div class="iconplate mr-2"><a href="#"><img src="images/utubeicon.png" alt=""></a></div>
+            <div class="iconplate mr-2"><a href="#"><img src="images/linkedinicon.png" alt=""></a></div>
+            <div class="iconplate mr-2"><a href="#"><img src="images/twittericon.png" alt=""></a></div>
+            <div class="iconplate mr-2"><a href="#"><img src="images/facebookicon.png" alt=""></a></div>
+            <div class="iconplate mr-2"><a href="#"><img src="images/instaicon.png" alt=""></a></div>
+          </div>
+        </div>
+        <div class="col-2    ">
+          <h4 style="font-weight: bold; font-size:0.9em; font-size: 20px;color:#FFFFFF">QUICK LINKS</h4>
+          <a href="">
+            <P>About us</P>
+          </a>
+          <a href="">
+            <P>Careers</P>
+          </a>
+          <a href="">
+            <P>Pricing</P>
+          </a>
+          <a href="">
+            <P>Tax Credits</P>
+          </a>
+
+          <a href="">
+            <P>Contact us</P>
+          </a>
+
+        </div>
+        <div class="col-2   ">
+          <h4 style="font-weight: bold; font-size:0.9em; font-size: 20px;color:#FFFFFF">APPLICATIONS</h4>
+          <a href="">
+            <P>Automotive</P>
+          </a>
+          <a href="">
+            <P>Municipal</P>
+          </a>
+          <a href="">
+            <P>Office</P>
+          </a>
+          <a href="">
+            <P>Parking</P>
+          </a>
+          <a href="">
+            <P>Residencial</P>
+          </a>
+          <a href="">
+            <P>Retail</P>
+          </a>
+
+        </div>
+        <div class=" col-sm-4 col-xs-6        ">
+          <h4 style="font-weight: bold; font-size:0.9em; font-size: 20px;color:#FFFFFF">STAY UPDATED WITH OUR NEWSLETTER
+          </h4>
+          <a href="">
+            <P>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi debitis placeat officiis veritatis.
+              Illo, error!</P>
+          </a>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username"
+              aria-describedby="basic-addon2" style="border-radius: 1px!important;">
+            <div class="input-group-append">
+              <button class="input-group-text btn-yellow" id="basic-addon2">SEND</button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- *------------------Footer1 END---------------* -->
+
+
+
+    <!-- *------------------Footer2 START---------------* -->
+    <div class="footer2 ">
+      <p class="py-4">VEHYA - &copy 2021 All Rights Reserved</p>
+    </div>
+    <!-- *------------------Footer2 END---------------* -->
+
+
+  </div>
+</body>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="js/header.js"></script>

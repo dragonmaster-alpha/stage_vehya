@@ -1,0 +1,376 @@
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    /* background-color: #f1f1f1; */
+    margin-top: 15em;
+    background-image:url('images/charles.svg') ;
+    background-color: rgba(100, 100, 100, 0.2);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 2em;
+  }
+  .co-y{
+    color: #F4CD1E;
+  }
+  .commercialcontent{
+    width: 90%;
+    margin: 0;
+    background-color:#F6F6F6 ;
+  }
+  .residencialcontent{
+    width: 80%;
+    margin: 0;
+    background-color: #F6F6F6;
+  }
+  #regForm {
+    background-color: #F6F6F6;
+    margin: 20px auto;
+    font-family: Raleway;
+    padding: 40px;
+    width: 100%;
+    /* min-width: 300px; */
+    overflow: hidden;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  input {
+    padding: 10px;
+    width: 100%;
+    font-size: 17px;
+    font-family: Raleway;
+    border: 1px solid #aaaaaa;
+  }
+
+  /* Mark input boxes that gets an error on validation: */
+  input.invalid {
+    background-color: #ffdddd;
+  }
+
+  /* Hide all steps by default: */
+  .tab {
+    display: none;
+  }
+
+  button {
+    background-color: #F4CD1E;
+    color: #000000;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    font-size: 17px;
+    font-family: Raleway;
+    cursor: pointer;
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+
+  .tab h6 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 34px;
+    color: #030303;
+  }
+
+  
+
+  .tab .row div p select {
+    width: 100%;
+    height: 3em;
+  }
+
+  button:hover {
+    opacity: 0.8;
+  }
+
+  #prevBtn {
+    background-color: #000000;
+    padding: 10px 20px;
+    color: #FFFFFF;
+    margin-left: 1em;
+    margin-right: 1em;
+
+  }
+
+  /* Make circles that indicate the steps of the form: */
+  .step {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbbbbb;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+  }
+
+  .step.active {
+    opacity: 1;
+  }
+
+  /* Mark the steps that are finished and valid: */
+  .step.finish {
+    background-color: #04AA6D;
+  }
+
+  .stepss {
+    font-size: 3.5vw;
+    /* padding-left: 2em; */
+    background: transparent;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+  }
+ .price_tag_black{
+    width: fit-content; 
+    text-align: center; 
+    height: fit-content;
+    margin: auto;
+    padding: 1em;
+    position:absolute; 
+    /* left: 2em;
+    top:12em;  */
+    z-index: 1;
+    font-size: 1em;
+ }
+
+ .questions{
+   position: relative;
+   margin:10em auto;
+   width: 80%;
+   background-color: #F6F6F6;
+   padding:2em ;
+ }
+
+ .quest p{
+   padding: auto 5em;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 34px;
+  line-height: 34px;
+  text-align: center;
+  margin: auto 5em;
+ }
+ .form_inputs .quest div div label {
+   font-size: 34px;
+ }
+
+.review{
+  margin-top: 8em;
+  width: 80%;
+  height: fit-content;
+  background-color: #F6F6F6;
+  padding: 5em;
+  position: relative;
+  top: 10em;
+}
+.review p{
+  font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 3.8em;
+line-height: 2.15em;
+text-align: center;
+}
+.review form table tbody td{
+  border-top:1px solid black
+}
+.review table,th,td{
+  border: 1px solid black;
+box-sizing: border-box
+}
+.review table {
+  width: 45vw;
+  margin: auto;
+}
+.review table td{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 34px;
+}
+.review form div p{
+  font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 2.15em;
+line-height: 2.15em;
+/* or 97% */
+
+text-align: center;
+
+color: #000000;
+}
+.review form  div {
+  margin: 2em auto;
+} 
+.quest div div input{
+  width: 30px;
+} 
+
+.s_1em{
+  
+  height: 25px;
+  width: 1em;
+}
+.quest div div input[type=radio]{
+  top: 1.2em;
+    text-align: left;
+    position: relative;
+}
+input[type=radio]:checked{
+  background-color: yellow!important;
+}
+.checkbox-round {
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  top: 0.8em;
+  margin-right: 5px;
+}
+
+.checkbox-round:checked {
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+  background-color: yellow;
+}
+ input[type=checkbox]:checked +label , input[type=radio]:checked +label  {
+  color: yellow;
+}
+
+
+input[type="checkbox"]:checked + label[class=rstep2] {
+    border : 2px solid red;
+}
+
+ @media only screen and (max-width: 400px) and (min-width:300px) {
+
+.residencial div .content{
+      margin-left: -3em;
+      
+    }
+    .form_inputs .quest div div label,input {
+      font-size: 14px;
+    }
+ }
+  /* 87pf */
+  
+
+  @media only screen and (max-width: 650px) and (min-width:451px) {
+    .stepss {
+      font-size: 2.5vw;
+      background-color: transparent!important;
+      /* width: 120%; */
+      /* margin-left: -3em; */
+      /* padding-left: 1.3em; */
+    }
+
+  }
+
+  @media only screen and (max-width: 814px) and (min-width:651px) {
+    .stepss {
+      font-size: 2.8vw;
+      background-color: non;
+      margin-left: -3em;
+      padding-left: 1.6em;
+    }
+
+  }
+
+  @media only screen and (max-width: 918px) and (min-width:815px) {
+    .stepss {
+      font-size: 2.8vw;
+      background-color: non;
+      margin-left: -1em;
+      padding-left: 1.5em;
+    }
+    form fieldset img{
+      
+    }
+  }
+  @media only screen and (max-width: 960px) and (min-width:767px) {
+    
+    .starss{
+        height: 0.7em;
+        margin-top: -0.5em;
+        z-index:2;
+    }
+   
+  }
+  /* @media only screen and (min-width:1200px){
+    .residencial div div div div form fieldset .price_tag{
+      width: fit-content;
+    text-align: center;
+    height: fit-content;
+    /* margin: auto; 
+    padding: 0.8em;
+    position: relative;
+    z-index: 1;
+    font-size: 1em;
+    top: -3.5em;
+    left: 8em;
+    }
+  }
+*/
+
+
+  @media only screen and (max-width:923px){
+    .terms{
+    width: fit-content!important;
+    }
+    .form_inputs .quest div div label {
+      font-size: 24px;
+      display: flex;
+      flex-direction: column;
+    }
+    .quest p{
+      padding: auto 5em;
+     font-family: Roboto;
+     font-style: normal;
+     font-weight: normal;
+     font-size: 24px;
+     line-height: 34px;
+     text-align: center;
+     margin: auto 2em;
+    
+  } 
+  .quest div{
+    display: flex;
+    flex-direction: column;
+  }
+  .quest div div{
+    display: flex;
+    flex-direction: row;
+  }
+  .quest div div input[type=radio]{
+    top:0.5em;
+      text-align: left;
+      position: relative;
+  }
+}
+
+  

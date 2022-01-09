@@ -1,0 +1,834 @@
+/*========== Uiversal CSS For page resetting purpose ==========*/
+*,
+::before,
+::after {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: inherit;
+}
+
+/* =================================================================================== */
+
+
+/*========== Base style CSS For project ==========*/
+html {
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Roboto', 'Russo One', 'sans-serif';
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #000;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+/* =================================================================================== */
+
+
+/*========== Website Style CSS Starts ==========*/
+
+/*============================================== The Home Page (index.html) Page Style Starts ===========================================*/
+
+/*===== header Section Start =====*/
+header {
+    text-transform: uppercase;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+header .navbar {
+    padding: 25px 120px;
+}
+
+.nav-bar_logo {
+    width: 150px;
+}
+
+header .navbar-nav .nav-item {
+    padding: 0px 20px;
+    position: relative;
+}
+
+header .navbar-nav .nav-item .nav-item-hover-block {
+    position: absolute;
+}
+
+.nav-item-hover-block .block-1 {
+    background-color: red;
+}
+
+header .drop-1 {
+    transition: all .3s ease-in-out;
+}
+
+header .drop-1 .dropdown-menu {
+    text-align: center;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    background-color: #242424;
+    border: #242424;
+    width: 100%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    transition: all .3s ease-in-out;
+}
+
+
+header .drop-1 .dropdown-menu .dropdown-item {
+    padding: 10px 0px;
+    color: #ffff;
+    letter-spacing: 1px;
+}
+
+header .drop-1 .dropdown-menu .dropdown-item:hover {
+    color: rgba(0, 0, 0, 50%);
+}
+
+header .drop-1 .dropdown-menu .dropdown-item.active,
+header .drop-1 .dropdown-menu .dropdown-item:active {
+    background-color: #e9ecef;
+    color: rgba(0, 0, 0, 50%);
+}
+
+.get-quote-btn a {
+    font-size: 1.4rem;
+}
+
+/*===== header Section End =====*/
+/* =================================================================================== */
+
+
+/*===== hero-banner-section start =====*/
+.banner {
+    padding: 25px 120px;
+    position: relative !important;
+}
+
+.banner::after {
+    content: url("../img/banner/header-dots.svg");
+    position: absolute;
+    top: 10%;
+    right: 0px;
+}
+
+.banner-img {
+    width: 100%;
+    height: 400px;
+}
+
+.banner-title {
+    border-left: 2px solid #F4CD1E;
+    padding: 15px 0px 15px 30px;
+    position: relative !important;
+}
+
+.banner-title h3 {
+    font-family: 'Russo One' !important;
+    font-size: 4.5rem;
+    color: #ffff;
+
+}
+
+.banner-watermark {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -10px;
+    left: 30px;
+    font-family: 'Russo One';
+    font-size: 150rem;
+    text-transform: uppercase;
+    z-index: -1;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgba(132 132 132 / 50%);
+}
+
+.banner-disc {
+    width: 55%;
+    margin-top: 80px;
+}
+
+.banner-btn {
+    margin-top: 50px;
+}
+
+
+/*==== Css Of Slick Slider IN Hero banner section ====*/
+.hero-banner-section .slick-dots {
+    width: auto !important;
+    top: 45%;
+    right: 0px;
+    bottom: auto;
+    transform: rotate(90deg);
+}
+
+.hero-banner-section .slick-dots li button:before {
+    line-height: initial !important;
+    font-size: 30px;
+    color: #565151cc;
+    opacity: 1;
+}
+
+
+.hero-banner-section .slick-dots li.slick-active button:before {
+    color: #F4CD1E;
+    opacity: 1;
+}
+
+/* =================================================================================== */
+
+
+/*==== Bottom Cards Of Hero Banner Section ====*/
+.hero-bottom-card {
+    margin-bottom: 35px;
+}
+
+.hero-bottom-card .card {
+    padding: 30px 130px;
+    padding-right: 0px !important;
+}
+
+.hero-bottom-card .card.card-2 {
+    padding-left: 30px;
+}
+
+.hero-bottom-card .bottom-card-img {
+    position: absolute;
+    top: 0px;
+    left: 15%;
+    width: 85%;
+    height: 270px;
+    padding: 0px 120px 0px 0px;
+}
+
+/* =================================================================================== */
+/*===== hero-banner-section End =====*/
+
+
+/*========== About Us(Why Vehya) section ==========*/
+.why-vehya {
+    padding: 25px 120px;
+    background-color: #F9F9F9;
+}
+
+.why-vehya .card-body {
+    padding: 10px 10px;
+}
+
+.why-vehya .card-body h1 {
+    font-size: 4rem;
+}
+
+.why-points-list {
+    font-size: 2rem;
+}
+
+.why-vehya .card-body a {
+    font-size: 1.4rem;
+    margin-top: 40px;
+}
+
+
+.why-vehya .why-img {
+    width: 100%;
+    height: 450px;
+}
+
+.why-img img::before {
+    content: " ";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(98, 98, 98, 0);
+}
+
+
+/* =================================================================================== */
+
+/*========== Our Partners Section Starts ==========*/
+
+.our-partner {
+    padding: 50px 50px;
+}
+
+.our-partner h1 {
+    font-size: 3rem;
+}
+
+
+.partner-img {
+    width: 100%;
+    height: 100px;
+    padding-top: 40px;
+}
+
+/*========== Our Partners Section End ==========*/
+
+/* =================================================================================== */
+
+/*========== How Can We Help Section Starts ==========*/
+.can-help {
+    padding: 50px 120px;
+}
+
+.can-help .title h1 {
+    font-size: 4rem;
+    /* text-transform: uppercase; */
+}
+
+.can-help .title>p {
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+
+.help-watermark {
+    position: absolute;
+    /* width: 100%; */
+    /* height: 100%; */
+    top: -97px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Russo One';
+    font-size: 115px;
+    text-transform: uppercase;
+    z-index: -1;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #e7e3e3;
+    opacity: .5;
+}
+
+.basic-card {
+    box-shadow: 0px 0px 10px #beb9b9;
+}
+
+.basic-card-img {
+    width: 100%;
+    height: 350px;
+}
+
+.img-overlay-rating {
+    position: absolute;
+    color: #ffff;
+    top: 7%;
+    left: 7%;
+}
+
+.img-overlay-price {
+    bottom: -20px;
+    position: absolute;
+    font-size: 18px;
+    background: #FFC107;
+    font-weight: 600;
+    padding: 15px 20px;
+    right: 6%;
+}
+
+.can-help a {
+    font-size: 1.4rem;
+    margin-top: 100px;
+}
+
+/*========== How Can We Help Section End ==========*/
+
+
+/*========== Application Section Starts ==========*/
+.applications {
+    padding: 50px 120px;
+    background-color: #f9f9f9;
+}
+
+.applications .title h1 {
+    font-size: 4rem;
+    /* text-transform: uppercase; */
+}
+
+.applications .title>p {
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+.application-watermark {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -97px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Russo One';
+    font-size: 115px;
+    text-transform: uppercase;
+    /* z-index: -1; */
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #e7e3e3;
+    opacity: .5;
+}
+
+.default-card-img {
+    height: 300px;
+}
+
+.default-card-img::after {
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient(to top, rgb(20, 20, 20), rgba(128, 127, 127, 0));
+}
+
+.card-img-overlay {
+    top: auto;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+.applications a {
+    font-size: 1.4rem;
+    margin-top: 15px;
+}
+
+/*========== Application Section End ==========*/
+/* =================================================================================== */
+
+/*========== Multi Purpose Uses Section Starts ==========*/
+.multi-use {
+    padding: 80px 75px;
+}
+
+.multi-use .title h1 {
+    font-size: 4rem;
+    /* text-transform: uppercase; */
+}
+
+.multiuse-watermark {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -97px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Russo One';
+    font-size: 115px;
+    text-transform: uppercase;
+    z-index: -1;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #e7e3e3;
+    opacity: .5;
+}
+
+.multi-use-list-container {
+    padding: 120px 80px;
+    padding-right: 0px;
+}
+
+.multi-use-list-container h1 {
+    font-size: 3rem;
+    margin: 25px 0px;
+}
+
+.multi-use-list-container p {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.multi-use-list-container .solution-icon {
+    width: 20%;
+    text-align: center;
+    padding: 18px 22px;
+    font-size: 3rem;
+}
+
+/*========== Multi Purpose Uses Section End ==========*/
+/* =================================================================================== */
+
+/*========== Testimonials Section Starts ==========*/
+.testimonial {
+    padding: 90px 120px;
+}
+
+.testimonial .title h1 {
+    font-size: 4rem;
+    /* text-transform: uppercase; */
+}
+
+.testimonial-watermark {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -97px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Russo One';
+    font-size: 115px;
+    text-transform: uppercase;
+    /* z-index: -1; */
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: pink;
+    opacity: .5;
+}
+
+.testimonial-card {
+    height: 275px;
+    margin-top: 100px;
+}
+
+.testimonial-card .card .card-body {
+    padding: 0px 70px;
+    font-size: 2rem;
+    line-height: 30px;
+    background-color: rgba(255, 255, 255, 10%);
+    color: #fff;
+}
+
+.tc-img {
+    height: 250px;
+}
+
+/* 
+.testimonial-card.slick-initialized .slick-list {
+    overflow: visible;
+} */
+.testimonial-card .row{
+    padding:3em;
+}
+.testimonial-card .row::before {
+    content: url(../img/quotations.svg);
+    position: absolute;
+    width: 109px;
+    height: 90px;
+    background-color: #FFC107;
+    color: #fff;
+    top: 16px;
+    bottom: auto;
+    left: 19px;
+    right: auto;
+    font-size: 40px;
+    padding: 1px 24px;
+    padding-top: 19px;
+    z-index:1;
+}
+
+/* =============================================================================== */
+.tc-pagination {
+    padding: 80px 0px;
+    padding-top: 100px;
+}
+
+.tc-pagination .user-img {
+    width: 70px;
+    height: 70px;
+    border: 4px solid rgba(145, 142, 142, 0.176);
+    border-radius: 50%;
+}
+
+.tc-pagination .user-img.active {
+    position: absolute;
+    z-index: 10;
+    border: none;
+    width: 100px;
+    height: 100px;
+}
+
+/*========== Testimonials Section End ==========*/
+
+/*========== Have Question Section Starts ==========*/
+.hav-que-img {
+    height: 350px;
+}
+
+.have-question .title h1 {
+    font-size: 4rem;
+    /* text-transform: uppercase; */
+}
+
+.have-question .title>p {
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+.hav-que-watermark {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -40px;
+    left: 100%;
+    transform: translateX(-50%);
+    font-family: 'Russo One';
+    font-size: 75px;
+    text-transform: uppercase;
+    /* z-index: -1; */
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #bda228fd;
+    opacity: .5;
+}
+
+.have-btn a {
+    font-size: 1.4rem;
+    margin-top: 20px;
+    margin-right: 40px;
+    letter-spacing: 1px;
+}
+
+/*========== Have Question Section End ==========*/
+
+
+/*========== Footer section Starts ==========*/
+.footer-section {
+    padding: 120px 90px;
+    background-color: #242424;
+}
+
+.footer-alert {
+    background-color: #1D1D1D;
+}
+
+.footer-img {
+    width: 200px;
+}
+
+.footer-social-links a {
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #565656;
+    font-size: 2rem;
+    padding: 10px;
+    margin-right: 10px;
+
+}
+
+.footer-nav li {
+    margin-bottom: 15px;
+}
+
+
+.footer-nav a {
+    color: rgba(255, 255, 255, 50%);
+    text-decoration: none;
+}
+
+.footer-search input {
+    font-size: 1.6rem;
+    border: 1px solid #565656;
+}
+
+.footer-search button {
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+/*========== Footer section End ==========*/
+
+
+/*============================================== The Home Page (index.html) Page Style End ===========================================*/
+
+
+/*============================================== The Pricing Page Style Starts ===========================================*/
+/*===== Page Hero Title Starts =====*/
+.page-hero-title {
+    padding: 30px 0px;
+}
+
+.page-hero-title h1 {
+    font-size: 3rem;
+}
+
+.page-hero-title p {
+    font-size: 1.8rem;
+}
+
+/*===== How Can we Help Section As Equipment Pricing Section Starts =====*/
+.cat-2,
+.cat-4 {
+    background-color: #F9F9F9;
+}
+
+.cat-1,
+.cat-2,
+.cat-3,
+.cat-4 {
+    padding: 50px 0px;
+}
+
+/*========= How Can we Help Section As All Blogs Section Starts ==========*/
+.blog-sec .form-select {
+    border: 2px solid #FFC107;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.blog-sec .form-select {
+    background-image: url("../img/select-yellow-arrow.svg");
+}
+
+.blog-sec .form-select:focus {
+    border-color: #FFC107;
+    outline: 0;
+    box-shadow: 0 0 0 2px #FFC107;
+}
+
+a.img-overlay-price {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+}
+
+.blog-pagination .pagination a {
+    padding: 10px 25px;
+    font-size: 2rem;
+    color: #464646;
+    font-weight: 600;
+    background-color: #E1E1E1;
+    border-color: #b3b1b1;
+}
+
+.page-link:hover {
+    z-index: 2;
+    color: #0a58ca;
+
+}
+
+.blog-pagination .page-item.active .page-link {
+    background: #464646;
+    border-color: #464646;
+    color: #fff;
+}
+
+.blog-pagination .page-link:focus {
+    box-shadow: none;
+}
+
+/*========= How Can we Help Section As Blog Post 1 Section Starts ==========*/
+.blog-banner {
+    padding: 50px 120px;
+}
+
+.blog-banner .breadcrumb-item a {
+    color: #181717;
+    font-size: 2rem;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.blog-banner .breadcrumb-item+.breadcrumb-item::before {
+    
+    float: none;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #C4C4C4;
+    padding: 0px 20px;
+}
+
+.blog-banner .breadcrumb-item.active a {
+    color: #b5b2b2;
+}
+
+.blog-data .card {
+    border-bottom: 2px solid #b8b6b6 !important;
+    padding-bottom: 50px;
+    border-radius: 0px;
+}
+
+.blog-data .basic-card-img {
+    height: 450px;
+}
+
+.blog-social a {
+    text-decoration: none;
+    color: #464646;
+    font-size: 3rem;
+    /* padding: 10px; */
+}
+
+.blog-data .nav-tabs {
+    border: none;
+}
+
+.blog-data .nav-link {
+    color: #9b9898;
+}
+
+.blog-data .nav-tabs .nav-link {
+    border: none;
+    border-bottom: 3px solid transparent;
+}
+
+.blog-data .nav-tabs .nav-link.active,
+.blog-data .nav-tabs .nav-item.show .nav-link {
+    color: #464646;
+    border: none;
+    border-bottom: 3px solid #FFC107;
+}
+
+
+/*============= Application Pages Starts ===========*/
+.application-page.blog-data .card {
+    border: none !important;
+}
+
+/*========== Careers Page Starts ==========*/
+.careers-section.why-vehya .why-img {
+    width: 50%;
+    height: 88px;
+}
+
+.careers-section.why-vehya .card-body h1 {
+    font-size: 2.3rem;
+}
+
+.careers-section.why-vehya .card-body a {
+    margin-top: 20px;
+}
+
+.career-banner.blog-banner {
+    padding: 30px 210px;
+}
+
+.careers-section.why-vehya {
+    padding: 50px 120px;
+}
+
+.careers-section input {
+    font-size: 1.6rem;
+}
+
+.careers-section button {
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.applications .fa-home,
+.applications .fa-building {
+    font-size: 60px;
+    padding-bottom: 20px;
+}
+
+/* ========================================================== */
+
+.web-about.why-vehya {
+    background-color: #f9f9f9;
+}
+
+/*========== Website Style CSS End ==========*/

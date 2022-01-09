@@ -1,0 +1,336 @@
+/*============================================== The Home Page (index.html) Page Responsive Starts ===========================================*/
+
+
+@media screen and (max-width:480px) {
+    /*=========== header Section Responsive ===========*/
+
+    /*==== With out offcanvaas header ====*/
+    header .navbar {
+        padding: 20px 20px;
+        box-shadow: 0px 0px 5px #f4cd1e;
+    }
+
+    .nav-bar_logo {
+        width: 120px;
+    }
+
+    header .navbar-nav .nav-item {
+        padding: 5px 0px;
+    }
+
+    header .drop-1 .dropdown-menu {
+        text-align: left;
+    }
+
+    .get-quote-btn a {
+        width: 100%;
+    }
+
+    header .navbar-light .navbar-toggler-icon {
+        background-image: url("../img/toggle-icon.svg");
+    }
+
+    header .navbar-light .navbar-toggler {
+        color: #F4CD1E;
+        border-color: #F4CD1E;
+        width: 50px;
+        height: 30px;
+    }
+
+    /* ============================================================================ */
+
+
+    /*========= hero-banner-section =========*/
+    .banner {
+        padding: 25px 5px;
+    }
+
+    .banner-title {
+        padding: 5px 0px 5px 15px;
+    }
+
+    .banner-title h3 {
+        font-size: 2.5rem;
+    }
+
+    .banner-watermark {
+        font-size: 8rem;
+        top: 15px;
+        left: 15px;
+    }
+
+    .banner-disc {
+        width: 90%;
+        margin: 25px auto;
+    }
+
+    .banner-btn {
+        margin: 25px 0px;
+    }
+
+    /*======= Responsive Slick Slider IN Hero banner section =======*/
+    .hero-banner-section .slick-dots {
+        left: 0;
+        right: 0;
+        top: auto;
+        bottom: 9px;
+        transform: rotate(0deg);
+        z-index: 9;
+    }
+
+    .banner::after {
+        display: none;
+    }
+
+    /*==== Responsive Bottom Cards Of Hero Banner Section ====*/
+    .hero-bottom-card .card {
+        padding: 30px 0px;
+    }
+
+    .hero-bottom-card .card.card-2 {
+        padding: 0px;
+    }
+
+    .hero-bottom-card .bottom-card-img {
+        position: static;
+        width: 100%;
+        padding: 0px;
+        height: auto;
+    }
+
+    .hero-bottom-card {
+        margin: 0px;
+    }
+
+    /* =================================================================================== */
+
+    /*========== About Us(Why Vehya) section ==========*/
+    .why-vehya {
+        padding: 25px 0px;
+    }
+
+    .why-vehya .card-body h1 {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+    }
+
+    .why-points-list {
+        font-size: 1.27rem;
+    }
+
+    .why-vehya .card-body a {
+        font-size: 1.3rem;
+        margin-top: 15px;
+    }
+
+    /* =================================================================================== */
+
+    /*======= Our Partners Section Starts ========*/
+    .our-partner {
+        padding: 25px 10px;
+    }
+
+    /* =================================================================================== */
+
+    /*========== How Can we Help Section ==========*/
+    .can-help {
+        padding: 25px 10px;
+    }
+
+    .can-help .title h1 {
+        font-size: 3rem;
+    }
+
+    .can-help .title>p {
+        font-size: 1.5rem;
+    }
+
+    .help-watermark {
+        width: 100%;
+        height: 100%;
+        top: -30px;
+        font-size: 40px;
+    }
+
+    .can-help a {
+        margin-top: 30px;
+    }
+
+    /* =================================================================================== */
+
+    /*========== EV charger Section ==========*/
+    .applications {
+        padding: 25px 10px;
+    }
+
+    .applications .title h1 {
+        font-size: 2.43rem;
+    }
+
+    .application-watermark {
+        top: -35px;
+        font-size: 40px;
+    }
+
+    .applications .title>p {
+        font-size: 1.5rem;
+    }
+
+    /* =================================================================================== */
+
+    /*========== Multipurpose uses Section Starts ==========*/
+    .multi-use {
+        padding: 25px 10px;
+    }
+
+    .multi-use .title h1 {
+        font-size: 3rem;
+    }
+
+    .multiuse-watermark {
+        top: -30px;
+        font-size: 39px;
+    }
+
+    .multi-use-list-container {
+        padding: 25px 10px;
+        padding-right: 10px;
+    }
+
+    .multi-use-list-container .solution-icon {
+        width: 60%;
+        padding: 10px 10px;
+    }
+
+    .multi-use-list-container h1 {
+        font-size: 2rem;
+        margin: 20px 0px;
+    }
+
+    .multi-use-list-container p {
+        font-size: 1.43rem;
+    }
+
+    /* =================================================================================== */
+
+    /*========== Testimonial Section Starts ==========*/
+    .testimonial {
+        padding: 25px 10px;
+    }
+
+    .testimonial-watermark {
+        top: -15px;
+        font-size: 32px;
+    }
+
+    .testimonial-card {
+        margin-top: 40px;
+        height: auto;
+    }
+
+    .testimonial-card.slick-initialized.slick-slider button {
+        display: none !important;
+    }
+
+    .testimonial-card .card .card-body {
+        padding: 5px;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .tc-pagination {
+        padding: 50px 0px;
+        padding-top: 30px;
+    }
+
+    .tc-pagination .user-img {
+        width: 46px;
+        height: 45px;
+    }
+
+    .tc-pagination .user-img.active {
+        width: 60px;
+        height: 60px;
+    }
+
+    /* =================================================================================== */
+
+    /*========== Have a question Section Starts ==========*/
+    .hav-que-watermark {
+        top: -10px;
+        left: 22%;
+        font-size: 40px;
+        transform: translateX(0px);
+        width: auto;
+        height: auto;
+    }
+
+    .have-question .title {
+        width: 100% !important;
+    }
+
+    .have-question .title>p {
+        font-size: 1.7rem;
+    }
+
+    .have-btn a {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+        margin-right: 10px;
+        letter-spacing: 0px;
+    }
+
+    /* =================================================================================== */
+
+    /*========== Footer Section Starts ==========*/
+    .footer-section {
+        padding: 50px 10px;
+    }
+
+    /* =================================================================================== */
+
+    /*============================================== The Home Page (index.html) Page Responsive End ===========================================*/
+
+    .pricing-banner .page-hero-title p {
+        font-size: 1.5rem;
+    }
+
+    .pricing .eq-cat h1 {
+        font-size: 2.5rem;
+    }
+
+    /*============================================== The Blog Page (blog-1.html) Page Responsive Starts ===========================================*/
+
+    .blog-banner {
+        padding: 25px 10px;
+    }
+
+    .blog-banner .breadcrumb-item a {
+        font-size: 1.8rem;
+    }
+
+    .blog-banner .breadcrumb-item+.breadcrumb-item::before {
+        content: "- ";
+        padding: 0px 0px;
+    }
+
+
+    .careers-section.why-vehya {
+        padding: 25px 10px;
+    }
+
+    .careers-section.why-vehya .why-img {
+        width: 100%;
+        height: 64px;
+    }
+
+    .careers-section.why-vehya .card-body h1 {
+        font-size: 1.9rem;
+    }
+
+
+
+
+
+    /*============================================== The Blog Page (blog-1.html) Page Responsive End ===========================================*/
+}
