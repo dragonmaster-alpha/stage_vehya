@@ -1,21 +1,6 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
-
-
-<!------- Vehya Project Starts ON Friday,10-Dec-2021 at 4.00PM ------->
-
-
-
-
-
-<!-- Mirrored from iwebwiserprojects.xyz/Vehya_Project/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 17 Dec 2021 06:22:14 GMT -->
-
 @include('veh.includes.assets')
-
-
-
 <body>
 
     <!------- Main Container Starts ------->
@@ -29,45 +14,35 @@
 
         <!------- Header section End ------->
 
+           <section class="sec1 d-flex justify-content-center text-center bg-dark">
+            <img src="{{env('APP_URL')}}public/veh/assets/img/HomePage.jpg" alt="GET A QUOTE" style="width:100%;height:auto;">
+               <h1 class="mt-5">Calling All Engineers</h1>
+        </section>
+        <div class="text-center my-4">
+                <h1 style="font-size: 32px; font-weight: normal;" ><p>We're looking for creative innovators, who share our passion for bots, AI, and technology</p><p>Makers whol love to build stuff with their own hands and challenge the status quo.</p></h1>
+        </div>
 
 
         <!------- Hero Banner Section Start ------->
 
-        <section class="pricing-banner hero-banner-section base-bg">
-
-            <div class="container-fluid">
-
-                <div class="row justify-content-center align-items-center">
-
-                    <div class="col-lg-4 col-12">
-
+        <!--<section class="pricing-banner hero-banner-section base-bg">-->
+        <!--    <div class="container-fluid">-->
+        <!--        <div class="row justify-content-center align-items-center">-->
+        <!--            <div class="col-lg-4 col-12">-->
                         <!------ Page Hero Title ------>
-
-                        <div class="page-hero-title text-white text-center">
-
-                            <h1 class="russo-font text-uppercase">Careers with<br>Vehya</h1>
-
-                            <p class="my-3">
-
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-
-                                incididunt ut labore et dolore magna
-
-                                aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-
-                                aliquip ex ea.
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
+        <!--                <div class="page-hero-title text-white text-center">-->
+        <!--                    <h1 class="russo-font text-uppercase">Careers with<br>Vehya</h1>-->
+        <!--                    <p class="my-3">-->
+        <!--                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor-->
+        <!--                        incididunt ut labore et dolore magna-->
+        <!--                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut-->
+        <!--                        aliquip ex ea.-->
+        <!--                    </p>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--        </div>-->
+        <!--    </div>-->
+        <!--</section>-->
 
         <!------- Hero Banner Section End ------->
 

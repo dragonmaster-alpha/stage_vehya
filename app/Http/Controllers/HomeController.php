@@ -76,11 +76,12 @@ public function commercial(Request $request)
         $input->address = $request->address;
         $input->city = $request->city;
         $input->state = $request->state;
+        $input->zip_code = $request->zip_code;
         
         
         try{
 
-            Session::flash('message', 'Successfully Done');
+            Session::flash('message', 'Success');
 
             Session::flash('alert_class', 'success');
             $input->save();
@@ -103,13 +104,13 @@ public function commercial(Request $request)
             //var_dump($request->email);die;
                 $data = ['name'=>$request->name, 'data'=> ""];
                 $user['to'] = $request->email; //'quicksnetolution@gmail.com';
-                Mail::send('mail', $data, function($message) use ($user) {
+                Mail::send('emails.mail', $data, function($message) use ($user) {
                 $message->to($user['to']);
                 $message->subject("Vehya");
                 });
                 
                 $admint_message ="Hi, Admin You received a notification";
-                $data = ['name'=>"Vish", 'data'=> "Hello Vish"];
+                $data = ['name'=>"", 'data'=> ""];
                 $user['to']='demomailfortesting88@gmail.com';
                 Mail::raw($admint_message, function ($message) use ($user) {
                     $message->to($user['to']);
@@ -122,7 +123,7 @@ public function commercial(Request $request)
 
             $errormsg = 'Database error! ' . $exception->getCode();
 
-            Session::flash('message', 'Somthing Error');
+            Session::flash('message', 'Some error has occurred');
 
             Session::flash('alert_class', 'danger');
 
@@ -157,6 +158,7 @@ public function residential(Request $request)
         $input->address = $request->address;
         $input->city = $request->city;
         $input->state = $request->state;
+        $input->zip_code = $request->zip_code;
         $input->make = $request->make;
         $input->model = $request->model;
         
@@ -206,13 +208,13 @@ public function residential(Request $request)
             
                 $data = ['name'=>$request->name, 'data'=> ""];
                 $user['to'] = $request->email; //'quicksnetolution@gmail.com';
-                Mail::send('mail', $data, function($message) use ($user) {
+                Mail::send('emails.mail', $data, function($message) use ($user) {
                 $message->to($user['to']);
                 $message->subject("Vehya");
                 });
                 
                 $admint_message ="Hi, Admin You received a notification";
-                $data = ['name'=>"Vish", 'data'=> "Hello Vish"];
+                $data = ['name'=>"", 'data'=> ""];
                 $user['to']='demomailfortesting88@gmail.com';
                 Mail::raw($admint_message, function ($message) use ($user) {
                     $message->to($user['to']);
@@ -456,7 +458,7 @@ public function contactUs(Request $request){
         
         try{
 
-            Session::flash('message', 'Submit Successfully');
+            Session::flash('message', 'Submitted successfully');
 
             Session::flash('alert_class', 'success');
 
@@ -468,7 +470,7 @@ public function contactUs(Request $request){
 
             $errormsg = 'Database error! ' . $exception->getCode();
 
-            Session::flash('message', 'Somthing error');
+            Session::flash('message', 'Some error has occurred');
 
             Session::flash('alert_class', 'danger');
 
@@ -495,7 +497,7 @@ public function newsLetter(Request $request){
         $input->email = $request->email;
         
         $input->save();
-        Session::flash('message', 'Your Data Successfully Sent');
+        Session::flash('message', 'Your data has been successfully sent');
         Session::flash('alert_class', 'danger');
         return redirect(env('APP_URL').'veh/');
         

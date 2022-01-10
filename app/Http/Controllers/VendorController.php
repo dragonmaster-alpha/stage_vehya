@@ -145,7 +145,7 @@ public function forgetPassword(Request $request){
 
                 }else{
 
-                    Session::flash('message', 'Email not match');
+                    Session::flash('message', 'Email not matched');
 
                     Session::flash('alert_class', 'danger');
 
@@ -279,7 +279,7 @@ public function userProfile(Request $request){
 
                 Vendor::where('id',$user_id)->update(['password'=>md5($ext['password'])]);
                 
-                Session::flash('message', 'User Password Reset successfully');
+                Session::flash('message', 'User password reset successfully');
 
                 Session::flash('alert_class', 'success');
             }
@@ -399,7 +399,7 @@ public function addVendor(Request $request){
             
         try{
 
-            Session::flash('message', 'Vendor Created successfully');
+            Session::flash('message', 'Vendor created successfully');
 
             Session::flash('alert_class', 'success');
 
@@ -478,7 +478,7 @@ public function vendorDelete($id){
 
         try{
 
-            Session::flash('message', 'Vendor Deleted successfully');
+            Session::flash('message', 'Vendor deleted successfully');
 
             Session::flash('alert_class', 'success');
 
@@ -490,7 +490,7 @@ public function vendorDelete($id){
 
             $errormsg = 'Database error! ' . $exception->getCode();
 
-            Session::flash('message', 'Vendor do not Delete');
+            Session::flash('message', 'Vendor could not be deleted');
 
             Session::flash('alert_class', 'danger');
 
@@ -769,7 +769,7 @@ public function vendorUpdate(Request $request, $id){
 
             $errormsg = 'Database error! ' . $exception->getCode();
 
-            Session::flash('message', 'Vendor  Does Not Update successfully');
+            Session::flash('message', 'Vendor could not be updated');
 
             Session::flash('alert_class', 'danger');
 
@@ -827,10 +827,11 @@ public function addElectrician(Request $request){
         $user_id = Session::get('vendors');
         $data['user'] = $this->user($user_id);
         if(!empty($request->post('_token'))){ 
-        
+        //print_r($user_id); die();
         $input = new Electrician;
         //print_r($input); die();
         //echo "<pre />";print_r($input); die();
+        $input->vendor_id = $user_id;
         $input->name = $request->name;
         $input->email = $request->email;
         $input->password = md5($request->password);
@@ -895,7 +896,7 @@ public function addElectrician(Request $request){
            
         try{
 
-            Session::flash('message', 'Electrician Created successfully');
+            Session::flash('message', 'Electrician created successfully');
 
             Session::flash('alert_class', 'success');
 
@@ -954,7 +955,7 @@ public function electricianList(Request $request){
 
           $data['user'] = $this->user($user_id);
 
-          $data['electricianlist'] = Electrician::orderBy('id', 'desc')->get();
+          $data['electricianlist'] = Electrician::orderBy('id', 'desc')->where('vendor_id', $user_id)->get();
 
           $data['active'] = 'electrician';
 
@@ -979,7 +980,7 @@ public function electricianDelete($id){
 
         try{
 
-            Session::flash('message', 'Electrician Deleted successfully');
+            Session::flash('message', 'Electrician deleted successfully');
 
             Session::flash('alert_class', 'success');
 
@@ -991,7 +992,7 @@ public function electricianDelete($id){
 
             $errormsg = 'Database error! ' . $exception->getCode();
 
-            Session::flash('message', 'Electrician do not Delete');
+            Session::flash('message', 'Electrician could not be deleted');
 
             Session::flash('alert_class', 'danger');
 
@@ -1067,7 +1068,7 @@ public function electricianUpdate(Request $request, $id){
         
         try{
 
-            Session::flash('message', 'Electrician Updated successfully');
+            Session::flash('message', 'Electrician updated successfully');
 
             Session::flash('alert_class', 'success');
 
@@ -1079,7 +1080,7 @@ public function electricianUpdate(Request $request, $id){
 
             $errormsg = 'Database error! ' . $exception->getCode();
 
-            Session::flash('message', 'Electrician  Does Not Update successfully');
+            Session::flash('message', 'Electrician could not be updated');
 
             Session::flash('alert_class', 'danger');
 
@@ -1186,7 +1187,7 @@ public function addJob(Request $request){
 
             if($achecke > 0){
 
-            Session::flash('message', 'User already exists with same mobile Number');
+            Session::flash('message', 'User already exists with same mobile number');
 
             Session::flash('alert_class', 'danger');
 
@@ -1324,7 +1325,7 @@ public function addJob(Request $request){
             
         try{
 
-            Session::flash('message', 'Job Created successfully');
+            Session::flash('message', 'Job created successfully');
 
             Session::flash('alert_class', 'success');
 
@@ -1414,7 +1415,7 @@ public function jobListStatus($status,$id){
         $user_id = Session::get('vendors');
         $data['user'] = $this->user($user_id);
         try{
-            Session::flash('message', 'Successfully Done');
+            Session::flash('message', 'Successfully done');
             Session::flash('alert_class', 'success');
             if($status == 'accept'){
             Job::where('customer_id',$id)->update(["status"=>'active']);
@@ -1440,7 +1441,7 @@ public function jobListStatus($status,$id){
             }catch(\Exception $exception)
         {
             $errormsg = 'Database error! ' . $exception->getCode();
-            Session::flash('message', 'Vendor Not assigned');
+            Session::flash('message', 'Vendor not assigned');
             Session::flash('alert_class', 'danger');
             return redirect(env('APP_URL').'vendors/job-list')->withInput();
             exit;

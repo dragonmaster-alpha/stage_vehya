@@ -32,7 +32,7 @@
             <img src="{{env('APP_URL')}}public/veh/assets/img/HomePage.jpg" alt="GET A QUOTE" style="width:100%;height:auto;">
                <h1 class="mt-5">EV CHARGER INSTALLS <br> & SERVICE MADE EASY</h1>
             <div class=" text-center my-4">
-                <a href="{{env('APP_URL')}}veh/get_quote"><button class="btn-yellow-lg" >GET A QUOTE</button></a>
+                <a href="{{env('APP_URL')}}veh/get-quote"><button class="btn-yellow-lg" >GET A QUOTE</button></a>
            </div>
         </section>
         <section class="sec2">
@@ -40,7 +40,7 @@
             <img src="{{env('APP_URL')}}public/veh/assets/img/yellowcar.jpg" alt="GET A QUOTE" class="imgcenter ">
             <div class="mx-5 justify-content-center text-center">
                 <img src="{{env('APP_URL')}}public/veh/assets/img/customers.jpg" class="imgcenter " alt="">
-                <button class="my-3 btn-yellow-lg">COMPARE</button>
+                <a href="{{env('APP_URL')}}veh/pricing"><button class="my-3 btn-yellow-lg">COMPARE</button></a>
             </div>
 
         </section>
@@ -49,7 +49,7 @@
             <img src="{{env('APP_URL')}}public/veh/assets/img/brandlogos.jpg" alt="GET A QUOTE" class="imgcenter ">
             <div class=" text-center my-4">
                 <h1 style="font-size: 40px; font-weight: normal;" >And many more...</h1>
-                <a href="{{env('APP_URL')}}veh/get_quote"><button class="my-4 btn-yellow-lg">GET A QUOTE</button></a>
+                <a href="{{env('APP_URL')}}veh/get-quote"><button class="my-4 btn-yellow-lg">GET A QUOTE</button></a>
             </div>
         </section>
         <section class="sec4 pt-5">
@@ -115,14 +115,14 @@
                         </div>
                     </div>
                 </div>
-                <button class="btn-yellow-lg mt-5">GET A QUOTE</button>
+                <a href="{{env('APP_URL')}}veh/get-quote"><button class="btn-yellow-lg mt-5">GET A QUOTE</button></a>
             </div>
 
         </section>
         <section class="sec5 text-center">
             <h1 class="text-center mt-4">Certified Electricians</h1>
             <img src="{{env('APP_URL')}}public/veh/assets/img/certifiedElectricians.png" alt="GET A QUOTE" class="imgcenter ">
-            <button class="btn-yellow-lg my-5">LEARN MORE</button>
+            <a href="{{env('APP_URL')}}veh/about_us"><button class="btn-yellow-lg my-5">LEARN MORE</button></a>
         </section>
         <section class="sec6 p-4">
             <h1 class="text-center mt-4">Some Numbers</h1>
@@ -206,7 +206,7 @@
 
                     
                 </div>
-                <button class="btn-yellow-lg my-5">ABOUT VEHYA</button>
+                <a href="{{env('APP_URL')}}veh/about_us"><button class="btn-yellow-lg my-5">ABOUT VEHYA</button></a>
             </div>
         </section>
 

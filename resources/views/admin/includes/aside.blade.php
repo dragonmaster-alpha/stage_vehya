@@ -22,7 +22,7 @@
             <a href="{{env('APP_URL')}}admin/vendor-list" class="nav-link @if($active == 'vendor')active @endif">
               <i class="nav-icon fas fa-copy"></i>
               <p>
-                Vendor 
+                Vendors
               </p>
             </a>
           </li>
@@ -34,49 +34,95 @@
           <!--    </p>-->
           <!--  </a>-->
           <!--</li>-->
-          <li class="nav-item">
-       <a href="#" class="nav-link @if($active == 'customer')active @endif">
-        <i class="nav-icon fas fa-copy"></i>
-        <p>
-      Job
-      <i class="fas fa-angle-left right"></i>
-
-      </p>
-       </a>
-       
-       <ul class="nav nav-treeview" >
-              <li class="nav-item">
+          
+           <li class="nav-item">
             <a href="{{env('APP_URL').'admin/'}}customer-list/pending" class="nav-link">
               <i class="nav-icon fas fa-copy"></i>
               <p>
-                Pending
+                Pending Assignment
               </p>
             </a>
              </li>
-              <li class="nav-item">
+             <li class="nav-item">
             <a href="{{env('APP_URL').'admin/'}}customer-list/assign" class="nav-link">
               <i class="nav-icon fas fa-copy"></i>
               <p>
-                Assign
+                Assigned Jobs
               </p>
             </a>
-             </li>
-              <li class="nav-item">
+            </li>
+            </li>
+            <li class="nav-item">
             <a href="{{env('APP_URL').'admin/'}}customer-list/active" class="nav-link">
               <i class="nav-icon fas fa-copy"></i>
               <p>
-                Accepted
+                Accepted/Active Jobs
               </p>
             </a>
-             </li>
-              <li class="nav-item">
+            </li>
+            <li class="nav-item">
+            <a href="{{env('APP_URL').'admin/'}}customer-list/declined" class="nav-link">
+              <i class="nav-icon fas fa-copy"></i>
+              <p>
+                Declined Jobs
+              </p>
+            </a>
+            </li>
+            <li class="nav-item">
             <a href="{{env('APP_URL').'admin/'}}customer-list/complete" class="nav-link">
               <i class="nav-icon fas fa-copy"></i>
               <p>
-                Complete
+                Completed Jobs
               </p>
             </a>
-             </li>
+            </li>
+             
+             
+       <!--   <li class="nav-item">-->
+       <!--<a href="#" class="nav-link @if($active == 'customer')active @endif">-->
+       <!-- <i class="nav-icon fas fa-copy"></i>-->
+       <!-- <p>Customer Jobs<i class="fas fa-angle-left right"></i></p>-->
+       <!--</a>-->
+       
+       <!--<ul class="nav nav-treeview" >-->
+       <!--       <li class="nav-item">-->
+       <!--     <a href="{{env('APP_URL').'admin/'}}customer-list/pending" class="nav-link">-->
+       <!--       <i class="nav-icon fas fa-copy"></i>-->
+       <!--       <p>-->
+       <!--         Pending Assignment-->
+       <!--       </p>-->
+       <!--     </a>-->
+       <!--      </li>-->
+       <!--       <li class="nav-item">-->
+       <!--     <a href="{{env('APP_URL').'admin/'}}customer-list/assign" class="nav-link">-->
+       <!--       <i class="nav-icon fas fa-copy"></i>-->
+       <!--       <p>-->
+       <!--         Assigned Jobs-->
+       <!--       </p>-->
+       <!--     </a>-->
+       <!--      </li>-->
+       <!--       <li class="nav-item">-->
+       <!--     <a href="{{env('APP_URL').'admin/'}}customer-list/active" class="nav-link">-->
+       <!--       <i class="nav-icon fas fa-copy"></i>-->
+       <!--       <p>-->
+       <!--         Accepted/Active Jobs-->
+       <!--       </p>-->
+       <!--     </a>-->
+       <!--      </li>-->
+       <!--       <li class="nav-item">-->
+       <!--     <a href="{{env('APP_URL').'admin/'}}customer-list/complete" class="nav-link">-->
+       <!--       <i class="nav-icon fas fa-copy"></i>-->
+       <!--       <p>-->
+       <!--         Completed Jobs-->
+       <!--       </p>-->
+       <!--     </a>-->
+       <!--     <a href="{{env('APP_URL').'admin/'}}customer-list/complete" class="nav-link">-->
+       <!--       <i class="nav-icon fas fa-copy"></i>-->
+       <!--       <p>-->
+       <!--         Declined Jobs-->
+       <!--       </p>-->
+       <!--     </a>-->
+       <!--      </li>-->
              
              
           </ul>

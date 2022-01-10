@@ -23,7 +23,7 @@
                         <ul>
                             <li class="text-warning">Company</li>
                             <a href="{{env('APP_URL')}}veh/about_us"><li>About</li></a>
-                            <li>Careers</li>
+                            <a href="{{env('APP_URL')}}veh/career"><li>Careers</li></a>
                             <li>Terms Of Use</li>
                             <li>Privacy Policy</li>
                         </ul>
@@ -31,10 +31,10 @@
                     <div class="col-md-3 col-xs-6 ">
                         <ul>
                             <li class="text-warning">Social</li>
-                            <li>Instagram</li>
+                            <a href="https://www.instagram.com/currentdealers/" target="_blank"><li>Instagram</li></a>
                             <li>LinkedIn</li>
                             <li>Twitter</li>
-                            <li>YouTube</li>
+                            <a href="https://www.youtube.com/channel/UCEtAzJ-se5gAh8Q0OWPDCkQ" target="_blank"><li>YouTube</li></a>
                         </ul>
                     </div>
 
@@ -46,10 +46,10 @@
                 </div>
                 <div class="col-12 mt-3">
                     <div class="d-flex justify-content-center">
-                        <a href="#"><i class="fa fa-instagram icon mx-3 pt-3 text-muted" ></i></a>
+                        <a href="https://www.instagram.com/currentdealers/"><i class="fa fa-instagram icon mx-3 pt-3 text-muted" ></i></a>
                         <a href="#"><i class="fa fa-facebook icon mx-3 pt-3 text-muted" ></i></a>
                         <a href="#"><i class="fa fa-twitter icon mx-3 pt-3 text-muted" ></i></a>
-                        <a href="#"><i class="fa fa-youtube-play icon mx-3 pt-3 text-muted" ></i></a>
+                        <a href="https://www.youtube.com/channel/UCEtAzJ-se5gAh8Q0OWPDCkQ"><i class="fa fa-youtube-play icon mx-3 pt-3 text-muted" ></i></a>
                         <a href="#"><i class="fa fa-dribbble icon mx-3 pt-3 text-muted" ></i></a>
                     </div>
                 </div>

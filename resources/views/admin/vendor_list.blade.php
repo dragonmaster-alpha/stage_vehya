@@ -28,7 +28,7 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Vendor List</h3>
+                <h3 class="card-title">Vendors List</h3>
                 <a href="add-vendor" class="btn btn-success" style="float:right;">Add Vendor</a>
               </div>
               <!-- /.card-header -->
@@ -36,11 +36,11 @@
                 <table id="example1" class="table table-bordered table-striped">
                   <thead>
                   <tr>
-                    <th>Sr No</th>
+                    <th>No</th>
                     <th>Name</th>
                     <th>Email</th>
-                    <th>Mobile No</th>
-                    <th>Disable/Enable</th>
+                    <th>Mobile</th>
+                    <th>Status</th>
                     <th>Pending/Approved</th>
                     <th class="text-center">Action</th> 
                   </tr>
@@ -58,7 +58,7 @@
                       @csrf
                       
                      <input type="hidden" name="vendor_status" value="{{$list['vendor_status'] == 0 ? 1 : 0 }}">
-                    <button type=submit class="btn btn-info"><i aria-hidden="true">@if($list['vendor_status'] == 0)Disable @else Enable @endif</i></button>
+                    <button type=submit class="btn btn-info"><i aria-hidden="true">@if($list['vendor_status'] == 0)Disabled @else Enabled @endif</i></button>
                     </form>
                     </td>
                      <td>

@@ -35,6 +35,21 @@
                 <div class="imgs"> <img src="{{env('APP_URL')}}public/veh/assets/img/HermealPhoto-01.png" alt="" srcset=""> </div>
             </h1>
             
+            <div class="tab">
+                    <h1 class="text-center mt-2 caps">
+                        <div class="headng">Thank you for choosing Vehya, <br> EV charger install & service made easy.</div>
+                    </h1>
+                    <div class="col-12 py-5 text-center">
+                        <img src="{{env('APP_URL')}}public/veh/assets/img/LastScreen-01 1.svg" alt="">
+                    </div>
+                    <h1 class="text-center mt-2 caps">
+                        <div class="headng">We look forward to working with you. <br> One of our representatives will contact you for the remaining details! 
+                        </div>
+                    </h1>
+                    <button type="submit" class="btn-yellow-lg">Submit</button> 
+                </div>
+            
+            
             <div class="forms">
                 <div>
                     <img src="{{env('APP_URL')}}public/veh/assets/img/thankks.jpg" alt="">

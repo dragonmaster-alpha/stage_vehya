@@ -1,50 +1,37 @@
-
-    
 <!DOCTYPE html>
-
 <html lang="en">
-    
-    
-    
     <!------- Vehya Project Starts ON Friday,10-Dec-2021 at 4.00PM ------->
-    
-    
-    
-    
-    
-    
     <link rel="stylesheet" href="{{env('APP_URL')}}public/veh/assets/css/accordion.css" type="text/css">
-    <link rel="stylesheet" href="{{env('APP_URL')}}public/veh/assets/css/style1.css" type="text/css">
-
+    <!--<link rel="stylesheet" href="{{env('APP_URL')}}public/veh/assets/css/style1.css" type="text/css">-->
 @include('veh.includes.assets')
-
-
-
 <body>
-
     <!------- Main Container Starts ------->
-
     <div class="main-container">
-
         <!------- Header section Starts ------->
-
         @include('veh.includes.header')
-
-
         <!------- Header section End ------->
 
-    <div style="position: relative;background: #242424;" class="price_sec1 d-flex flex-column text-center">
-        <div class="mt-2">
-            <h3 style="filter: invert(100%);" class="heading_russoone">Federal Electric Vehicle Tax Credits, Incentives
-                & Rebates</h3>
-            <h4 style="filter: invert(100%);" class="subheading_roboto"
-                style="margin:auto;text-align: center; padding:1em">
-
-                In addition to broad-scale electric vehicle incentives, states and utilities provide incentive programs,
-                rebates and tax credits specifically for purchasing and installing EV Charging equiptment across the
-                country. Search what is available in your area below. </h4>
+    <section class="sec1 d-flex justify-content-center text-center bg-dark">
+            <img src="{{env('APP_URL')}}public/veh/assets/img/HomePage.jpg" alt="GET A QUOTE" style="width:100%;height:auto;">
+               <h1 class="mt-5">Federal & State Electric Vehicle Tax<br>Credits, Incentives & Rebates</h1>
+        </section>
+        <div class="text-center my-4">
+                <h1 style="font-size: 32px; font-weight: normal;" >In addition to broad-scale electric vehicle incentives, states and utilities provide incentive programs, rebates and tax credits specifically for purchasing and installing EV charging equipment across the country. Search what is available in your area below.</h1>
         </div>
-    </div>
+
+
+    <!--<div style="position: relative;background: #242424;" class="price_sec1 d-flex flex-column text-center">-->
+    <!--    <div class="mt-2">-->
+    <!--        <h3 style="filter: invert(100%);" class="heading_russoone">Federal Electric Vehicle Tax Credits, Incentives-->
+    <!--            & Rebates</h3>-->
+    <!--        <h4 style="filter: invert(100%);" class="subheading_roboto"-->
+    <!--            style="margin:auto;text-align: center; padding:1em">-->
+
+    <!--            In addition to broad-scale electric vehicle incentives, states and utilities provide incentive programs,-->
+    <!--            rebates and tax credits specifically for purchasing and installing EV Charging equiptment across the-->
+    <!--            country. Search what is available in your area below. </h4>-->
+    <!--    </div>-->
+    <!--</div>-->
     <div class="detailexample mt-5 p-md-5 p-xs-1 ">
         <div class="row col-12 d-flex justify-content-center">
             <div class="col-lg-5 col-sm-12 current-accordion-card" style=" padding-top: 2em; padding-left: 3em;">

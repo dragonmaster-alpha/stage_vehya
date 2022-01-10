@@ -14,7 +14,7 @@
             <a href="{{env('APP_URL')}}vendors/vendor-list-show/{{$user->id}}" class="nav-link @if($active == 'user')active @endif">
               <i class="nav-icon fas fa-copy"></i>
               <p>
-               Profile 
+               My Profile 
               </p>
             </a>
           </li>
@@ -22,25 +22,15 @@
             <a href="{{env('APP_URL')}}vendors/electrician-list" class="nav-link @if($active == 'electrician')active @endif">
               <i class="nav-icon fas fa-copy"></i>
               <p>
-                Electrician
+                My Electricians
               </p>
             </a>
           </li>
           <li class="nav-item">
-           <a href="{{env('APP_URL').'vendors/'}}job-list" class="nav-link @if($active == 'job')active @endif">
-          <i class="nav-icon fas fa-copy"></i>
-          <p>
-              Job
-              <i class="fas fa-angle-left right"></i>
-          </p>
-       </a>
-       
-       <ul class="nav nav-treeview" >
-              <li class="nav-item">
             <a href="{{env('APP_URL').'vendors/'}}job-list/assign" class="nav-link">
               <i class="nav-icon fas fa-copy"></i>
               <p>
-                New Job
+                New Jobs
               </p>
             </a>
              </li>
@@ -48,7 +38,7 @@
               <a href="{{env('APP_URL').'vendors/'}}job-list/active" class="nav-link ">
               <i class="nav-icon fas fa-copy"></i>
               <p>
-                Active Job
+                Active Jobs
               </p>
             </a>
           </li>
@@ -56,10 +46,46 @@
             <a href="{{env('APP_URL').'vendors/'}}job-list/complete" class="nav-link">
               <i class="nav-icon fas fa-copy"></i>
               <p>
-                Complete Job
+                Completed Jobs
               </p>
               </a>
             </li>
+          
+          
+       <!--   <li class="nav-item">-->
+       <!--    <a href="{{env('APP_URL').'vendors/'}}job-list" class="nav-link @if($active == 'job')active @endif">-->
+       <!--   <i class="nav-icon fas fa-copy"></i>-->
+       <!--   <p>-->
+       <!--       Job-->
+       <!--       <i class="fas fa-angle-left right"></i>-->
+       <!--   </p>-->
+       <!--</a>-->
+       
+       <!--<ul class="nav nav-treeview" >-->
+       <!--       <li class="nav-item">-->
+       <!--     <a href="{{env('APP_URL').'vendors/'}}job-list/assign" class="nav-link">-->
+       <!--       <i class="nav-icon fas fa-copy"></i>-->
+       <!--       <p>-->
+       <!--         New Job-->
+       <!--       </p>-->
+       <!--     </a>-->
+       <!--      </li>-->
+       <!--      <li class="nav-item">-->
+       <!--       <a href="{{env('APP_URL').'vendors/'}}job-list/active" class="nav-link ">-->
+       <!--       <i class="nav-icon fas fa-copy"></i>-->
+       <!--       <p>-->
+       <!--         Active Job-->
+       <!--       </p>-->
+       <!--     </a>-->
+       <!--   </li>-->
+       <!--   <li class="nav-item">-->
+       <!--     <a href="{{env('APP_URL').'vendors/'}}job-list/complete" class="nav-link">-->
+       <!--       <i class="nav-icon fas fa-copy"></i>-->
+       <!--       <p>-->
+       <!--         Complete Job-->
+       <!--       </p>-->
+       <!--       </a>-->
+       <!--     </li>-->
           
           </ul>
       </li>

@@ -28,7 +28,7 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Pending Jobs</h3>
+                <h3 class="card-title">Customer Jobs</h3>
                 <!--<a href="add-customer" class="btn btn-success" style="float:right;">Add Customer</a>-->
               </div>
               <!-- /.card-header -->
@@ -38,11 +38,11 @@
                   <tr>
                     <th>Customer Name</th>
                     <th>Customer Type</th>
-                    <th>City || State</th>
+                    <th>City & State</th>
                     <th>Installation Date</th>
                     <th>Installation Amount</th>
                     @if($status !== "complete")
-                    <th colspan="2" class="text-center">Assign Vendor</th>
+                    <th colspan="2" class="text-center">Vendor</th>
                     <th class="text-center">Action</th>
                     @endif
                     @if($status == "complete")
@@ -56,7 +56,7 @@
                   <tr>
                     <td>{{$list->name}} {{$list->lname}}</td>
                     <td>{{$list->customer_type}}</td>
-                    <td>{{$list->city}} || {{$list->state}}</td>
+                    <td>{{$list->city}}, {{$list->state}}</td>
                     <td>{{$list->install_date}}</td>
                     <td>@if($list->total_amount == "") @else ${{$list->total_amount}} @endif</td>
                     
@@ -67,7 +67,7 @@
                       <input type="hidden" value="{{$list->customer_id}}" name="id">
                     <div class="form-group">
                         <select name="vendor_id" class="form-control selectpicker" required="">
-                          <option>**********</option>
+                          <option>Select Vendor</option>
                           @foreach($vendornmaes as $vendornmae)
                           <option value="<?php print_r($vendornmae->id); ?>"  @isset($list->vendor_id) @if($list->vendor_id == $vendornmae->id) selected @endif @endisset @if(old('vendor_id') == $vendornmae->id) selected @endif>{{$vendornmae->name}}</option>
                           @endforeach

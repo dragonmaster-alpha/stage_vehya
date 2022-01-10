@@ -1,33 +1,15 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
-
-
 <!------- Vehya Project Starts ON Friday,10-Dec-2021 at 4.00PM ------->
-
-
-
-
-
- <link rel="stylesheet" href="{{env('APP_URL')}}public/veh/assets/css/stylenew.css" type="text/css">
+<link rel="stylesheet" href="{{env('APP_URL')}}public/veh/assets/css/stylenew.css" type="text/css">
 @include('veh.includes.assets')
-
-
-
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=AIzaSyAuGkxTIibaR_uVyYVlEqzKYJEDs1GVSQo"></script> 
 <body>
-
     <!------- Main Container Starts ------->
-
     <div class="main-container">
-
         <!------- Header section Starts ------->
-
         @include('veh.includes.header')
-
-
         <!------- Header section End ------->
-
         <section class="sec2"></section>
         <hr>
         <div class="center">
@@ -37,7 +19,6 @@
             <form action="" id="regForm" method="post" enctype="multipart/form-data">
                   @csrf
                 <!-- One "tab" for each step in the form: -->
-
                 <!-- BRAND AND MODEL OF CHARGER -->
                  <div class="tab">
                     <h1 class="text-center mt-2 caps">
@@ -57,8 +38,6 @@
                                 </label>
                             </div>
                         </div>
-
-
                     </div>
                 </div>
                 <!-- EV CHARGERS WE ARE PROVIDING -->
@@ -79,7 +58,6 @@
                         <input type="radio" name="own_charger" value="WallBox-Pulsar-Plus-48"  onclick="camtf()"/>
                         </div>
                     </div>
-                    
                     <div class="forms form-design my-5">
                         <div class="items"> <label class="formcontrolinput">
                                 <input type="radio" name="own_charger" value="I-have-my-own-charger"  onclick="camtfa()"/>
@@ -96,16 +74,15 @@
                     <div class="forms form-design my-5">
                         <div class="items"> <label class="formcontrolinput">
                                 <input type="radio" name="next_year" value="Yes"  />
-                                Yes
+                                YES
                             </label></div>
 
                         <div class="items"> <label class="formcontrolinput">
                                 <label class="formcontrolinput">
                                     <input type="radio" name="next_year" value="No"  />
-                                    No
+                                    NO
                                 </label></div>
                     </div>
-
                 </div>
                 <!-- CONTACT INFO -->
                 <div class="tab">
@@ -117,13 +94,10 @@
                         <div class="row d-flex">
                             <div class="col-xl-6 col-lg-12 col-xs-12"> <label class="">
                                     <input type="text" name="name" placeholder="FIRST NAME"  />
-
                                 </label></div>
-
                             <div class="col-xl-6 col-lg-12 col-xs-12">
                                 <label class="">
                                     <input type="text" name="lname" placeholder='LAST NAME'  />
-
                                 </label>
                             </div>
                         </div>
@@ -143,13 +117,9 @@
                         </div>
                         <div class=" text-center my-4">
 
-                            <div class="termCondition">By clicking on NEXT, you are agreeing to our terms and policy
+                            <div class="termCondition">By Clicking On Next, You Are Agreeing To Our Terms And Privacy Policy
                             </div>
-
-
                         </div>
-
-
                     </div>
                 </div>
                 <!-- ADDRESS  -->
@@ -165,36 +135,28 @@
                     <div class="row" style="
                      text-align: center;">
 
-                        <div class="col-md-2"> <label class="formcontrolinput">
-                                <input type="text" name="address" placeholder="STREET" id="streetinput"  />
+                        <div class="col-md-2"> 
+                        <label class="formcontrolinput">
+                                <input type="text" name="address" placeholder="STREET" id="search_input"  />
 
-                            </label></div>
-
+                        </label>
+                        </div>
                         <div class="col-md-2">
                             <label class="formcontrolinput">
-                                <input type="text" name="number" placeholder='NUMBER'  />
+                                <input type="text" name="city" placeholder="CITY" id="city" />
+
+                            </label>
+                        </div>
+                        
+                        <div class="col-md-2">
+                            <label class="formcontrolinput">
+                                <input type="text" name="state" placeholder='STATE' id="state"  />
 
                             </label>
                         </div>
                         <div class="col-md-2">
                             <label class="formcontrolinput">
-                                <select name="state" required onchange="getcity()" id="states">
-                                    <option value="">Please select state</option>
-                                      @foreach($states as $state)
-                                    <option value="<?php print_r($state->id); ?>"  @isset($list) @if($list->state == $state->id) selected @endif @endisset @if(old('state') == $state->id) selected @endif>{{$state->name}}</option>
-                                      @endforeach
-                                </select>
-                            </label>
-                        </div>
-                        <div class="col-md-2">
-                            <label class="formcontrolinput">
-                                <input type="text" name="city" placeholder="CITY" />
-
-                            </label>
-                        </div>
-                        <div class="col-md-2">
-                            <label class="formcontrolinput">
-                                <input type="text" name="pc" placeholder="P.C"  />
+                                <input type="text" name="zip_code" placeholder="ZIP CODE" id="zip_code"   />
 
                             </label>
                         </div>
@@ -203,7 +165,7 @@
                <!-- STYLE OF HOME -->
                 <div class="tab">
                     <h1 class="text-center mt-2 caps">
-                        <div class="headng">WHAT STYLE OF HOME?</div>
+                        <div class="headng">What style of home?</div>
                     </h1>
                     <div class="forms">
                         <div class="showProperty row" >
@@ -229,44 +191,41 @@
                             <div class="col-xl-3 col-lg-12  items">
                                 <label class="formcontrolinput">
                                     <input type="radio" name="property_type" value="Rent"  />
-                                    rent
+                                    RENT
                                 </label>
                             </div>
 
                             <div class="col-xl-3 col-lg-12 items">
                                 <label class="formcontrolinput">
                                     <input type="radio" name="property_type" value="Own"  />
-                                    Ownership Type
+                                    OWN
                                 </label>
                             </div>
 
                             <div class="col-xl-3 col-lg-12 items">
                                 <label class="formcontrolinput">
                                     <input type="radio" name="property_type" value="Other"  />
-                                    Other
+                                    OTHER
                                 </label>
                             </div>
                         </div>
                     </div>
                 </div>
-                
                <!-- NEED PERMISSION? -->
                 <div class="tab">
                     <h1 class="text-center mt-2 caps">
-                        <div class="headng">WILL YOU NEED PERMISSION FROM ANYONE <br> TO INSTALL THIS EV CHARGER</div>
+                        <div class="headng">Will you need permission from anyone to install the EV charger?</div>
                     </h1>
                     <div class="forms form-design py-5">
                         <div class="items"> <label class="formcontrolinput">
                                 <input type="radio" name="permission" value="Yes"   />
-                                Yes
+                                YES
                             </label></div>
 
                         <div class="items"> <label class="formcontrolinput">
                                 <input type="radio" name="permission" value="No"  />
-                                No
+                                NO
                             </label></div>
-
-
                     </div>
                 </div>
                 <!-- GETTING POWER -->
@@ -286,21 +245,19 @@
                     <div class="forms form-design py-5">
                         <div class="items"> <label class="formcontrolinput">
                                 <input type="radio" name="ev_location_ie" value="Interior"   />
-                                Interior
+                                INTERIOR
                             </label></div>
 
                         <div class="items"> <label class="formcontrolinput">
                                 <input type="radio" name="ev_location_ie" value="Exterior" />
-                                Exterior
+                                EXTERIOR
                             </label></div>
-
-
                     </div>
                 </div>
                 <!-- DISTANCE 5FT 10FT 15FT 20FT -->
                 <div class="tab">
                     <h1 class="text-center mt-2 caps">
-                        <div class="headng">Approximately how far is it from the <br> breaker panel to the EV charger?</div>
+                        <div class="headng">Approximately how far is it from the breaker panel to the EV charger?</div>
                     </h1>
                     <div class="forms form-design py-5" style="width: 100%;">
                         <div class="distance">
@@ -333,20 +290,18 @@
                 <!-- EV CHARGER LOCATION ON SAME WALL?  -->
                 <div class="tab">
                     <h1 class="text-center mt-2 caps">
-                        <div class="headng">will the ev charger be located on the <br> same wall as the breaker panel?</div>
+                        <div class="headng">Will the EV charger be located on the same wall as the breaker panel?</div>
                     </h1>
                     <div class="forms form-design py-5">
                         <div class="items"> <label class="formcontrolinput">
                                 <input type="radio" name="breaker_panel" value="Yes"  >
-                                Yes
+                                YES
                             </label></div>
 
                         <div class="items"> <label class="formcontrolinput">
                                 <input type="radio" name="breaker_panel" value="No"   />
-                                No
+                                NO
                             </label></div>
-
-
                     </div>
                 </div>
                 <!-- Because EV chargers have power requirements, we need to understand the types of electrical items you have at your home. -->
@@ -359,7 +314,7 @@
                 <!-- Please choose the electrical items at your home. -->
                 <div class="tab">
                     <h1 class="text-center mt-2 caps">
-                        <div class="headng">Please choose the electrical items at your home.</div>
+                        <div class="headng">Please Choose The Electrical Items At Your Home.</div>
                     </h1>
                     <div class="forms">
 
@@ -450,22 +405,14 @@
                             </div>
 
                         </div>
-
-
-
-
-
-
                     </div>
                 </div>
                 <!-- WRAP -->
                 <div class="tab">
                     <h1 class="text-center mt-2 caps">
-                        <div class="headng">we'll wrap this quote up for you.</div>
+                        <div class="headng">We'll wrap this quote up for you.</div>
                     </h1>
                     <div class="forms">
-
-
                         <div class="form-design wrap">
                             <img src="./img/GQ-Commercial-10.png" alt="">
                         </div>
@@ -474,26 +421,24 @@
                 <!-- when are you looking to install your ev charger? -->
                 <div class="tab">
                     <h1 class="text-center mt-2 caps">
-                        <div class="headng">when are you looking to install your ev charger?</div>
+                        <div class="headng">When are you looking to install your EV charger?</div>
                     </h1>
                     <div class="forms form-design">
                         <div class="items"> <label class="formcontrolinput">
                                 <input type="radio"name="time_range" value="1-2 Weeks"    />
-                                1-3 weeks
+                                1-3 WEEKS
                             </label></div>
 
                         <div class="items"> <label class="formcontrolinput">
                                 <label class="formcontrolinput">
                                     <input type="radio" name="time_range" value="1 Month"    />
-                                    1 month
+                                    1 MONTH
                                 </label></div>
                         <div class="items"> <label class="formcontrolinput">
                                 <label class="formcontrolinput">
                                     <input type="radio" name="time_range" value="2 Month"    />
-                                    1 month+
+                                    1 MONTH+
                                 </label></div>
-
-
                     </div>
                 </div>
                     <!-- QUOTE IS HERE -->
@@ -501,17 +446,17 @@
 
                     <h1 class="text-center mt-2 caps">
 
-                        <div class="headng"><b>base on the vehya online assessnment <br> here's your Quote</b> </div>
+                        <div class="headng"><b>Based on the Vehya Online Assessnment <br> here's your quote.</b> </div>
                     </h1>
 
                     <div class="forms text-center ">
 
-                        <div class="cost" style="font-size: 2em;">total cost:$<span id="total_amount">1515</span></div>
+                        <div class="cost" style="font-size: 2em;">Total Cost:$<span id="total_amount">1515</span></div>
                         <ul style="font-size: 2em;">
-                            <li>charerpoint charger:$<span id="chargeramt"></span></li>
-                            <li>installation:$700</li>
-                            <li>permit:$100</li>
-                            <li>service fee:$65</li>
+                            <li>CHARGEPOINT CHARGER: $<span id="chargeramt"></span></li>
+                            <li>INSTALLATION: $700</li>
+                            <li>PERMIT: $100</li>
+                            <li>SERVICE FEE: $65</li>
                         </ul>
                         <!-- <div class=" text-center my-4 submit m-auto">
                             <div class="d-flex textstate m-auto justify-content-center text-center"><span class="left"
@@ -522,31 +467,24 @@
 
                                     </label></div>
                             </div>
-
-
-
-
-                        </div> -->
-
-
+                     </div> -->
                     </div>
-
                 </div>
                 <!-- ARE YOU Interested IN Financing? -->
                 <div class="tab">
                     <h1 class="text-center mt-2 caps">
-                        <div class="headng">Are You Interested in Financing?</div>
+                        <div class="headng">Are you interested in financing?</div>
                     </h1>
                     <div class="forms form-design">
                         <div class="items"> <label class="formcontrolinput">
                                 <input type="radio" name="financing" value="Yes"   />
-                                Yes
+                                YES
                             </label></div>
 
                         <div class="items"> <label class="formcontrolinput">
                                 <label class="formcontrolinput">
                                     <input type="radio" name="financing" value="No"  />
-                                    No
+                                    NO
                                 </label></div>
                     </div>
                 </div>
@@ -554,10 +492,8 @@
                 <div class="tab">
                     <h1 class="text-center mt-2 caps">
 
-                        <div class="headng"><b>when is a good date and time to call and get the remaining details for
-                                your ev charger installation.</b> </div>
-                        <h5 class="text-center">PLEASE NOTE: You should have access to your breaker panel when
-                            scheduling a date and time</h5>
+                        <div class="headng"><b>When is a good date and time to call and get the remaining details for your EV charger installation?</b> </div>
+                        <h5 class="text-center">PLEASE NOTE: You Should Have Access To Your Breaker Panel When Scheduling A Date And Time</h5>
                     </h1>
                     <div>
                         <!-- Calendly inline widget begin -->
@@ -618,15 +554,8 @@
             </form>
 
         </div>
-
-
-
-
-
           <!------- Footer Section Starts ------->
-
      @include('veh.includes.footer')
-
 <!------- Footer Section End ------->
 
 </div>
@@ -645,9 +574,7 @@ let camt = 0;
         $('#chargeramt').html(evamt);
     }
 </script>
-<script async
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDo9gQ563Vudr-5zck8Q10A66mvajHUEA&libraries=places&callback=initMap">
-</script>
+
 <script>
 // This example requires the Places library. Include the libraries=places
 // parameter when you first load the API. For example:
@@ -753,6 +680,60 @@ function submit(btn){
     input.value = "";
   });
 }
+</script>
+<script>
+function initialize() {
+  var input = document.getElementById('search_input');
+  var options = {
+    types: ['address'],
+    componentRestrictions: {
+      country: 'us'
+    }
+  };
+  autocomplete = new google.maps.places.Autocomplete(input, options);
+  google.maps.event.addListener(autocomplete, 'place_changed', function() {
+let street = '';
+let city = '';
+let state = '';
+let country = '';
+let zip_code = '';
+    var place = autocomplete.getPlace();
+    console.log(place);
+    for (var i = 0; i < place.address_components.length; i++) {
+      for (var j = 0; j < place.address_components[i].types.length; j++) {
+        if (place.address_components[i].types[j] == "street_number") {
+         street += place.address_components[i].long_name;
+         document.getElementById('search_input').value = street;
+        }
+        if (place.address_components[i].types[j] == "route") {
+         street += place.address_components[i].long_name;
+         document.getElementById('search_input').value = street;
+        }
+        if (place.address_components[i].types[j] == "sublocality") {
+         street += place.address_components[i].long_name;
+         document.getElementById('search_input').value = street;
+        }
+        if (place.address_components[i].types[j] == "locality") {
+         city += place.address_components[i].long_name;
+         document.getElementById('city').value = city;
+        }
+        if (place.address_components[i].types[j] == "administrative_area_level_1") {
+         state += place.address_components[i].long_name;
+         document.getElementById('state').value = state;
+        }
+        if (place.address_components[i].types[j] == "postal_code") {
+         zip_code += place.address_components[i].long_name;
+         document.getElementById('zip_code').value = zip_code;
+        }
+      }
+    }
+    console.log(street);
+    console.log(city);
+    console.log(state);
+    console.log(zip_code);
+  })
+}
+google.maps.event.addDomListener(window, "load", initialize);
 </script>
 <!------- Main Container End ------->
 

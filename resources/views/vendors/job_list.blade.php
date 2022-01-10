@@ -27,7 +27,7 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Job List</h3>
+                <h3 class="card-title">Jobs List</h3>
                 <!--<a href="add-job" class="btn btn-success" style="float:right;">Add Job</a>-->
               </div>
               <!-- /.card-header -->
@@ -37,13 +37,13 @@
                   <tr>
                     <th>Customer Name</th>
                     <th>Customer Type</th>
-                    <th>City || State</th>
-                    <th>Installation Amount</th>
-                    <th>Installation Date</th>
+                    <th>City & State</th>
+                    <th>Price</th>
+                    <th>Install Date</th>
                     @if($status == "assign")
                     <th class="text-center">Action</th>
                     @elseif($status == "active")
-                    <th colspan="2" class="text-center">Assign Electrician</th>
+                    <th colspan="2" class="text-center">Assigned Electrician</th>
                     <th class="text-center">Action</th>
                     @elseif($status == "complete")
                     <th class="text-center">Assign Electrician</th> 
@@ -57,7 +57,7 @@
                   <tr>
                     <td>{{$list->name}} {{$list->lname}}</td>
                     <td>{{$list->customer_type}}</td>
-                    <td>{{$list->city}} || {{$list->state}}</td>
+                    <td>{{$list->city}}, {{$list->state}}</td>
                     <td>@if($list->total_amount == "") @else ${{$list->total_amount}} @endif</td>
                     <td>{{$list->install_date}}</td>
                     @if($status == 'assign')
@@ -73,7 +73,7 @@
                               <input type="hidden" value="{{$list->customer_id}}" name="id">
                             <div class="form-group">
                                 <select name="electrician_id" class="form-control selectpicker" required="">
-                                    <option>*********</option>
+                                    <option>Select Electrician</option>
                                   @foreach($electricians as $electrician)
                                   <option value="<?php print_r($electrician->id); ?>"  @isset($list) @if($list->electrician_id == $electrician->id) selected @endif @endisset @if(old('electrician_id') == $electrician->id) selected @endif>{{$electrician->name}}</option>
                                   @endforeach

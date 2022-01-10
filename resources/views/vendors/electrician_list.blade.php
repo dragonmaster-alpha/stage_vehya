@@ -28,7 +28,7 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Electrician List</h3>
+                <h3 class="card-title">My Electricians</h3>
                 <a href="add-electrician" class="btn btn-success" style="float:right;">Add Electrician</a>
               </div>
               <!-- /.card-header -->
@@ -36,20 +36,15 @@
                 <table id="example1" class="table table-bordered table-striped">
                   <thead>
                   <tr>
-                    <th>Sr No</th>
-                    <th>Electrician ID</th>
                     <th>Name</th>
                     <th>Email</th>
-                    <th>Mobile No</th>
+                    <th>Mobile</th>
                     <th class="text-center">Action</th> 
                   </tr>
                   </thead>
                   <tbody>
-                      <?php $i = 1;?>
                       @foreach($electricianlist as $list)
                   <tr>
-                    <td>{{$i}}</td>
-                    <td>{{$list['id']+1000}}</td>
                     <td>{{$list['name']}}</td>
                     <td>{{$list['email']}}</td>
                     <td>{{$list['mobile_number']}}</td>
@@ -57,7 +52,6 @@
                     <a href="electrician-list-show/{{$list['id']}}"><button class="btn btn-info"><i class="fas fa-edit"></i></button></a>
                     <button class="btn btn-info" onclick="a('{{$list['id']}}')"><i class="fa fa-trash" aria-hidden="true"></i></button></td>
                   </tr>
-                  <?php $i++;?>
                   @endforeach
                    </tbody>
                 </table>

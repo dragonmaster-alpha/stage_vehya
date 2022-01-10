@@ -29,44 +29,31 @@
 
         <!------- Header section End ------->
 
-
-
+        <section class="sec1 d-flex justify-content-center text-center bg-dark">
+            <img src="{{env('APP_URL')}}public/veh/assets/img/HomePage.jpg" alt="GET A QUOTE" style="width:100%;height:auto;">
+               <h1 class="mt-5">At Vehya, we took the guesswork<br>out of getting an EV charger</h1>
+        </section>
+        <div class=" text-center my-4">
+                <h1 style="font-size: 32px; font-weight: normal;" >Our pricing for EV chargers is transparent, and so is the cost for installation.</h1>
+           </div>
 
         <!------- Hero Banner Section Start ------->
 
-        <section class="pricing-banner hero-banner-section base-bg">
-
-            <div class="container-fluid">
-
-                <div class="row justify-content-center align-items-center">
-
-                    <div class="col-lg-4 col-12">
-
+        <!--<section class="pricing-banner hero-banner-section base-bg">-->
+        <!--    <div class="container-fluid">-->
+        <!--        <div class="row justify-content-center align-items-center">-->
+        <!--            <div class="col-lg-4 col-12">-->
                         <!------ Page Hero Title ------>
-
-                        <div class="page-hero-title text-white text-center">
-
-                            <h1 class="russo-font text-uppercase">Pricing</h1>
-
-                            <p class="my-3">
-
-                                At Vehya, we took the guesswork out of getting an EV charger. Our pricing for EV
-
-                                chargers is
-
-                                transparent, and so is the cost for installation.
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
+        <!--                <div class="page-hero-title text-white text-center">-->
+        <!--                    <h1 class="russo-font text-uppercase">Pricing</h1>-->
+        <!--                    <p class="my-3">-->
+        <!--                        At Vehya, we took the guesswork out of getting an EV charger. Our pricing for EV chargers is transparent, and so is the cost for installation.-->
+        <!--                    </p>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--        </div>-->
+        <!--    </div>-->
+        <!--</section>-->
 
         <!------- Hero Banner Section End ------->
 

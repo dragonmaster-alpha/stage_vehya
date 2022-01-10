@@ -25,7 +25,7 @@
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Customer Update</h3>
+                <h3 class="card-title">Edit Customer Job</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -36,7 +36,7 @@
                     <p style="color:red;">All fields are mandatory</p>
                   <div class="row">
                   <div class="col-md-12">
-                      <h3><u>Customer Information</u></h3>
+                      <h4><u>Customer Information</u></h4>
                       </div>
                 <div class="col-md-6">
                   <div class="form-group">
@@ -67,7 +67,7 @@
                   </div>
                   <div class="col-md-6">
                   <div class="form-group">
-                    <label>Mobile Number</label>
+                    <label>Mobile</label>
                     <input type="number" name="mobile_number" min="1000000000" max="9999999999"  class="form-control" placeholder="Mobile Number" value="{{$list->mobile_number}}" required="">
                   </div>
                   </div>
@@ -96,18 +96,18 @@
                   </div>
                   <div class="col-md-6">
                   <div class="form-group">
-                    <label>Number</label><br>
-                    <input type="text" name="number" class="form-control" placeholder="Number" value="{{$jobdetail[0]->number}}" required="">
+                    <label>State</label><br>
+                    <input type="text" name="number" class="form-control" placeholder="State" value="{{$jobdetail[0]->number}}" required="">
                   </div>
                   </div>
                   <div class="col-md-6">
                   <div class="form-group">
-                    <label>Pc</label><br>
-                    <input type="text" name="pc" class="form-control" placeholder="Pc" value="{{$jobdetail[0]->pc}}" required="">
+                    <label>Zip Code</label><br>
+                    <input type="text" name="pc" class="form-control" placeholder="Zip Code" value="{{$jobdetail[0]->pc}}" required="">
                   </div>
                   </div>
                   <div class="col-md-12">
-                      <h3><u>Assessment Question</u></h3>
+                      <h4><u>Online Assessment Information</u></h4>
                       </div>
                       @if($list->customer_type == 'Residential')
                 <div class="col-md-12" id="residential">
@@ -124,61 +124,61 @@
                     <input type="text" name="model" class="Let's Start with some form-control" placeholder="Model" value="{{$list->model}}" required="">
                   </div>
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-md-9">
                   <div class="form-group">
                     <label>Here are the EV Chargers we provide based on your vihicle</label><br>
-                    I have my own charger <input type="radio" name="own_charger" {{$jobdetail[0]->own_charger == 'I-have-my-own-charger' ? "checked" : ""}} placeholder="property type" value="I-have-my-own-charger" required="">
-                    &ensp;&ensp;Charge Point Home Flex <input type="radio" name="own_charger" {{$jobdetail[0]->own_charger == 'Charge-Point-Home-Flex' ? "checked" : ""}} placeholder="property type" value="Charge-Point-Home-Flex" required="">
-                    &ensp;&ensp;Enelx JuiceBox 48 <input type="radio" name="own_charger" {{$jobdetail[0]->own_charger == 'Enelx-JuiceBox-48' ? "checked" : ""}} placeholder="property type" value="Enelx-JuiceBox-48" required="">
-                    &ensp;&ensp;WallBox Pulsar Plus 48 <input type="radio" name="own_charger" {{$jobdetail[0]->own_charger == 'WallBox-Pulsar-Plus-48' ? "checked" : ""}} placeholder="property type" value="WallBox-Pulsar-Plus-48" required="">
+                    <input type="radio" name="own_charger" {{$jobdetail[0]->own_charger == 'I-have-my-own-charger' ? "checked" : ""}} placeholder="property type" value="I-have-my-own-charger" required=""> Own charger
+                    &ensp;&ensp;<input type="radio" name="own_charger" {{$jobdetail[0]->own_charger == 'Charge-Point-Home-Flex' ? "checked" : ""}} placeholder="property type" value="Charge-Point-Home-Flex" required=""> Charge Point Home Flex
+                    &ensp;&ensp;<input type="radio" name="own_charger" {{$jobdetail[0]->own_charger == 'Enelx-JuiceBox-48' ? "checked" : ""}} placeholder="property type" value="Enelx-JuiceBox-48" required=""> Enelx JuiceBox 48
+                    &ensp;&ensp;<input type="radio" name="own_charger" {{$jobdetail[0]->own_charger == 'WallBox-Pulsar-Plus-48' ? "checked" : ""}} placeholder="property type" value="WallBox-Pulsar-Plus-48" required=""> WallBox Pulsar Plus 48
                   </div>
                   </div>
                   <div class="col-md-6">
                   <div class="form-group">
                     <label>Are you Considering an additional EV within the next year ?</label><br>
-                    Yes <input type="radio" name="next_year" {{$jobdetail[0]->next_year == 'Yes' ? "checked" : ""}} placeholder="property type" value="Yes" required="">
-                    &ensp;&ensp;No <input type="radio" name="next_year" {{$jobdetail[0]->next_year == 'No' ? "checked" : ""}} placeholder="property type" value="No" required="">
+                    <input type="radio" name="next_year" {{$jobdetail[0]->next_year == 'Yes' ? "checked" : ""}} placeholder="property type" value="Yes" required=""> Yes
+                    &ensp;&ensp;<input type="radio" name="next_year" {{$jobdetail[0]->next_year == 'No' ? "checked" : ""}} placeholder="property type" value="No" required=""> No
                   </div>
                   </div>
                   <div class="col-md-6">
                   <div class="form-group">
                     <label>What Style of home</label><br>
-                    <input type="radio" name="property_type_home" {{$jobdetail[0]->property_type_home == 'Detached' ? "checked" : ""}} placeholder="property type" value="Detached" required=""> &ensp;Detached 
-                    &ensp;<input type="radio" name="property_type_home" {{$jobdetail[0]->property_type_home == 'TownHome' ? "checked" : ""}} placeholder="property type" value="TownHome" required="">&ensp;TownHome
-                    &ensp;<input type="radio" name="property_type_home" {{$jobdetail[0]->property_type_home == 'Condo' ? "checked" : ""}} placeholder="property type" value="Condo" required="">&ensp;Condo
-                    &ensp;<input type="radio" name="property_type_home" {{$jobdetail[0]->property_type_home == 'Other' ? "checked" : ""}} placeholder="property type" value="Other" required="">&ensp;Other
+                    <input type="radio" name="property_type_home" {{$jobdetail[0]->property_type_home == 'Detached' ? "checked" : ""}} placeholder="property type" value="Detached" required=""> Detached 
+                    &ensp;<input type="radio" name="property_type_home" {{$jobdetail[0]->property_type_home == 'TownHome' ? "checked" : ""}} placeholder="property type" value="TownHome" required=""> TownHome
+                    &ensp;<input type="radio" name="property_type_home" {{$jobdetail[0]->property_type_home == 'Condo' ? "checked" : ""}} placeholder="property type" value="Condo" required=""> Condo
+                    &ensp;<input type="radio" name="property_type_home" {{$jobdetail[0]->property_type_home == 'Other' ? "checked" : ""}} placeholder="property type" value="Other" required=""> Other
                   </div>
                   </div>
                   <div class="col-md-6">
                   <div class="form-group">
                     <label>Where will the EV charger be installed</label><br>
-                    Interior <input type="radio" name="ev_location_ie" {{$jobdetail[0]->ev_location_ie == 'Interior' ? "checked" : ""}} value="Interior" required="">
-                    &ensp;&ensp;Exterior <input type="radio" name="ev_location_ie" {{$jobdetail[0]->ev_location_ie == 'Exterior' ? "checked" : ""}} value="Exterior" required="">
+                    <input type="radio" name="ev_location_ie" {{$jobdetail[0]->ev_location_ie == 'Interior' ? "checked" : ""}} value="Interior" required=""> Interior
+                    &ensp;&ensp;<input type="radio" name="ev_location_ie" {{$jobdetail[0]->ev_location_ie == 'Exterior' ? "checked" : ""}} value="Exterior" required=""> Exterior
                   </div>
                   </div>
                   <div class="col-md-6">
                   <div class="form-group">
                     <label>Will the EV Charger be located on the same wall as the breaker panel?</label><br>
-                    Yes <input type="radio" name="breaker_panel" {{$jobdetail[0]->breaker_panel == 'Yes' ? "checked" : ""}} placeholder="property type" value="Yes" required="">
-                    &ensp;&ensp;No <input type="radio" name="breaker_panel" {{$jobdetail[0]->breaker_panel == 'No' ? "checked" : ""}} placeholder="property type" value="No" required="">
+                    <input type="radio" name="breaker_panel" {{$jobdetail[0]->breaker_panel == 'Yes' ? "checked" : ""}} placeholder="property type" value="Yes" required=""> Yes
+                    &ensp;&ensp;<input type="radio" name="breaker_panel" {{$jobdetail[0]->breaker_panel == 'No' ? "checked" : ""}} placeholder="property type" value="No" required=""> No
                   </div>
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-md-12">
                   <div class="form-group">
                     <label>Please Choose the electrical items at your home?</label><br>
-                    Washer <input type="checkbox" name="electrical_appliances[]" {{in_array("Washer", $electrical_appliances) ? "checked" : ""}} placeholder="EV charger location" value="Washer">
-                    &ensp;&ensp;Dryer <input type="checkbox" name="electrical_appliances[]" {{in_array("Dryer", $electrical_appliances) ? "checked" : ""}} placeholder="EV charger location" value="Dryer">
-                    &ensp;&ensp;Refrigerator <input type="checkbox" name="electrical_appliances[]" {{in_array("Refrigerator", $electrical_appliances) ? "checked" : ""}} placeholder="EV charger location" value="Refrigerator">
-                    &ensp;&ensp;Stove <input type="checkbox" name="electrical_appliances[]" {{in_array("Stove", $electrical_appliances) ? "checked" : ""}} placeholder="EV charger location" value="Stove">
-                    &ensp;&ensp;Microwave <input type="checkbox" name="electrical_appliances[]" {{in_array("Microwave", $electrical_appliances) ? "checked" : ""}} placeholder="EV charger location" value="Microwave">
-                    &ensp;&ensp;Freezer <input type="checkbox" name="electrical_appliances[]" {{in_array("Freezer", $electrical_appliances) ? "checked" : ""}} placeholder="EV charger location" value="Freezer">
-                    &ensp;&ensp;HeatPump Heater <input type="checkbox" name="electrical_appliances[]" {{in_array("HeatPump-Heater", $electrical_appliances) ? "checked" : ""}} placeholder="EV charger location" value="HeatPump-Heater">
-                    &ensp;&ensp;AC Unit <input type="checkbox" name="electrical_appliances[]"  {{in_array("AC-Unit", $electrical_appliances) ? "checked" : ""}} placeholder="EV charger location" value="AC-Unit">
-                    &ensp;&ensp;Water Heater<input type="checkbox" name="electrical_appliances[]" {{in_array("Water-Heater", $electrical_appliances) ? "checked" : ""}} placeholder="EV charger location" value="Water-Heater">
-                    &ensp;&ensp;Tankless Water Heater<input type="checkbox" name="electrical_appliances[]" {{in_array("Tankless-Water-Heater", $electrical_appliances) ? "checked" : ""}} placeholder="EV charger location" value="Tankless-Water-Heater">
-                    &ensp;&ensp;Solar Paels<input type="checkbox" name="electrical_appliances[]" {{in_array("Solar-Paels", $electrical_appliances) ? "checked" : ""}} placeholder="EV charger location" value="Solar-Paels">
-                    &ensp;&ensp;Battery Storage <input type="checkbox" name="electrical_appliances[]" {{in_array("Battery-Storage", $electrical_appliances) ? "checked" : ""}} placeholder="EV charger location" value="Battery-Storage">
-                    &ensp;&ensp;Generator <input type="checkbox" name="electrical_appliances[]" {{in_array("Generator", $electrical_appliances) ? "checked" : ""}} placeholder="EV charger location" value="Generator">
+                    <input type="checkbox" name="electrical_appliances[]" {{in_array("Washer", $electrical_appliances) ? "checked" : ""}} placeholder="EV charger location" value="Washer"> Washer
+                    &ensp;&ensp;<input type="checkbox" name="electrical_appliances[]" {{in_array("Dryer", $electrical_appliances) ? "checked" : ""}} placeholder="EV charger location" value="Dryer"> Dryer
+                    &ensp;&ensp;<input type="checkbox" name="electrical_appliances[]" {{in_array("Refrigerator", $electrical_appliances) ? "checked" : ""}} placeholder="EV charger location" value="Refrigerator"> Refrigerator
+                    &ensp;&ensp;<input type="checkbox" name="electrical_appliances[]" {{in_array("Stove", $electrical_appliances) ? "checked" : ""}} placeholder="EV charger location" value="Stove"> Stove
+                    &ensp;&ensp;<input type="checkbox" name="electrical_appliances[]" {{in_array("Microwave", $electrical_appliances) ? "checked" : ""}} placeholder="EV charger location" value="Microwave"> Microwave
+                    &ensp;&ensp;<input type="checkbox" name="electrical_appliances[]" {{in_array("Freezer", $electrical_appliances) ? "checked" : ""}} placeholder="EV charger location" value="Freezer"> Freezer
+                    &ensp;&ensp;<input type="checkbox" name="electrical_appliances[]" {{in_array("HeatPump-Heater", $electrical_appliances) ? "checked" : ""}} placeholder="EV charger location" value="HeatPump-Heater"> Heatpump Heater <br/>
+                    &ensp;&ensp;<input type="checkbox" name="electrical_appliances[]"  {{in_array("AC-Unit", $electrical_appliances) ? "checked" : ""}} placeholder="EV charger location" value="AC-Unit"> AC Unit
+                    &ensp;&ensp;<input type="checkbox" name="electrical_appliances[]" {{in_array("Water-Heater", $electrical_appliances) ? "checked" : ""}} placeholder="EV charger location" value="Water-Heater"> Water Heater
+                    &ensp;&ensp;<input type="checkbox" name="electrical_appliances[]" {{in_array("Tankless-Water-Heater", $electrical_appliances) ? "checked" : ""}} placeholder="EV charger location" value="Tankless-Water-Heater"> Tankless Water Heater
+                    &ensp;&ensp;<input type="checkbox" name="electrical_appliances[]" {{in_array("Solar-Paels", $electrical_appliances) ? "checked" : ""}} placeholder="EV charger location" value="Solar-Paels"> Solar Panels
+                    &ensp;&ensp;<input type="checkbox" name="electrical_appliances[]" {{in_array("Battery-Storage", $electrical_appliances) ? "checked" : ""}} placeholder="EV charger location" value="Battery-Storage"> Battery Storage
+                    &ensp;&ensp;<input type="checkbox" name="electrical_appliances[]" {{in_array("Generator", $electrical_appliances) ? "checked" : ""}} placeholder="EV charger location" value="Generator"> Generator
                     
                   </div>
                   </div>
@@ -186,18 +186,18 @@
                   <div class="form-group">
                     <label>Approximately How far is it from the breaker panel to the EV charger ?</label><br>
                     <!--5ft <input type="radio" name="ev_location" placeholder="EV charger location" value="{{$jobdetail[0]->ev_location}}" required="">-->
-                    5ft <input type="radio" {{$jobdetail[0]->ev_location == '5ft' ? "checked" : ""}}  name="ev_location" placeholder="EV charger location" value="5ft" required="">
-                    &ensp;&ensp;10Ft <input type="radio" {{$jobdetail[0]->ev_location == '10ft' ? "checked" : ""}} name="ev_location" placeholder="EV charger location" value="10ft" required="">
-                    &ensp;&ensp;15Ft <input type="radio" {{$jobdetail[0]->ev_location == '15ft' ? "checked" : ""}} name="ev_location" placeholder="EV charger location" value="15ft" required="">
-                    &ensp;&ensp;20Ft <input type="radio" {{$jobdetail[0]->ev_location == '20ft' ? "checked" : ""}} name="ev_location" placeholder="EV charger location" value="20ft" required="">
-                    &ensp;&ensp;25Ft <input type="radio" {{$jobdetail[0]->ev_location == '25ft' ? "checked" : ""}} name="ev_location" placeholder="EV charger location" value="25ft" required="">
+                    <input type="radio" {{$jobdetail[0]->ev_location == '5ft' ? "checked" : ""}}  name="ev_location" placeholder="EV charger location" value="5ft" required=""> 5ft
+                    &ensp;&ensp;<input type="radio" {{$jobdetail[0]->ev_location == '10ft' ? "checked" : ""}} name="ev_location" placeholder="EV charger location" value="10ft" required=""> 10ft
+                    &ensp;&ensp;<input type="radio" {{$jobdetail[0]->ev_location == '15ft' ? "checked" : ""}} name="ev_location" placeholder="EV charger location" value="15ft" required=""> 15ft
+                    &ensp;&ensp;<input type="radio" {{$jobdetail[0]->ev_location == '20ft' ? "checked" : ""}} name="ev_location" placeholder="EV charger location" value="20ft" required=""> 20 ft
+                    &ensp;&ensp;<input type="radio" {{$jobdetail[0]->ev_location == '25ft' ? "checked" : ""}} name="ev_location" placeholder="EV charger location" value="25ft" required=""> 20+ft
                   </div>
                   </div>
                   <div class="col-md-6">
                   <div class="form-group">
                     <label>Are you Intrested in Financing ?</label><br>
-                    Yes <input type="radio" name="financing" {{$jobdetail[0]->financing == 'Yes' ? "checked" : ""}} placeholder="property type" value="Yes" required="">
-                    &ensp;&ensp;No <input type="radio" name="financing" {{$jobdetail[0]->financing == 'No' ? "checked" : ""}} placeholder="property type" value="No" required="">
+                    <input type="radio" name="financing" {{$jobdetail[0]->financing == 'Yes' ? "checked" : ""}} placeholder="property type" value="Yes" required=""> Yes
+                    &ensp;&ensp;<input type="radio" name="financing" {{$jobdetail[0]->financing == 'No' ? "checked" : ""}} placeholder="property type" value="No" required=""> No
                   </div>
                   </div>
                 </div>
@@ -211,44 +211,44 @@
                   <div class="col-md-6">
                   <div class="form-group">
                     <label>Let's Start with some basic info which level of EV Chargers do you need ?</label><br>
-                    Level 2 <input type="radio" name="own_charger_level" {{$jobdetail[0]->own_charger_level == 'Level 2' ? "checked" : ""}} placeholder="property type" value="Level 2" required="">
-                    &ensp;&ensp; Level 3 <input type="radio" name="own_charger_level" {{$jobdetail[0]->own_charger_level == 'Level 3' ? "checked" : ""}} placeholder="property type" value="Level 3" required="">
-                    &ensp;&ensp; I have my Own Charger <input type="radio" name="own_charger_level" {{$jobdetail[0]->own_charger_level == '1' ? "checked" : ""}} placeholder="property type" value="1" required="">
+                    <input type="radio" name="own_charger_level" {{$jobdetail[0]->own_charger_level == 'Level 2' ? "checked" : ""}} placeholder="property type" value="Level 2" required=""> Level 2 
+                    &ensp;&ensp;<input type="radio" name="own_charger_level" {{$jobdetail[0]->own_charger_level == 'Level 3' ? "checked" : ""}} placeholder="property type" value="Level 3" required=""> Level 3 
+                    &ensp;&ensp;<input type="radio" name="own_charger_level" {{$jobdetail[0]->own_charger_level == '1' ? "checked" : ""}} placeholder="property type" value="1" required=""> I have my Own Charger 
                   </div>
                   </div>
                   <div class="col-md-6">
                   <div class="form-group">
                     <label>Could Multiple Vehicles be charging at once</label><br>
-                    Yes <input type="radio" name="ev_location_d" {{$jobdetail[0]->ev_location_d == 'Yes' ? "checked" : ""}} placeholder="property type" value="Yes" required="">
-                    &ensp;&ensp;No <input type="radio" name="ev_location_d" {{$jobdetail[0]->ev_location_d == 'No' ? "checked" : ""}} placeholder="property type" value="No" required="">
+                    <input type="radio" name="ev_location_d" {{$jobdetail[0]->ev_location_d == 'Yes' ? "checked" : ""}} placeholder="property type" value="Yes" required=""> Yes
+                    &ensp;&ensp;<input type="radio" name="ev_location_d" {{$jobdetail[0]->ev_location_d == 'No' ? "checked" : ""}} placeholder="property type" value="No" required=""> No
                   </div>
                   </div>
                   <div class="col-md-6">
                   <div class="form-group">
                     <label>Are you thinking of providing ev charging as a paid service</label><br>
-                    Yes <input type="radio" name="paid_service" {{$jobdetail[0]->paid_service == 'Yes' ? "checked" : ""}} placeholder="property type" value="Yes" required="">
-                    &ensp;&ensp;No <input type="radio" name="paid_service" {{$jobdetail[0]->paid_service == 'No' ? "checked" : ""}} placeholder="property type" value="No" required="">
+                    <input type="radio" name="paid_service" {{$jobdetail[0]->paid_service == 'Yes' ? "checked" : ""}} placeholder="property type" value="Yes" required=""> Yes
+                    &ensp;&ensp;<input type="radio" name="paid_service" {{$jobdetail[0]->paid_service == 'No' ? "checked" : ""}} placeholder="property type" value="No" required=""> No
                   </div>
                   </div>
                   <div class="col-md-6">
                   <div class="form-group">
                     <label>What Style of Property ?</label><br>
-                    <input type="radio" name="property_type_land" {{$jobdetail[0]->property_type_land == 'Land' ? "checked" : ""}} placeholder="property type" value="Land" required=""> &ensp;Land 
-                    &ensp;<input type="radio" name="property_type_land" {{$jobdetail[0]->property_type_land == 'Commercial' ? "checked" : ""}} placeholder="property type" value="Commercial" required="">&ensp;Commercial
-                    &ensp;<input type="radio" name="property_type_land" {{$jobdetail[0]->property_type_land == 'Milti-Unit' ? "checked" : ""}} placeholder="property type" value="Milti-Unit" required="">&ensp;Milti-Unit
+                    <input type="radio" name="property_type_land" {{$jobdetail[0]->property_type_land == 'Land' ? "checked" : ""}} placeholder="property type" value="Land" required=""> Land 
+                    &ensp;<input type="radio" name="property_type_land" {{$jobdetail[0]->property_type_land == 'Commercial' ? "checked" : ""}} placeholder="property type" value="Commercial" required=""> Commercial
+                    &ensp;<input type="radio" name="property_type_land" {{$jobdetail[0]->property_type_land == 'Milti-Unit' ? "checked" : ""}} placeholder="property type" value="Milti-Unit" required=""> Multi-Unit
                   </div>
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-md-9">
                   <div class="form-group">
                     <label>What is the area And/Or Industry type</label><br>
-                    Automotive <input type="checkbox" name="industry_location[]" {{in_array("Automotive", $industry_location) ? "checked" : ""}} placeholder="EV charger location" value="Automotive">
-                    &ensp;&ensp;Hotel <input type="checkbox" name="industry_location[]" {{in_array("Hotel", $industry_location) ? "checked" : ""}} placeholder="EV charger location" value="Hotel">
-                    &ensp;&ensp;Municipal <input type="checkbox" name="industry_location[]" {{in_array("Municipal", $industry_location) ? "checked" : ""}} placeholder="EV charger location" value="Municipal">
-                    &ensp;&ensp;Office <input type="checkbox" name="industry_location[]" {{in_array("Office", $industry_location) ? "checked" : ""}} placeholder="EV charger location" value="Office">
-                    &ensp;&ensp;Parking <input type="checkbox" name="industry_location[]" {{in_array("Parking", $industry_location) ? "checked" : ""}} placeholder="EV charger location" value="Parking">
-                    &ensp;&ensp;Residential <input type="checkbox" name="industry_location[]" {{in_array("Residential", $industry_location) ? "checked" : ""}} placeholder="EV charger location" value="Residential">
-                    &ensp;&ensp;Retail <input type="checkbox" name="industry_location[]" {{in_array("Retail", $industry_location) ? "checked" : ""}} placeholder="EV charger location" value="Retail">
-                    &ensp;&ensp;Other <input type="checkbox" name="industry_location[]" {{in_array("Other", $industry_location) ? "checked" : ""}} placeholder="EV charger location" value="Other">
+                    <input type="checkbox" name="industry_location[]" {{in_array("Automotive", $industry_location) ? "checked" : ""}} placeholder="EV charger location" value="Automotive"> Automotive
+                    &ensp;&ensp;<input type="checkbox" name="industry_location[]" {{in_array("Hotel", $industry_location) ? "checked" : ""}} placeholder="EV charger location" value="Hotel"> Hotel
+                    &ensp;&ensp;<input type="checkbox" name="industry_location[]" {{in_array("Municipal", $industry_location) ? "checked" : ""}} placeholder="EV charger location" value="Municipal"> Municipal
+                    &ensp;&ensp;<input type="checkbox" name="industry_location[]" {{in_array("Office", $industry_location) ? "checked" : ""}} placeholder="EV charger location" value="Office"> Office
+                    &ensp;&ensp;<input type="checkbox" name="industry_location[]" {{in_array("Parking", $industry_location) ? "checked" : ""}} placeholder="EV charger location" value="Parking"> Parking
+                    &ensp;&ensp;<input type="checkbox" name="industry_location[]" {{in_array("Residential", $industry_location) ? "checked" : ""}} placeholder="EV charger location" value="Residential"> Residential
+                    &ensp;&ensp;<input type="checkbox" name="industry_location[]" {{in_array("Retail", $industry_location) ? "checked" : ""}} placeholder="EV charger location" value="Retail"> Retail
+                    &ensp;&ensp;<input type="checkbox" name="industry_location[]" {{in_array("Other", $industry_location) ? "checked" : ""}} placeholder="EV charger location" value="Other"> Other
                   </div>
                   </div>
                 <!-- Commercial end -->    
@@ -259,16 +259,16 @@
                   <div class="col-md-6">
                   <div class="form-group">
                     <label>What Type of Property</label><br>
-                    Rent <input type="radio" name="property_type" {{$jobdetail[0]->property_type == 'Rent' ? "checked" : ""}} placeholder="property type" value="Rent" required="">
-                    &ensp;&ensp;Own <input type="radio" name="property_type" {{$jobdetail[0]->property_type == 'Own' ? "checked" : ""}} placeholder="property type" value="Own" required="">
-                    &ensp;&ensp;Other <input type="radio" name="property_type" {{$jobdetail[0]->property_type == 'Other' ? "checked" : ""}} placeholder="property type" value="Other" required="">
+                    <input type="radio" name="property_type" {{$jobdetail[0]->property_type == 'Rent' ? "checked" : ""}} placeholder="property type" value="Rent" required=""> Rent
+                    &ensp;&ensp;<input type="radio" name="property_type" {{$jobdetail[0]->property_type == 'Own' ? "checked" : ""}} placeholder="property type" value="Own" required=""> Own
+                    &ensp;&ensp;<input type="radio" name="property_type" {{$jobdetail[0]->property_type == 'Other' ? "checked" : ""}} placeholder="property type" value="Other" required=""> Other
                   </div>
                   </div>
                   <div class="col-md-6">
                   <div class="form-group">
                     <label>Will you need permission from anyone to install this Ev Charger</label><br>
-                    Yes <input type="radio" name="permission" {{$jobdetail[0]->permission == 'Yes' ? "checked" : ""}} placeholder="Pemission" value="Yes" required="">
-                    &ensp;&ensp;No <input type="radio" name="permission" {{$jobdetail[0]->permission == 'No' ? "checked" : ""}} placeholder="Pemission" value="No" required="">
+                    <input type="radio" name="permission" {{$jobdetail[0]->permission == 'Yes' ? "checked" : ""}} placeholder="Pemission" value="Yes" required=""> Yes
+                    &ensp;&ensp;<input type="radio" name="permission" {{$jobdetail[0]->permission == 'No' ? "checked" : ""}} placeholder="Pemission" value="No" required=""> No
                   </div>
                   </div>
                   <div class="col-md-6">
@@ -286,15 +286,15 @@
                   <div class="col-md-6">
                   <div class="form-group">
                     <label>When are you looking to install your EV charger?</label><br>
-                    1-2 Weeks <input type="radio" name="time_range" {{$jobdetail[0]->time_range == '1-2 Weeks' ? "checked" : ""}} placeholder="EV charger location" value="1-2 Weeks" required="">
-                    &ensp;&ensp;1 Month <input type="radio" name="time_range" {{$jobdetail[0]->time_range == '1 Month' ? "checked" : ""}} placeholder="EV charger location" value="1 Month" required="">
-                    &ensp;&ensp;2 Month <input type="radio" name="time_range" {{$jobdetail[0]->time_range == '2 Month' ? "checked" : ""}} placeholder="EV charger location" value="2 Month" required="">
+                    <input type="radio" name="time_range" {{$jobdetail[0]->time_range == '1-2 Weeks' ? "checked" : ""}} placeholder="EV charger location" value="1-2 Weeks" required=""> 1-2 Weeks
+                    &ensp;&ensp;<input type="radio" name="time_range" {{$jobdetail[0]->time_range == '1 Month' ? "checked" : ""}} placeholder="EV charger location" value="1 Month" required=""> 1 Month
+                    &ensp;&ensp;<input type="radio" name="time_range" {{$jobdetail[0]->time_range == '2 Month' ? "checked" : ""}} placeholder="EV charger location" value="2 Month" required=""> 1+ Month
                   </div>
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-md-12">
                   <div class="form-group">
-                    <label>Based on the vehya online assessment here's your Quote</label><br>
-                     {{$jobdetail[0]->total_amount ? '$' : ''}} <input type="text" name="total_amount" class="form-control" placeholder="Amount" value="{{$jobdetail[0]->total_amount}}" required="">
+                    <label>Based on the vehya online assessment here's your quote (USD $)</label><br>
+                     {{$jobdetail[0]->total_amount ? '' : ''}} <input type="text" name="total_amount" class="form-control" placeholder="Amount" value="{{$jobdetail[0]->total_amount}}" required="">
                    
                   </div>
                   </div>
