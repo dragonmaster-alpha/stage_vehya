@@ -51,7 +51,7 @@
             
             
             <div class="forms">
-                <div>
+                <div class="d-flex justify-content-center align-items-center">
                     <img src="{{env('APP_URL')}}public/veh/assets/img/thankks.jpg" alt="">
                 </div>
             </div>

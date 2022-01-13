@@ -44,11 +44,13 @@ details summary {
   cursor: pointer;
   list-style: none;
   outline: 0;
-  font-family: Montserrat;
   font-style: normal;
-  font-weight: 700;
+  font-weight: normal;
   font-size: 1.95em;
   line-height: 34px;
+  text-transform: uppercase;
+  background-color:#FAFAFA;
+  box-shadow: 0 0px 4px 4px rgb(231 224 224 / 60%);
 }
 
 details summary:after {
@@ -62,7 +64,6 @@ details summary:after {
   transform-origin: center;
   /* transition: 200ms linear; */
 
-  font-family: Montserrat;
 font-style: normal;
 font-weight: normal;
 line-height: 34px;
@@ -76,14 +77,15 @@ details[open] summary:after {
   font-style: normal;
   font-weight: normal;
   line-height: 34px;
-  color: #FFFFFF;
+  /* color: #FFFFFF; */
+  color: black;
   right: 1.1em;
 
 }
 details[open] summary {
-  background-color: 
-  #F4CD1E;
-  margin-bottom: 1em;
+  /* background-color: #F4CD1E; */
+  background-color: #FAFAFA;
+  /* margin-bottom: 1em; */
 }
 details p {
   font-size: 1.95rem!important;
@@ -93,8 +95,8 @@ details p {
 
 details{
   margin: auto;
-  width: 88%;
-  background-color:#FAFAFA;
+  width: 98%;
+  /* background-color:#FAFAFA; */
   margin: 1em auto;
   padding-bottom: 0.5em;
   overflow: hidden;
@@ -177,7 +179,7 @@ color: rgba(0, 0, 0, 0.5);
         details{
           margin: auto;
           width: 100%;
-          background-color:#FAFAFA;
+          /* background-color:#FAFAFA; */
           margin: 1em 0;
           padding-bottom: 0.5em;
         }
@@ -190,11 +192,12 @@ color: rgba(0, 0, 0, 0.5);
         details summary {
           padding: 0.5em;
           outline: 0;
-          font-family: Montserrat;
           font-style: normal;
-          font-weight: bold;
+          font-weight: normal;
           font-size: 1.2em;
           line-height: 34px;
+          background-color:#FAFAFA;
+          box-shadow: 0 0px 4px 4px rgb(231 224 224 / 60%);
       }
       .title h2
       {       
@@ -212,7 +215,7 @@ color: rgba(0, 0, 0, 0.5);
             details{
               margin: auto;
               width: 100%;
-              background-color:#FAFAFA;
+              /* background-color:#FAFAFA; */
               margin: 1em auto;
               padding-bottom: 0.5em;
             }
@@ -279,7 +282,8 @@ details[open] summary:after {
   font-style: normal;
   font-weight: normal;
   line-height: 34px;
-  color: #FFFFFF;
+  /* color: #FFFFFF; */
+  color: black;
   right: 0.9em;
 }
 

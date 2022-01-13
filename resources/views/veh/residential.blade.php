@@ -6,11 +6,11 @@
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=AIzaSyAuGkxTIibaR_uVyYVlEqzKYJEDs1GVSQo"></script> 
 <body>
     <!------- Main Container Starts ------->
-    <div class="main-container">
+    <div class="main-container get-quote-page">
         <!------- Header section Starts ------->
         @include('veh.includes.header')
         <!------- Header section End ------->
-        <section class="sec2"></section>
+        <section class="sec2" style="background-color: white"></section>
         <hr>
         <div class="center">
             <h1 class="text-center caps" style="margin-top: 58px;">
@@ -22,7 +22,7 @@
                 <!-- BRAND AND MODEL OF CHARGER -->
                  <div class="tab">
                     <h1 class="text-center mt-2 caps">
-                        <div class="headng">Let's start with some basic info. <br> What type of EV do you have?</div>
+                        <div class="headng text-uppercase">Let's start with some basic info. <br> What type of EV do you have?</div>
                     </h1>
                     <div class="forms form-design text-center " style="margin-top: 6em; width: fit-content;">
                         <div class="row d-flex">
@@ -41,26 +41,231 @@
                     </div>
                 </div>
                 <!-- EV CHARGERS WE ARE PROVIDING -->
-                <div class="tab">
+                <div class="tab charger-group-container">
                     <h1 class="text-center mt-2 caps">
-                        <div class="headng">Here are the EV chargers we provide based on your vehicle.
+                        <div class="headng text-uppercase">Here are the EV chargers we provide based on your vehicle.
                         </div>
                     </h1>
-                    <div class="d-flex justify-content-center">
+                    <div class="charger-group-box">
+                        <label for="chargepoint">
+                        <input type="radio" id="chargepoint" name="own_charger" value="Charge-Point-Home-Flex"  onclick="camtf(1)"/>
+                        <div class="charger-individual-box">
+                            <div class="charger-sub-box">
+                                <div class="charger-caption-image">
+                                    <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/2.png" alt="">
+                                </div>
+                                <div class="cap-price-container">
+                                    <p class="cap-title text-capitalize">blink home level 2</p>
+                                    <div class="position-relative">
+                                        <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/11.png" alt="" style="width: 120px;">
+                                        <span class="price-label position-absolute">549.99$</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="asset-group-box">
+                                <div class="asset-individual bg-dark">
+                                    <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/5.png" alt="">
+                                    <span class="text-white"> 11.2kW </span>
+                                </div>
+                                <div class="asset-individual bg-dark">
+                                    <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/6.png" alt="">
+                                    <span class="text-white"> 25ft Cable </span>
+                                </div>
+                                <div class="asset-individual bg-dark">
+                                    <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/7.png" alt="">
+                                    <span class="text-white"> Power Share </span>
+                                </div>
+                            </div>
+                            <div id="id-more-information1" class="more-info-box">
+                                <div class="individual-info">
+                                    <span class="info-l">Max. Charge</span>
+                                    <span class="info-r">11.5kW</span>
+                                </div>
+                                <div class="individual-info">
+                                    <span class="info-l">Amperage</span>
+                                    <span class="info-r">60amp</span>
+                                </div>
+                                <div class="individual-info">
+                                    <span class="info-l">Input Voltage</span>
+                                    <span class="info-r">240v</span>
+                                </div>
+                                <div class="individual-info">
+                                    <span class="info-l">Connectivity</span>
+                                    <span class="info-r">Wi-Fi/Smartphone</span>
+                                </div>
+                                <div class="individual-info">
+                                    <span class="info-l">Warranty</span>
+                                    <span class="info-r">3 years</span>
+                                </div>
+                                <div class="individual-info">
+                                    <span class="info-l">Cabel Length</span>
+                                    <span class="info-r">25ft</span>
+                                </div>
+                                <div class="individual-info">
+                                    <span class="info-l">Safety</span>
+                                    <span class="info-r">UL Listed</span>
+                                </div>
+                                <div class="individual-info">
+                                    <span class="info-l">Efficiency</span>
+                                    <span class="info-r">Energy Star Certified</span>
+                                </div>
+                            </div>
+                            <div id="readMore1" class="show-more-less" onclick="showMoreOrLess(1)">SHOW MORE</div>
+                        </div>
+                        </label>
                         
-                        <div class="col-4 gx-5 mx-2"><img src="{{env('APP_URL')}}public/veh/assets/img/GQ-Residential-Chargers-01.svg" alt="">
-                        <input type="radio" name="own_charger" value="Charge-Point-Home-Flex"  onclick="camtf()"/>
+                        <label for="enelx">
+                        <input type="radio" id="enelx" name="own_charger" value="Enelx-JuiceBox-48"  onclick="camtf(2)"/>
+                        <div class="charger-individual-box">
+                            <div class="charger-sub-box">
+                                <div class="charger-caption-image">
+                                    <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/3.png" alt="">
+                                </div>
+                                <div class="cap-price-container">
+                                    <p class="cap-title text-capitalize">Charge point homeflex</p>
+                                    <div class="position-relative">
+                                        <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/11.png" alt="" style="width: 120px;">
+                                        <span class="price-label position-absolute">699.99$</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="asset-group-box">
+                                <div class="asset-individual bg-dark">
+                                    <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/5.png" alt="">
+                                    <span class="text-white"> 11.2kW </span>
+                                </div>
+                                <div class="asset-individual bg-dark">
+                                    <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/6.png" alt="">
+                                    <span class="text-white"> 25ft Cable </span>
+                                </div>
+                                <div class="asset-individual bg-dark">
+                                    <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/7.png" alt="">
+                                    <span class="text-white"> Power Share </span>
+                                </div>
+                            </div>
+                            <div id="id-more-information2" class="more-info-box">
+                                <div class="individual-info">
+                                    <span class="info-l">Max. Charge</span>
+                                    <span class="info-r">11.5kW</span>
+                                </div>
+                                <div class="individual-info">
+                                    <span class="info-l">Amperage</span>
+                                    <span class="info-r">60amp</span>
+                                </div>
+                                <div class="individual-info">
+                                    <span class="info-l">Input Voltage</span>
+                                    <span class="info-r">240v</span>
+                                </div>
+                                <div class="individual-info">
+                                    <span class="info-l">Connectivity</span>
+                                    <span class="info-r">Wi-Fi/Smartphone</span>
+                                </div>
+                                <div class="individual-info">
+                                    <span class="info-l">Warranty</span>
+                                    <span class="info-r">3 years</span>
+                                </div>
+                                <div class="individual-info">
+                                    <span class="info-l">Cabel Length</span>
+                                    <span class="info-r">25ft</span>
+                                </div>
+                                <div class="individual-info">
+                                    <span class="info-l">Safety</span>
+                                    <span class="info-r">UL Listed</span>
+                                </div>
+                                <div class="individual-info">
+                                    <span class="info-l">Efficiency</span>
+                                    <span class="info-r">Energy Star Certified</span>
+                                </div>
+                            </div>
+                            <div id="readMore2" class="show-more-less" onclick="showMoreOrLess(2)">SHOW MORE</div>
                         </div>
-                        <div class="col-4 gx-5 mx-2"><img src="{{env('APP_URL')}}public/veh/assets/img/GQ-Residential-Chargers-02.svg" alt="">
-                        <input type="radio" name="own_charger" value="Enelx-JuiceBox-48"  onclick="camtf()"/>
+                        </label>
+                        <label for="wallbox">
+                        <input type="radio" id="wallbox" name="own_charger" value="WallBox-Pulsar-Plus-48"  onclick="camtf(3)"/>
+                        <div class="charger-individual-box">
+                            <div class="charger-sub-box">
+                                <div class="charger-caption-image">
+                                    <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/4.png" alt="">
+                                </div>
+                                <div class="cap-price-container">
+                                    <p class="cap-title text-capitalize">Enel X Juicebox</p>
+                                    <div class="position-relative">
+                                        <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/11.png" alt="" style="width: 120px;">
+                                        <span class="price-label position-absolute">649.99$</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="asset-group-box">
+                                <div class="asset-individual bg-dark">
+                                    <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/5.png" alt="">
+                                    <span class="text-white"> 11.2kW </span>
+                                </div>
+                                <div class="asset-individual bg-dark">
+                                    <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/6.png" alt="">
+                                    <span class="text-white"> 25ft Cable </span>
+                                </div>
+                                <div class="asset-individual bg-dark">
+                                    <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/7.png" alt="">
+                                    <span class="text-white"> Power Share </span>
+                                </div>
+                            </div>
+                            <div id="id-more-information3" class="more-info-box">
+                                <div class="individual-info">
+                                    <span class="info-l">Max. Charge</span>
+                                    <span class="info-r">11.5kW</span>
+                                </div>
+                                <div class="individual-info">
+                                    <span class="info-l">Amperage</span>
+                                    <span class="info-r">60amp</span>
+                                </div>
+                                <div class="individual-info">
+                                    <span class="info-l">Input Voltage</span>
+                                    <span class="info-r">240v</span>
+                                </div>
+                                <div class="individual-info">
+                                    <span class="info-l">Connectivity</span>
+                                    <span class="info-r">Wi-Fi/Smartphone</span>
+                                </div>
+                                <div class="individual-info">
+                                    <span class="info-l">Warranty</span>
+                                    <span class="info-r">3 years</span>
+                                </div>
+                                <div class="individual-info">
+                                    <span class="info-l">Cabel Length</span>
+                                    <span class="info-r">25ft</span>
+                                </div>
+                                <div class="individual-info">
+                                    <span class="info-l">Safety</span>
+                                    <span class="info-r">UL Listed</span>
+                                </div>
+                                <div class="individual-info">
+                                    <span class="info-l">Efficiency</span>
+                                    <span class="info-r">Energy Star Certified</span>
+                                </div>
+                            </div>
+                            <div id="readMore3" class="show-more-less" onclick="showMoreOrLess(3)">SHOW MORE</div>
                         </div>
-                        <div class="col-4 gx-5 mx-2"><img src="{{env('APP_URL')}}public/veh/assets/img/GQ-Residential-Chargers-03.svg" alt="">
-                        <input type="radio" name="own_charger" value="WallBox-Pulsar-Plus-48"  onclick="camtf()"/>
-                        </div>
+                        </label>
                     </div>
+                    <!-- <div class="d-flex justify-content-center">
+                        
+                        <div class="col-4 gx-5 mx-2">
+                            <input type="radio" name="own_charger" value="Charge-Point-Home-Flex"  onclick="camtf()"/>
+                            <img src="{{env('APP_URL')}}public/veh/assets/img/GQ-Residential-Chargers-01.svg" alt="">
+                        
+                        </div>
+                        <div class="col-4 gx-5 mx-2">
+                            <input type="radio" name="own_charger" value="Enelx-JuiceBox-48"  onclick="camtf()"/>
+                            <img src="{{env('APP_URL')}}public/veh/assets/img/GQ-Residential-Chargers-02.svg" alt="">                    
+                        </div>
+                        <div class="col-4 gx-5 mx-2">
+                            <input type="radio" name="own_charger" value="WallBox-Pulsar-Plus-48"  onclick="camtf()"/>
+                            <img src="{{env('APP_URL')}}public/veh/assets/img/GQ-Residential-Chargers-03.svg" alt="">
+                        </div>
+                    </div> -->
                     <div class="forms form-design my-5">
                         <div class="items"> <label class="formcontrolinput">
-                                <input type="radio" name="own_charger" value="I-have-my-own-charger"  onclick="camtfa()"/>
+                                <input type="radio" name="own_charger" value="I-have-my-own-charger" style="visibility: visible!important" onclick="camtfa()"/>
                                 i have my own charger
                             </label>
                         </div>
@@ -69,7 +274,7 @@
                 <!-- ADDITIONAL EV CHARGER IN NEXT YEAR? -->
                 <div class="tab">
                     <h1 class="text-center mt-2 caps">
-                        <div class="headng">Are you considering an additional <br> EV within the next year?</div>
+                        <div class="headng text-uppercase">Are you considering an additional <br> EV within the next year?</div>
                     </h1>
                     <div class="forms form-design my-5">
                         <div class="items"> <label class="formcontrolinput">
@@ -87,7 +292,7 @@
                 <!-- CONTACT INFO -->
                 <div class="tab">
                     <h1 class="text-center mt-2 caps">
-                        <div class="headng">We'll need some contact information</div>
+                        <div class="headng text-uppercase">We'll need some contact information</div>
                     </h1>
                     <div class="forms form-design text-center " style="
                     width: fit-content; margin-top: 5em;">
@@ -125,86 +330,76 @@
                 <!-- ADDRESS  -->
                  <div class="tab">
                     <h1 class="text-center mt-2 caps">
-                        <div class="headng"><b>GREAT! What's the address where <br> the EV charger will be installed?</b>
+                        <div class="headng text-uppercase"><b>GREAT! What's the address where <br> the EV charger will be installed?</b>
 
                             <div class="middleImg">
                                 <img src="{{env('APP_URL')}}public/veh/assets/img/GQ-Commercial-06.png" alt="">
                             </div>
                         </div>
                     </h1>
-                    <div class="row" style="
-                     text-align: center;">
+                    <div class="row selectOption d-flex flex-row justify-content-center align-items-center" style="text-align: center;">
 
-                        <div class="col-md-2"> 
-                        <label class="formcontrolinput">
-                                <input type="text" name="address" placeholder="STREET" id="search_input"  />
-
-                        </label>
+                        <div class="col-md-3 px-4">
+                                <input type="text" name="address" placeholder="STREET" id="search_input" />
                         </div>
-                        <div class="col-md-2">
-                            <label class="formcontrolinput">
-                                <input type="text" name="city" placeholder="CITY" id="city" />
-
-                            </label>
+                        <div class="col-md-3 px-4">
+                                <input type="text" name="city" placeholder="CITY" id="city"/>
                         </div>
-                        
-                        <div class="col-md-2">
-                            <label class="formcontrolinput">
-                                <input type="text" name="state" placeholder='STATE' id="state"  />
-
-                            </label>
+                        <div class="col-md-3 px-4">
+                                <input type="text" name="state" placeholder='STATE' id="state" /> 
                         </div>
-                        <div class="col-md-2">
-                            <label class="formcontrolinput">
-                                <input type="text" name="zip_code" placeholder="ZIP CODE" id="zip_code"   />
-
-                            </label>
+                        <div class="col-md-3 px-4">
+                                <input type="text" name="zip_code" placeholder="ZIP CODE" id="zip_code" />
                         </div>
                     </div>
                 </div> 
                <!-- STYLE OF HOME -->
                 <div class="tab">
                     <h1 class="text-center mt-2 caps">
-                        <div class="headng">What style of home?</div>
+                        <div class="headng text-uppercase">What style of home?</div>
                     </h1>
                     <div class="forms">
                         <div class="showProperty row" >
                             <div class="col-md-3">
-                               <label for="detached"><div class="land"><img src="{{env('APP_URL')}}public/veh/assets/img/GQ-Residential-Detached-07 1.svg" alt=""></div>
-                                <div class="lndText"><input type="radio" name="property_type_home" value="Detached" id="detached" ></div></label> 
+                               <label for="detached">
+                               <input type="radio" name="property_type_home" value="Detached" id="detached" >
+                                   <div class="land"><img src="{{env('APP_URL')}}public/veh/assets/img/GQ-Residential-Detached-07 1.svg" alt=""></div>
+                                <div class="lndText"></div></label> 
                             </div>
                             <div class="col-md-3">
-                                <label for="townhome"><div class="land"><img src="{{env('APP_URL')}}public/veh/assets/img/GQ-Residential-Townhome-07 1.svg" alt=""></div>
-                                <div class="lndText"><input type="radio" name="property_type_home" value="TownHome" id="townhome" ></div></label>
+                                <label for="townhome">
+                                <input type="radio" name="property_type_home" value="TownHome" id="townhome" >
+                                    <div class="land"><img src="{{env('APP_URL')}}public/veh/assets/img/GQ-Residential-Townhome-07 1.svg" alt=""></div>
+                                <div class="lndText"></div></label>
                             </div>
 
                             <div class="col-md-3">
-                               <label for="condo"><div class="land"><img src="{{env('APP_URL')}}public/veh/assets/img/GQ-Residential-Condo-07 1.svg" alt=""></div>
-                                <div class="lndText"><input type="radio" name="property_type_home" value="Condo" id="condo" ></div></label>
+                               <label for="condo"><input type="radio" name="property_type_home" value="Condo" id="condo" ><div class="land"><img src="{{env('APP_URL')}}public/veh/assets/img/GQ-Residential-Condo-07 1.svg" alt=""></div>
+                                <div class="lndText"></div></label>
                             </div>
                             <div class="col-md-3">
-                                <label for="other"><div class="land"><img src="{{env('APP_URL')}}public/veh/assets/img/GQ-Residential-Other-07 1.svg" alt=""></div>
-                                <div class="lndText"><input type="radio" name="property_type_home" value="Other" id="other" ></div></label>
+                                <label for="other"><input type="radio" name="property_type_home" value="Other" id="other" ><div class="land"><img src="{{env('APP_URL')}}public/veh/assets/img/GQ-Residential-Other-07 1.svg" alt=""></div>
+                                <div class="lndText"></div></label>
                             </div>
                         </div>
-                        <div class=" col-12 justify-content-center showTSelecProperty row" style="width: 100%;">
-                            <div class="col-xl-3 col-lg-12  items">
+                        <div class="showTSelecProperty row mt-4 d-flex flex-row justify-content-center align-items-center">
+                            <div class="items" style="width: 20%">
                                 <label class="formcontrolinput">
-                                    <input type="radio" name="property_type" value="Rent"  />
+                                    <input type="radio" name="property_type" value="Rent" />
                                     RENT
                                 </label>
                             </div>
 
-                            <div class="col-xl-3 col-lg-12 items">
+                            <div class="items" style="width: 20%">
                                 <label class="formcontrolinput">
-                                    <input type="radio" name="property_type" value="Own"  />
+                                    <input type="radio" name="property_type" value="Own" />
                                     OWN
                                 </label>
                             </div>
 
-                            <div class="col-xl-3 col-lg-12 items">
+                            <div class="items" style="width: 20%">
                                 <label class="formcontrolinput">
-                                    <input type="radio" name="property_type" value="Other"  />
+                                    <input type="radio" name="property_type" value="Other" />
                                     OTHER
                                 </label>
                             </div>
@@ -214,7 +409,7 @@
                <!-- NEED PERMISSION? -->
                 <div class="tab">
                     <h1 class="text-center mt-2 caps">
-                        <div class="headng">Will you need permission from anyone to install the EV charger?</div>
+                        <div class="headng text-uppercase">Will you need permission from anyone<br> to install the EV charger?</div>
                     </h1>
                     <div class="forms form-design py-5">
                         <div class="items"> <label class="formcontrolinput">
@@ -231,7 +426,7 @@
                 <!-- GETTING POWER -->
                 <div class="tab">
                     <h1 class="text-center mt-2 caps">
-                        <div class="headng">Getting power to your EV charger is key.</div>
+                        <div class="headng text-uppercase">Getting power to your EV charger is key.</div>
                     </h1>
                     <div class="col-12 py-5">
                         <img src="{{env('APP_URL')}}public/veh/assets/img/GQ-Residential-PowerIllustration-09.svg" alt="">
@@ -240,7 +435,7 @@
                 <!-- WHERE INSTALLATION INTERIOR OR Exterior -->
                 <div class="tab">
                     <h1 class="text-center mt-2 caps">
-                        <div class="headng">Where will the EV Charger be installed?</div>
+                        <div class="headng text-uppercase">Where will the EV Charger be installed?</div>
                     </h1>
                     <div class="forms form-design py-5">
                         <div class="items"> <label class="formcontrolinput">
@@ -257,7 +452,7 @@
                 <!-- DISTANCE 5FT 10FT 15FT 20FT -->
                 <div class="tab">
                     <h1 class="text-center mt-2 caps">
-                        <div class="headng">Approximately how far is it from the breaker panel to the EV charger?</div>
+                        <div class="headng text-uppercase">Approximately how far is it from the breaker<br> panel to the EV charger?</div>
                     </h1>
                     <div class="forms form-design py-5" style="width: 100%;">
                         <div class="distance">
@@ -290,7 +485,7 @@
                 <!-- EV CHARGER LOCATION ON SAME WALL?  -->
                 <div class="tab">
                     <h1 class="text-center mt-2 caps">
-                        <div class="headng">Will the EV charger be located on the same wall as the breaker panel?</div>
+                        <div class="headng text-uppercase">Will the EV charger be located on the<br> same wall as the breaker panel?</div>
                     </h1>
                     <div class="forms form-design py-5">
                         <div class="items"> <label class="formcontrolinput">
@@ -307,121 +502,117 @@
                 <!-- Because EV chargers have power requirements, we need to understand the types of electrical items you have at your home. -->
                 <div class="tab">
                     <h1 class="text-center mt-2 caps py-5">
-                        <div class="headng">Because EV chargers have power requirements, we need to understand the types of electrical items you have at your home. </div>
+                        <div class="headng text-uppercase">Because EV chargers have power requirements,<br> we need to understand the types of electrical items you have at your home. </div>
                     </h1>
                     
                 </div>
                 <!-- Please choose the electrical items at your home. -->
                 <div class="tab">
                     <h1 class="text-center mt-2 caps">
-                        <div class="headng">Please Choose The Electrical Items At Your Home.</div>
+                        <div class="headng text-uppercase">Please Choose The Electrical Items At Your Home.</div>
                     </h1>
                     <div class="forms">
 
                         <div class="text-center">Choose all that apply</div>
                         <div class="showProperty imgLayout row justify-content-center">
                             <div class="chooseItemSet">
-                                <label for="automative">
+                                <label for="washer">
+                                    <input class="mx-2" type="checkbox" name="electrical_appliances[]"  value="Washer"  id="washer">
                                     <div class="land"><img src="{{env('APP_URL')}}public/veh/assets/img/GQ-Residential-19.svg" alt=""></div>
-                                    <div class="lndText"><input class="mx-2" type="checkbox" name="electrical_appliances[]"  value="Washer"  id="automative">
-                                    </div>
                                 </label>
 
                             </div>
                             <div class="chooseItemSet">
-                                <label for="hotel">
+                                <label for="dryer">
+                                    <input class="mx-2" type="checkbox" name="electrical_appliances[]"  value="Dryer"  id="dryer">
                                     <div class="land"><img src="{{env('APP_URL')}}public/veh/assets/img/GQ-Residential-20.svg" alt=""></div>
-                                    <div class="lndText"> <input class="mx-2" type="checkbox" name="electrical_appliances[]"  value="Dryer"  id="hotel"></div>
                                 </label>
 
                             </div>
                             <div class="chooseItemSet">
-                                <label for="munciple">
+                                <label for="refrigerator">
+                                    <input class="mx-2" type="checkbox" name="electrical_appliances[]"  value="Refrigerator"  id="refrigerator">
                                     <div class="land"><img src="{{env('APP_URL')}}public/veh/assets/img/GQ-Residential-21.svg" alt=""></div>
-                                    <div class="lndText"> <input class="mx-2" type="checkbox" name="electrical_appliances[]"  value="Refrigerator"  id="munciple">
-                                    </div>
                                 </label>
                             </div>
                             <div class="chooseItemSet">
-                                <label for="office">
+                                <label for="stove">
+                                    <input class="mx-2" type="checkbox" name="electrical_appliances[]"  value="Stove"  id="stove">
                                     <div class="land"><img src="{{env('APP_URL')}}public/veh/assets/img/GQ-Residential-22.svg" alt=""></div>
-                                    <div class="lndText"> <input class="mx-2" type="checkbox" name="electrical_appliances[]"  value="Stove"  id="office"></div>
                                 </label>
                             </div>
                             <div class="chooseItemSet">
-                                <label for="parking">
+                                <label for="microwave">
+                                    <input class="mx-2" type="checkbox" name="electrical_appliances[]"  value="Microwave"  id="microwave">
                                     <div class="land"><img src="{{env('APP_URL')}}public/veh/assets/img/GQ-Residential-23.svg" alt=""></div>
-                                    <div class="lndText"> <input class="mx-2" type="checkbox" name="electrical_appliances[]"  value="Microwave"  id="parking"></div>
                                 </label>
                             </div>
                             <div class="chooseItemSet">
-                                <label for="residential">
+                                <label for="freezer">
+                                    <input class="mx-2" type="checkbox" name="electrical_appliances[]"  value="Freezer" id="freezer">
                                     <div class="land"><img src="{{env('APP_URL')}}public/veh/assets/img/GQ-Residential-24.svg" alt=""></div>
-                                    <div class="lndText"> <input class="mx-2" type="checkbox" name="electrical_appliances[]"  value="Freezer" 
-                                            id="residential"></div>
                                 </label>
                             </div>
                             <div class="chooseItemSet">
-                                <label for="retail">
+                                <label for="heat-heater">
+                                    <input class="mx-2" type="checkbox" name="electrical_appliances[]"  value="HeatPump-Heater"  id="heat-heater">
                                     <div class="land"><img src="{{env('APP_URL')}}public/veh/assets/img/GQ-Residential-25.svg" alt=""></div>
-                                    <div class="lndText"> <input class="mx-2" type="checkbox" name="electrical_appliances[]"  value="HeatPump-Heater"  id="retail"></div>
                                 </label>
                             </div>
                             <div class="chooseItemSet">
-                                <label for="others">
+                                <label for="acunit">
+                                    <input class="mx-2" type="checkbox" name="electrical_appliances[]"  value="AC-Unit"  id="acunit">
                                     <div class="land"><img src="{{env('APP_URL')}}public/veh/assets/img/GQ-Residential-26 1.svg" alt=""></div>
-                                    <div class="lndText"> <input class="mx-2" type="checkbox" name="electrical_appliances[]"  value="AC-Unit"  id="others"></div>
                                 </label>
                             </div>
                             <div class="chooseItemSet">
-                                <label for="others">
+                                <label for="water-heater">
+                                    <input class="mx-2" type="checkbox" name="electrical_appliances[]"  value="Water-Heater"  id="water-heater">
                                     <div class="land"><img src="{{env('APP_URL')}}public/veh/assets/img/GQ-Residential-27 1.svg" alt=""></div>
-                                    <div class="lndText"> <input class="mx-2" type="checkbox" name="electrical_appliances[]"  value="Water-Heater"  id="others"></div>
                                 </label>
                             </div>
                             <div class="chooseItemSet">
-                                <label for="others">
+                                <label for="t-water-heater">
+                                    <input class="mx-2" type="checkbox" name="electrical_appliances[]"  value="Tankless-Water-Heater"  id="t-water-heater">
                                     <div class="land"><img src="{{env('APP_URL')}}public/veh/assets/img/GQ-Residential-28 1.svg" alt=""></div>
-                                    <div class="lndText"> <input class="mx-2" type="checkbox" name="electrical_appliances[]"  value="Tankless-Water-Heater"  id="others"></div>
                                 </label>
                             </div>
                             <div class="chooseItemSet">
-                                <label for="others">
+                                <label for="solar-pael">
+                                    <input class="mx-2" type="checkbox" name="electrical_appliances[]"  value="Solar-Paels"  id="solar-pael">
                                     <div class="land"><img src="{{env('APP_URL')}}public/veh/assets/img/GQ-Residential-29 1.svg" alt=""></div>
-                                    <div class="lndText"> <input class="mx-2" type="checkbox" name="electrical_appliances[]"  value="Solar-Paels"  id="others"></div>
                                 </label>
                             </div>
                             <div class="chooseItemSet">
-                                <label for="others">
+                                <label for="battery-storage">
+                                    <input class="mx-2" type="checkbox" name="electrical_appliances[]"  value="Battery-Storage"  id="battery-storage">
                                     <div class="land"><img src="{{env('APP_URL')}}public/veh/assets/img/GQ-Residential-30 1.svg" alt=""></div>
-                                    <div class="lndText"> <input class="mx-2" type="checkbox" name="electrical_appliances[]"  value="Battery-Storage"  id="others"></div>
                                 </label>
                             </div>
                             <div class="chooseItemSet">
-                                <label for="others">
+                                <label for="generator">
+                                    <input class="mx-2" type="checkbox" name="electrical_appliances[]"  value="Generator"  id="generator">
                                     <div class="land"><img src="{{env('APP_URL')}}public/veh/assets/img/GQ-Residential-31 1.svg" alt=""></div>
-                                    <div class="lndText"> <input class="mx-2" type="checkbox" name="electrical_appliances[]"  value="Generator"  id="others"></div>
                                 </label>
                             </div>
-
                         </div>
                     </div>
                 </div>
                 <!-- WRAP -->
                 <div class="tab">
                     <h1 class="text-center mt-2 caps">
-                        <div class="headng">We'll wrap this quote up for you.</div>
+                        <div class="headng text-uppercase">We'll wrap this quote up for you.</div>
                     </h1>
                     <div class="forms">
                         <div class="form-design wrap">
-                            <img src="./img/GQ-Commercial-10.png" alt="">
+                            <img src="{{env('APP_URL')}}public/veh/assets/img/GQ-Commercial-10.png" alt="">
                         </div>
                     </div>
                 </div>
                 <!-- when are you looking to install your ev charger? -->
                 <div class="tab">
                     <h1 class="text-center mt-2 caps">
-                        <div class="headng">When are you looking to install your EV charger?</div>
+                        <div class="headng text-uppercase">When are you looking to install your EV charger?</div>
                     </h1>
                     <div class="forms form-design">
                         <div class="items"> <label class="formcontrolinput">
@@ -454,10 +645,15 @@
                         <div class="cost" style="font-size: 2em;">Total Cost:$<span id="total_amount">1515</span></div>
                         <ul style="font-size: 2em;">
                             <li>CHARGEPOINT CHARGER: $<span id="chargeramt"></span></li>
+                            <li>CHARGER FT: $<span id="chargereamt"></span></li>
                             <li>INSTALLATION: $700</li>
                             <li>PERMIT: $100</li>
                             <li>SERVICE FEE: $65</li>
                         </ul>
+                        <div>
+                           <span style="margin-right: 40px">Place your state and see federal and state rebates and credits</span>
+                           <input type="text" name="state_input" placeholder="STATE" class="p-2" style="border: 1px solid #d3d3d3">
+                       </div>
                         <!-- <div class=" text-center my-4 submit m-auto">
                             <div class="d-flex textstate m-auto justify-content-center text-center"><span class="left"
                                     style="font-size: 1em;">Place your state and see federal state rebates
@@ -473,7 +669,7 @@
                 <!-- ARE YOU Interested IN Financing? -->
                 <div class="tab">
                     <h1 class="text-center mt-2 caps">
-                        <div class="headng">Are you interested in financing?</div>
+                        <div class="headng text-uppercase">Are you interested in financing?</div>
                     </h1>
                     <div class="forms form-design">
                         <div class="items"> <label class="formcontrolinput">
@@ -492,7 +688,7 @@
                 <div class="tab">
                     <h1 class="text-center mt-2 caps">
 
-                        <div class="headng"><b>When is a good date and time to call and get the remaining details for your EV charger installation?</b> </div>
+                        <div class="headng text-uppercase"><b>When is a good date and time to call and get the remaining details for your EV charger installation?</b> </div>
                         <h5 class="text-center">PLEASE NOTE: You Should Have Access To Your Breaker Panel When Scheduling A Date And Time</h5>
                     </h1>
                     <div>
@@ -508,7 +704,7 @@
                 <!-- thankyout step -->
                 <div class="tab">
                     <h1 class="text-center mt-2 caps">
-                        <div class="headng">Thank you for choosing Vehya, <br> EV charger install & service made easy.</div>
+                        <div class="headng text-uppercase">Thank you for choosing Vehya, <br> EV charger install & service made easy.</div>
                     </h1>
                     <div class="col-12 py-5 text-center">
                         <img src="{{env('APP_URL')}}public/veh/assets/img/LastScreen-01 1.svg" alt="">
@@ -517,7 +713,6 @@
                         <div class="headng">We look forward to working with you. <br> One of our representatives will contact you for the remaining details! 
                         </div>
                     </h1>
-                    <button type="submit" class="btn-yellow-lg">Submit</button> 
                 </div>
                 
                 <div style="overflow:auto ;margin:2em;">
@@ -549,6 +744,7 @@
                     <span class="step"></span>
                     <span class="step"></span>
                     <span class="step"></span>
+                    <span class="step"></span>
                 </div>
                 
             </form>
@@ -562,8 +758,20 @@
 <script type="text/javascript" src="{{env('APP_URL')}}public/veh/assets/js/commercial_quote.js"></script>
 <script>
 let camt = 0;
-    function camtf(){
-        camt = 750;
+    function camtf(cond){
+        switch (cond) {
+            case 1:
+                camt = 549.99;
+                break;
+            case 2:
+                camt = 699.99;
+                break;
+            case 3:
+                camt = 649.99;
+                break;
+            default:
+                camt = 750;
+        }
     }
     function camtfa(){
         camt = 0;
@@ -571,7 +779,8 @@ let camt = 0;
     function total_amount(evamt){
         let a = camt+700+100+65+evamt;
         $('#total_amount').html(a);
-        $('#chargeramt').html(evamt);
+        $('#chargeramt').html(camt);
+        $('#chargereamt').html(evamt);
     }
 </script>
 

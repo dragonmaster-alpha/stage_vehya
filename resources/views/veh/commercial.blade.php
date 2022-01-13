@@ -6,13 +6,13 @@
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=AIzaSyAuGkxTIibaR_uVyYVlEqzKYJEDs1GVSQo"></script> 
 <body>
     <!------- Main Container Starts ------->
-    <div class="main-container">
+    <div class="main-container get-quote-page">
         <!------- Header section Starts ------->
         @include('veh.includes.header')
         <!------- Header section End ------->
-        <section class="sec2"></section>
+        <section class="sec2" style="background-color: white"></section>
         <hr>
-        <div class="center">
+        <div class="center" style="width: 80%;">
             <h1 class="text-center caps" style="margin-top: 58px;">
                 <div class="imgs"> <img src="{{env('APP_URL')}}public/veh/assets/img/HermealPhoto-01.png" alt="" srcset=""> </div>
             </h1> 
@@ -21,11 +21,11 @@
                 <!-- One "tab" for each step in the form: -->
                 <div class="tab">
                     <h1 class="text-center mt-2 caps">
-                        <div class="headng">Let's start with some basic info. <br> Which level of EV chargers do you need? </div>
+                        <div class="headng text-uppercase">Let's start with some basic info. <br> Which level of EV chargers do you need? </div>
                     </h1>
                     <div class="forms form-design">
 
-                        <span class="centerText ">Please Select All That Apply</span>
+                        <span class="centerText ">Please select all that apply</span>
 
                         <div class="items "> <label class="formcontrolinput">
                                 <input type="radio" name="own_charger_level" value="Level 2" />
@@ -46,7 +46,7 @@
                 </div>
                 <div class="tab">
                     <h1 class="text-center mt-2 caps">
-                        <div class="headng">Could multiple vehicles be charging at once?</div>
+                        <div class="headng text-uppercase">Could multiple vehicles be charging at once?</div>
                     </h1>
                     <div class="forms form-design">
                         <div class="items"> <label class="formcontrolinput">
@@ -63,7 +63,7 @@
                 </div>
                 <div class="tab">
                     <h1 class="text-center mt-2 caps">
-                        <div class="headng">Are you thinking of providing EV charging as a paid service?</div>
+                        <div class="headng text-uppercase">Are you thinking of providing <br> EV charging as a paid service?</div>
                     </h1>
                     <div class="forms form-design">
                         <div class="items"> <label class="formcontrolinput">
@@ -81,7 +81,7 @@
                 </div>
                 <div class="tab">
                     <h1 class="text-center mt-2 caps">
-                        <div class="headng">We'll need some contact information</div>
+                        <div class="headng text-uppercase">We'll need some contact information</div>
                     </h1>
                     <div class="forms form-design text-center " style="
                     width: fit-content;">
@@ -102,7 +102,7 @@
                         <div class="row d-flex">
                             <div class="col-xl-6 col-lg-12 col-xs-12">
                                 <label class="">
-                                    <input type="email" name="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,4}$" placeholder="EMAIL" />
+                                    <input type="email" name="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]{1,}+\.[a-z]{2,}$" placeholder="EMAIL" />
                                 </label>
                             </div>
                             <div class="col-xl-6 col-lg-12 col-xs-12">
@@ -120,83 +120,71 @@
                 </div>
                 <div class="tab">
                     <h1 class="text-center mt-2 caps">
-                        <div class="headng"><b>Great! Where will the EV chargers be installed?</b>
+                        <div class="headng text-uppercase"><b>Great! Where will the EV chargers be installed?</b>
 
                             <div class="middleImg">
                                 <img src="{{env('APP_URL')}}public/veh/assets/img/GQ-Commercial-06.png" alt="">
                             </div>
                         </div>
                     </h1>
-                    <div class="row selectOption" style="
-                     text-align: center;">
+                    <div class="row selectOption d-flex flex-row justify-content-center align-items-center" style="text-align: center;">
 
-                        <div class="col-md-2"> <label class="">
-                                <input type="text" name="address" placeholder="STREET" id="search_input" />
+                        <div class="col-md-3 px-4">
+                                <input type="text" name="address" placeholder="STREET" id="search_input" /></div>
 
-                            </label></div>
-
-                        <div class="col-md-2">
-                            <label class="">
+                        <div class="col-md-3 px-4">
                                 <input type="text" name="city" placeholder="CITY" id="city"/>
-
-                            </label>
                         </div>
-                        <div class="col-md-2">
-                            <label class="">
+                        <div class="col-md-3 px-4">
                                 <input type="text" name="state" placeholder='STATE' id="state" /> 
-
-                            </label>
                         </div>
-                        <div class="col-md-2">
-                            <label class="">
+                        <div class="col-md-3 px-4">
                                 <input type="text" name="zip_code" placeholder="ZIP CODE" id="zip_code" />
-
-                            </label>
                         </div>
                     </div>
                 </div>
                 <div class="tab">
                     <h1 class="text-center mt-2 caps">
-                        <div class="headng">Ownership Type</div>
+                        <div class="headng text-uppercase">Ownership Type</div>
                     </h1>
                     <div class="forms">
                         <div class="showProperty row" id='thumb_images'>
-                            <div class="col-md-4">
+                            <div class="col-md-4 px-5">
                                 <label for="land">
-                                <div class="land"><img  src="{{env('APP_URL')}}public/veh/assets/img/pr1.png" alt=""></div>
-                                <div class="lndText">LAND</div>
-                                <input type="radio"  id='land' name="property_type_land" value="Land" /></label>
+                                <input type="radio"  id='land' name="property_type_land" value="Land" />
+                                <div class="land"><img  src="{{env('APP_URL')}}public/veh/assets/img/pr3.png" alt=""></div>
+                                <div class="lndText">LAND</div></label>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-4 px-5">
                                 <label for='Commercial'>
+                                <input type="radio"  id='Commercial' name="property_type_land" value="Commercial" />
                                 <div class="land"><img  src="{{env('APP_URL')}}public/veh/assets/img/pr2.png" alt=""></div>
-                                <div class="lndText">COMMERCIAL</div>
-                                <input type="radio"  id='Commercial' name="property_type_land" value="Commercial" /></label>
+                                <div class="lndText">COMMERCIAL</div></label>
                             </div>
 
-                            <div class="col-md-4">
+                            <div class="col-md-4 px-5">
                                 <label for='multi'>
-                                <div class="land"><img  src="{{env('APP_URL')}}public/veh/assets/img/pr3.png" alt=""></div> 
-                                <div class="lndText">MULTI-UNIT</div>
-                                <input type="radio"  id='multi' name="property_type_land" value="Milti-Unit" /></label>
+                                <input type="radio"  id='multi' name="property_type_land" value="Milti-Unit" />
+                                <div class="land"><img  src="{{env('APP_URL')}}public/veh/assets/img/pr1.png" alt=""></div> 
+                                <div class="lndText">MULTI-UNIT</div></label>
                             </div>
                         </div>
-                        <div class="showTSelecProperty row">
-                            <div class="items">
+                        <div class="showTSelecProperty row mt-4 d-flex flex-row justify-content-center align-items-center">
+                            <div class="items" style="width: 20%">
                                 <label class="formcontrolinput">
                                     <input type="radio" name="property_type" value="Rent" />
                                     RENT
                                 </label>
                             </div>
 
-                            <div class="items">
+                            <div class="items" style="width: 20%">
                                 <label class="formcontrolinput">
                                     <input type="radio" name="property_type" value="Own" />
                                     OWN
                                 </label>
                             </div>
 
-                            <div class="items">
+                            <div class="items" style="width: 20%">
                                 <label class="formcontrolinput">
                                     <input type="radio" name="property_type" value="Other" />
                                     OTHER
@@ -207,7 +195,7 @@
                 </div>
                 <div class="tab">
                     <h1 class="text-center mt-2 caps">
-                        <div class="headng">Will you need permission from anyone to install this EV charger?</div>
+                        <div class="headng text-uppercase">Will you need permission from anyone to install this EV charger?</div>
                     </h1>
                     <div class="forms form-design">
                         <div class="items"> <label class="formcontrolinput">
@@ -223,7 +211,7 @@
                 </div>
                 <div class="tab">
                     <h1 class="text-center mt-2 caps">
-                        <div class="headng">what is your type of industry?</div>
+                        <div class="headng text-uppercase">what is your type of industry?</div>
                     </h1>
                     <div class="forms">
 
@@ -231,74 +219,80 @@
                         <div class="showProperty imgLayout row">
                             <div class="chooseItemSet">
                                 <label for="automative">
+                                    <input class="mx-2" type="checkbox" name="industry_location[]" value="Automotive" id="automative">
                                     <div class="land"><img src="{{env('APP_URL')}}public/veh/assets/img/1.png" alt=""></div>
-                                    <div class="lndText">AUTOMOTIVE <input class="mx-2" type="checkbox" name="industry_location[]" value="Automotive" id="automative">
+                                    <div class="lndText">AUTOMOTIVE 
                                     </div>
                                 </label>
                             </div>
                             <div class="chooseItemSet">
                                 <label for="hotel">
+                                    <input class="mx-2" type="checkbox" name="industry_location[]" value="Hotel" id="hotel">
                                     <div class="land"><img src="{{env('APP_URL')}}public/veh/assets/img/2.png" alt=""></div>
-                                    <div class="lndText">HOTEL <input class="mx-2" type="checkbox" name="industry_location[]" value="Hotel" id="hotel"></div>
+                                    <div class="lndText">HOTEL </div>
                                 </label>
 
                             </div>
                             <div class="chooseItemSet">
                                 <label for="munciple">
+                                    <input class="mx-2" type="checkbox" name="industry_location[]" value="Municipal" id="munciple">
                                     <div class="land"><img src="{{env('APP_URL')}}public/veh/assets/img/3.png" alt=""></div>
-                                    <div class="lndText">MUNICIPAL <input class="mx-2" type="checkbox" name="industry_location[]" value="Municipal" id="munciple">
+                                    <div class="lndText">MUNICIPAL 
                                     </div>
                                 </label>
                             </div>
                             <div class="chooseItemSet">
                                 <label for="office">
+                                    <input class="mx-2" type="checkbox" name="industry_location[]" value="Office" id="office">
                                     <div class="land"><img src="{{env('APP_URL')}}public/veh/assets/img/4.png" alt=""></div>
-                                    <div class="lndText">OFFICE <input class="mx-2" type="checkbox" name="industry_location[]" value="Office" id="office"></div>
+                                    <div class="lndText">OFFICE </div>
                                 </label>
                             </div>
                             <div class="chooseItemSet">
                                 <label for="parking">
+                                    <input class="mx-2" type="checkbox" name="industry_location[]" value="Parking" id="parking">
                                     <div class="land"><img src="{{env('APP_URL')}}public/veh/assets/img/5.png" alt=""></div>
-                                    <div class="lndText">PARKING <input class="mx-2" type="checkbox" name="industry_location[]" value="Parking" id="parking"></div>
+                                    <div class="lndText">PARKING </div>
                                 </label>
                             </div>
                             <div class="chooseItemSet">
                                 <label for="residential">
+                                    <input class="mx-2" type="checkbox" name="industry_location[]" value="Residential" id="residential">
                                     <div class="land"><img src="{{env('APP_URL')}}public/veh/assets/img/6.png" alt=""></div>
-                                    <div class="lndText">RESIDENTIAL <input class="mx-2" type="checkbox" name="industry_location[]" value="Residential" id="residential"></div>
+                                    <div class="lndText">RESIDENTIAL </div>
                                 </label>
                             </div>
                             <div class="chooseItemSet">
                                 <label for="retail">
+                                    <input class="mx-2" type="checkbox" name="industry_location[]" value="Retail" id="retail">
                                     <div class="land"><img src="{{env('APP_URL')}}public/veh/assets/img/7.png" alt=""></div>
-                                    <div class="lndText">RETAIL <input class="mx-2" type="checkbox" name="industry_location[]" value="Retail" id="retail"></div>
+                                    <div class="lndText">RETAIL </div>
                                 </label>
                             </div>
                             <div class="chooseItemSet">
                                 <label for="others">
+                                    <input class="mx-2" type="checkbox" name="industry_location[]" value="Other" id="others">
                                     <div class="land"><img src="{{env('APP_URL')}}public/veh/assets/img/8.png" alt=""></div>
-                                    <div class="lndText">OTHERS <input class="mx-2" type="checkbox" name="industry_location[]" value="Other" id="others"></div>
+                                    <div class="lndText">OTHERS </div>
                                 </label>
                             </div>
 
                         </div>
                     </div>
                 </div> 
-                <!--<div class="tab">-->
-                <!--    <h1 class="text-center mt-2 caps">-->
-                <!--        <div class="headng">We'll wrap this quote up for you.</div>-->
-                <!--    </h1>-->
-                <!--    <div class="forms">-->
-
-
-                <!--        <div class="form-design wrap">-->
-                <!--            <img src="./img/GQ-Commercial-10.png" alt="">-->
-                <!--        </div>-->
-                <!--    </div>-->
-                <!--</div>-->
+                <div class="tab">
+                   <h1 class="text-center mt-2 caps">
+                       <div class="headng text-uppercase">We'll wrap this quote up for you.</div>
+                   </h1>
+                   <div class="forms">
+                       <div class="form-design wrap">
+                           <img src="{{env('APP_URL')}}public/veh/assets/img/GQ-Commercial-10.png" alt="">
+                       </div>
+                   </div>
+                </div>
                 <div class="tab">
                     <h1 class="text-center mt-2 caps">
-                        <div class="headng">When are you looking to install your EV charger?</div>
+                        <div class="headng text-uppercase">When are you looking to install<br> your EV charger?</div>
                     </h1>
                     <div class="forms form-design">
                         <div class="items"> <label class="formcontrolinput">
@@ -318,31 +312,29 @@
                                 </label></div>
                     </div>
                 </div>
-                <!--<div class="tab">-->
 
-                <!--    <h1 class="text-center mt-2 caps">-->
-
-                <!--        <div class="headng"><b>Based on the Vehya Online Assessnment, here's your quote</b> </div>-->
-                <!--    </h1>-->
-
-                <!--    <div class="forms text-center ">-->
-
-                <!--        <div class="cost" style="font-size: 2em;">TOTAL COST: ${{700 + 100 + 65}}</div>-->
-                <!--        <ul style="font-size: 2em;">-->
-                            <!--<li>charerpoint charger:$650</li>-->
-                <!--            <li>INSTALLATION: $700</li>-->
-                <!--            <li>PERMIT: $100</li>-->
-                <!--            <li>SERVICE FEE: $65</li>-->
-                <!--        </ul>-->
-                <!--        <input type="hidden" name="total_amount" value="{{700 + 100 + 65}}">-->
-                        
-
-                <!--    </div>-->
-
-                <!--</div>-->
+                <div class="tab">
+                   <h1 class="text-center mt-2 caps">
+                       <div class="headng text-uppercase"><b>Based on the Vehya Online Assessnment, <br>here's your quote</b> </div>
+                   </h1>
+                   <div class="forms text-center ">
+                       <div class="cost" style="font-size: 2em;">TOTAL COST: ${{650 + 700 + 100 + 65}}</div>
+                       <ul style="font-size: 2em;">
+                           <li>charerpoint charger:$650</li>
+                           <li>INSTALLATION: $700</li>
+                           <li>PERMIT: $100</li>
+                           <li>SERVICE FEE: $65</li>
+                       </ul>
+                       <div>
+                           <span style="margin-right: 40px">Place your state and see federal and state rebates and credits</span>
+                           <input type="text" name="state_input" placeholder="STATE" class="p-2" style="border: 1px solid #d3d3d3">
+                       </div>
+                       <input type="hidden" name="total_amount" value="{{650 + 700 + 100 + 65}}">
+                   </div>
+                </div>
                 <div class="tab">
                     <h1 class="text-center mt-2 caps">
-                        <div class="headng"><b>When is a good date and time to call and get the remaining details for your EV charger installation?</b> </div>
+                        <div class="headng text-uppercase"><b>When is a good date and time to call and get the remaining details for your EV charger installation?</b> </div>
                     </h1>
                     <div>
                         <!-- Calendly inline widget begin -->

@@ -33,7 +33,7 @@
         <div class="center">
             <h1 class="text-center caps" style="margin-top: 58px;">
                 <div class="imgs"> <img src="{{env('APP_URL')}}public/veh/assets/img/HermealPhoto-01.png" alt="" srcset=""> </div>
-                <div class="headng">Hi. I'm Hermela. <br> I'me here to make your EV charger installation easy.<br/>Please tell me the type of EV charger installation.</div>
+                <div class="headng text-uppercase">Hi. I'm Hermela. <br> I'm here to make your EV charger installation easy.<br/>Please tell me the type of EV charger installation.</div>
             </h1>
             
             <div class="forms">

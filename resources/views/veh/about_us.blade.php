@@ -2,22 +2,71 @@
 
 <html lang="en">
 
-
-
 <!------- Vehya Project Starts ON Friday,10-Dec-2021 at 4.00PM ------->
 
+<style>
 
+/*About*/
 
+.about-main-bg{
+    background:url({{asset('public/veh/assets/img/about-2.png') }}) no-repeat;
+    background-size:100%;
+    padding: 200px 50px;
+}
+.about-main-info h1, .workforce-details h1, .ev-fleet-info h1, .eduction-info h1{ 
+    color: #fff;
+    font-weight: 500;
+}
+.about-main-info h2, .workforce-details h2, .ev-fleet-info h2, .eduction-info h2{
+    color: #fff;
+}
+.ev-bg{
+    background:url({{asset('public/veh/assets/img/about-7.png') }}) no-repeat;
+    background-size:100%;
+    padding: 200px 50px;
+}
+.workforce-bg{
+    background:url({{asset('public/veh/assets/img/work-bg.png') }}) no-repeat;
+    background-size:100%;
+    padding: 100px 50px;
+}
+.ev-fleet-bg{
+    background:url({{asset('public/veh/assets/img/about-9.png') }}) no-repeat;
+    background-size:100%;
+    padding: 200px 50px;
+}
+.eduction-bg{
+    background:url({{asset('public/veh/assets/img/about-1.png') }}) no-repeat;
+    background-size:100%;
+    padding: 200px 50px;
+}
+.workforce-details{
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+}
+.meet-team {
+    background:url({{asset('public/veh/assets/img/about-3.jpg') }}) no-repeat;
+    background-size:100%;
+    padding: 100px 50px;
+}
+.user-name{
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #efc523;
+    margin-top: 25px;
+}
 
-
-<!-- Mirrored from iwebwiserprojects.xyz/Vehya_Project/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 17 Dec 2021 06:22:14 GMT -->
-
+.mb2-5 {
+    font-size: 3.5rem !important;
+    margin-bottom: 0.5rem !important;
+    font-weight: 400 !important;
+    line-height: 1.2 !important;
+}
+</style>
 @include('veh.includes.assets')
 
-
-
 <body>
-
     <!------- Main Container Starts ------->
 
     <div class="main-container">
@@ -26,228 +75,144 @@
 
         @include('veh.includes.header')
 
-
         <!------- Header section End ------->
+        <h1 class="text-center">"At Vehya we are Committed to WorkforceDevelopment, Ev<br>
+        Infrastructure, <br>
+        and a Carbon neutral Future."</h1>
+<div class="charge-img text-center">
+	<img src="{{env('APP_URL')}}public/veh/assets/img/about-3.jpg" class="img-fluid">
+</div>
+<div class="ev-bg">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6"></div>
+			<div class="col-md-6">
+				<div class="ev-details">
+					<h1 class="mb-5">EV Infrastructure</h1>
+					<h2 class="mb2-5">Infrastructure is key to mass <br>
+						electric vehicle adoption. With <br>
+						every charger installed Vehya is <br>
+						making it easier to own an EV.</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="workforce-bg mt-5">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="workforce-details">
+					<div class="workforce-info">
+					<h1 class="mb-5">Workforce Development</h1>
+					<h2 class="mb2-5">Vehya is committed to maintaining the <br>
+						current electricalworkforce and <br>
+						building the next generation of <br>
+						electricians. We pledge to creating <br>
+						100,000 electrical professionals by 2030.</h2>
+						</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="story-detail text-center">
+					<img src="{{env('APP_URL')}}public/veh/assets/img/_Image_.png" class="img-fluid w-50 m-auto">
+					<div class="text-center">
+					<button type="button" class="btn mt-4">SEE DELONTES'S STORY</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="nature-img text-center mt-5">
+	<img src="{{env('APP_URL')}}public/veh/assets/img/about-5.jpg" class="img-fluid">
+</div>
+<div class="carbon-section mt-5 text-center">
+	<h1 class="">Carbon-Neutral Future</h1>
+	<img src="{{env('APP_URL')}}public/veh/assets/img/about-4.png" class="img-fluid">
+	<h2 class="mb2-5">Creating a carbon-neutral future is at the heart of Vehya’s purposes. <br>
+     Here are just a few of the steps we’re taking toward that future:</h2>
+</div>
+<div class="ev-fleet-bg mt-5">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6"></div>
+			<div class="col-md-6">
+				<div class="ev-fleet-details">
+					<div class="ev-fleet-info">
+						<h1 class="mb-5">EV fleet</h1>
+						<h2 class="mb2-5">We plan to maintain 90% EVs across <br>
+							Vehya’s fleet, with 100% EV adoption <br>
+							by no later than 2030.</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="meet-team text-center mt-5">
+	<h1>Meet our Team</h1>
+	<div class="row">
+		<div class="col-md-6">
+			<div class="team-menber text-center">
+				<img src="{{env('APP_URL')}}public/veh/assets/img/user_img.png" class="img-fluid w-50 pb-5 m-auto">
+				<div class="user-name w-50 m-auto text-center">
+					<h3>	WILLIAM <br>
+					FOUNDER & CEO </h3>
+				</div>
+				<img src="{{env('APP_URL')}}public/veh/assets/img/linkedin.png" class="img-fluid mt-4">
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="team-menber text-center">
+				<img src="{{env('APP_URL')}}public/veh/assets/img/user_img.png" class="img-fluid pb-5 w-50 m-auto">
+				<div class="user-name w-50 m-auto text-center">
+					<h3>	WILLIAM <br>
+					FOUNDER & CEO </h3>
 
-         <section class="sec1 d-flex justify-content-center text-center bg-dark">
-            <img src="{{env('APP_URL')}}public/veh/assets/img/HomePage.jpg" alt="GET A QUOTE" style="width:100%;height:auto;">
-               <h1 class="mt-5">Carbon-Neutral Future</h1>
-        </section>
-        <div class="text-center my-4">
-                <h1 style="font-size: 32px; font-weight: normal;" >Creating a carbon-neutral future is at the heart of Vehya's purposes. Here are just a few of the steps we're taking toward that future.</h1>
+				</div>
+				<img src="{{env('APP_URL')}}public/veh/assets/img/linkedin.png" class="img-fluid mt-4">
+			</div>
+		</div>
+	</div>
+</div>
+<div class="eduction-bg">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="eduction-details">
+					<div class="eduction-info">
+						<h1 class="mb-5">Education</h1>
+						<h2 class="mb2-5">Through the Vehya website, app, <br>
+							and with every install, we educate <br>
+							our customers and workforce on <br>
+							the advantages of a <br>
+							carbon-neutral future.</h2>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6"></div>
+		</div>
+	</div>
+</div>
+<div class="about-main-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6"></div>
+            <div class="col-md-6">
+                <div class="about-main-details">
+                    <div class="about-main-info">
+                        <h1 class="mb-5">Partnerships</h1>
+                        <h2 class="mb2-5">We value our partners and want <br>
+                            work with people who believe in <br>
+                            a carbon-neutral future.</h2>
+                            <button type="button" class="btn">BECOME A PARTNER</button>
+                    </div>
+                </div>
+            </div>
         </div>
-        <!------- Hero Banner Section Start ------->
-
-        <!--<section class="pricing-banner hero-banner-section base-bg">-->
-        <!--    <div class="container-fluid">-->
-        <!--        <div class="row justify-content-center align-items-center">-->
-        <!--            <div class="col-lg-4 col-12">-->
-                        <!------ Page Hero Title ------>
-        <!--                <div class="page-hero-title text-white text-center">-->
-        <!--                    <h1 class="russo-font text-uppercase">About Us</h1>-->
-        <!--                    <p class="my-3">-->
-        <!--                        Vehya is a group of professionals that include master electricians, EV experts,-->
-        <!--                        automotive sales, and engineers.-->
-        <!--                    </p>-->
-        <!--                </div>-->
-        <!--            </div>-->
-        <!--        </div>-->
-        <!--    </div>-->
-        <!--</section>-->
-
-        <!------- Hero Banner Section End ------->
-
-
-
-        <!------- About Us(Why Vehya) section Start ------->
-
-        <section class="web-about why-vehya">
-            <div class="card mb-3 border-0 bg-transparent">
-                <div class="row align-items-center g-0 m-0">
-                    <div class="col-lg-6 col-12">
-                        <div class="why-img p-0 pt-5 pb-lg-5">
-                            <img src="{{env('APP_URL')}}public/veh/assets/img/why-img.svg" class="default-img img-cover position-relative" alt="About us Image">
-                        </div>
-                    </div>
-
-                    <div class="col-lg-5 col-12 ms-auto">
-                        <div class="card-body">
-
-                            <!--<p class="card-text text-uppercase">-->
-
-                            <!--    <small class="text-muted fw-bold">About us</small>-->
-                            <!--</p>-->
-
-                            <h1 class="card-title russo-font">EV Infrastructure &#63;</h1>
-                            <ul class="why-points-list list-unstyled">
-                                <li>Infrastructure is key to mass electric vehicle adoption. With every charger installed, Vehya is making it easier to own an EV.</li>
-                            </ul>
-
-                            <a href="{{env('APP_URL')}}veh/get-quote" class="btn bg-warning text-uppercase rounded-0 px-5 py-3">
-                                <b>Get a quote</b> <i class="fas fa-caret-right ms-3"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!------- About Us(Why Vehya) section End ------->
-
-
-
-        <!------- Multipurpose uses Section Starts ------->
-
-        <section class="multi-use">
-
-            <!----- Multi use Section title ----->
-
-            <div class="title mt-lg-5 mt-3 text-center russo-font position-relative">
-
-                <h1>How it Works</h1>
-                <div class="multiuse-watermark pb-5">
-                    <p>How it Works</p>
-                </div>
-            </div>
-
-            <!----- Multipurpose Lists ----->
-            <div
-                class="row gx-lg-5 gx-lg-0 g-3 gy-5 multi-use-list-container justify-content-lg-evenly justify-content-between">
-                <div class="col-lg-3 col-6">
-                    <ul class="list-unstyled">
-                        <li class="bg-warning solution-icon">
-                            <i class="fas fa-coins"></i>
-                        </li>
-
-                        <li>
-                            <h1>Assessment</h1>
-                        </li>
-
-                        <li>
-                            <p>A thorough evaluation your EV chargers needed, permits required, and any electrical upgrades necessary for a successful install</p>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-3 col-6">
-                    <ul class="list-unstyled">
-                        <li class="bg-warning solution-icon">
-                            <i class="fas fa-headset"></i>
-                        </li>
-                        <li>
-                            <h1>Installation</h1>
-                        </li>
-                        <li>
-                            <p>We then schedule your install with an experienced and licensed electrician</p>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-3 col-6">
-                    <ul class="list-unstyled">
-                        <li class="bg-warning solution-icon">
-                            <i class="fas fa-star"></i>
-                        </li>
-
-                        <li>
-                            <h1>Service</h1>
-                        </li>
-
-                        <li>
-                            <p>Continued technical support and service of your EV chargers for the long-term</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!------- Multipurpose uses Section End ------->
-
-
-
-        <!------- About Us(Why Vehya) section Start ------->
-
-        <section class="why-vehya">
-            <div class="card mb-3 border-0 bg-transparent">
-                <div class="row align-items-center g-0 m-0">
-                    <div class="col-lg-6 col-12">
-                        <div class="card-body">
-                            <h1 class="card-title russo-font">Education</h1>
-                            <ul class="why-points-list list-unstyled">
-                                <li>Through the Vehya website, app, and with every install, we educate our customers and workforce on the advantages of a carbin-neutral future.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-12">
-                        <div class="why-img p-0 pt-5 pb-lg-5">
-                            <img src="{{env('APP_URL')}}public/veh/assets/img/why-img.svg" class="default-img img-cover position-relative" alt="About us Image">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!------- About Us(Why Vehya) section End ------->
-
-         <section class="why-vehya">
-            <div class="card mb-3 border-0 bg-transparent">
-                <div class="row align-items-center g-0 m-0">
-                    <div class="col-lg-6 col-12">
-                        <div class="why-img p-0 pt-5 pb-lg-5">
-                            <img src="{{env('APP_URL')}}public/veh/assets/img/why-img.svg" class="default-img img-cover position-relative" alt="About us Image">
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-12">
-                        <div class="card-body">
-                            <h1 class="card-title russo-font">EV fleet</h1>
-                            <ul class="why-points-list list-unstyled">
-                                <li>We plan to maintain 90% EVs across Vehya's fleet, with 100% EV adoption by no later than 2030.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!------- Have a question Section Starts ------->
-
-        <section class="have-question bg-warning">
-            <div class="row g-0">
-                <div class="col-lg-6 col-12">
-                    <div class="title mt-lg-5 p-lg-0 pt-lg-3 p-3  russo-font position-relative w-75 mx-auto">
-                        <h1>Have Questions &#63;</h1>
-                        <div class="hav-que-watermark">
-                            <p>Have a que</p>
-                        </div>
-
-                        <p class="roboto-font mt-lg-5 mt-3 mb-1">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        </p>
-
-                        <div class="have-btn mt-lg-5 mt-4">
-                            <a href="{{env('APP_URL')}}veh/get_quote" class="btn bg-dark text-white text-uppercase rounded-0 px-3 py-3">
-                                <b>Get A Quote</b> <i class="fas fa-caret-right ms-3"></i>
-                                <a href="tel:0987654321" class="btn bg-white text-uppercase rounded-0 px-3 py-3">
-                                    <i class="fas fa-phone-volume"></i> <b>224 000 22 11 33</b>
-                                </a>
-                            </a>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="col-lg-6 col-12">
-                    <div class="hav-que-img">
-                        <img src="{{env('APP_URL')}}public/veh/assets/img/have-question.svg" alt="Question Image" class="default-img img-cover">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!------- Have a question Section End ------->
-
-
-
+    </div>
+</div>
       <!------- Footer Section Starts ------->
 
       @include('veh.includes.footer')
@@ -255,21 +220,6 @@
       <!------- Footer Section End ------->
 
   </div>
-
-  <!------- Main Container End ------->
-
-
-
-  <!------- All Modals Coding Stats Here ------->
-
-
-
-  <!----- Modal-1 ----->
-
-
-
-  <!------- All Modals Coding Ends Here ------->
-
 
 
 

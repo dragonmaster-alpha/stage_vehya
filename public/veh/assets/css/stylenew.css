@@ -94,7 +94,6 @@ header{
 }
 
 .sec1 {
-    background-image: url('img/HomePage.jpg');
     background-size: cover;
     width: 100%;
     height: fit-content;
@@ -108,11 +107,12 @@ h1{
 }
 .sec1 h1{
     position: absolute;
-} 
+    top : 24%;
+}
 .sec1 button {
     position: absolute;
     left: 50%;
-    top: 60%;
+    top: 48%;
     transform: translate(-50%, -50%);
 }
 .col-xl-6.col-lg-12.col-xs-12.phone_number input {
@@ -127,12 +127,12 @@ h1{
     padding: 3em ;
 }
 .sec4{
-    width: 98%;
+    width: 100%;
     text-align: center;
     margin: auto;
     height: fit-content;
     background-color: #F9F9F9;
-    height: 60vh;
+    height: 44vh;
 }
 .starsect{
     margin-top: 3em;
@@ -145,14 +145,13 @@ h1{
 }
 
 .sec4 div div .card{
-    min-height:18em;
-    max-height: fit-content;
+    min-height:20em;
     padding: 1em;
     /* background-color: red; */
-    margin-left: 2em;
-    margin-right: 2em;
+    margin-left: .5em;
+    margin-right: .5em;
     border-radius: 15px;
-    box-shadow: 0 13px 8px 5px rgb(231, 224, 224);
+    box-shadow: 0 13px 8px 5px rgba(231, 224, 224, 0.6);
     /* overflow: auto  ;
     scrollbar-width: none;*/
 }
@@ -164,7 +163,8 @@ h1{
 .card_body p{
     font-weight: 500;
     font-size: 20px;
-    text-align: justify;
+    text-align: left;
+    word-wrap: break-word;
 }
  .sec5{
     margin-top: 22em;
@@ -199,6 +199,7 @@ footer{
 }   
 .sec8{
     margin-top: 5em;
+    margin-bottom: 5em;
 }
 .footer2 div div a i{
     font-size:2em;
@@ -870,3 +871,262 @@ span.left {
 
 }
 
+.carousel-item > div {
+    display: inline-block;
+    margin-left: -4px;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-size: 200%;
+    opacity: .3
+}
+
+.carousel-control-prev-icon:hover, .carousel-control-next-icon:hover {
+    opacity: 1;
+}
+
+details .content {
+    background: white;
+}
+
+details .content .box-group {
+    margin: auto;
+    width: 88%;
+}
+
+details .content .box-group .box-detail {
+    height: 240px;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px 12px rgb(231 224 224 / 60%);
+    padding: 0 20px 0 28px;
+}
+
+details .box-detail p{
+    padding: 0;
+    margin: 0;
+}
+
+details .box-datail img {
+    width: 120px;
+}
+
+.description-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 40px;
+}
+
+.charger-group-container .charger-lv-caption {
+    color: #FFC107;
+    background: black;
+    padding: 12px;
+    font-weight: 300;
+}
+
+.charger-group-container .charger-group-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.charger-group-box .charger-individual-box {
+    border-radius: 16px;
+    width: 360px;
+    height: fit-content;
+    margin: 40px 0 60px 0;
+    box-shadow: 0 4px 16px 12px rgb(231 224 224 / 60%);
+}
+
+.charger-individual-box .charger-sub-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.charger-sub-box .charger-caption-image {
+    width: 160px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.charger-sub-box .cap-price-container {
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+.charger-sub-box .cap-title {
+    font-size: 24px;
+    text-align: center;
+    line-height: 1.5em;
+}
+
+.charger-sub-box .price-label {
+    position: absolute;
+    left: 36px;
+    top: 6px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.charger-sub-box .price-label1 {
+    position: absolute;
+    left: 40px;
+    top: 10px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.charger-sub-box .price-label2 {
+    position: absolute;
+    left: 40px;
+    top: 10px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.charger-group-container .asset-group-box {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.asset-group-box .asset-individual {
+    border-radius: 16px;
+    padding: 6px;
+}
+
+.asset-individual img {
+    float: left;
+    margin-right: 6px;
+}
+
+.show-more-less {
+    background: #FFC107;
+    text-align: center;
+    color: black;
+    text-transform: capitalize;
+    font-size: 20px;
+    border-radius: 0 0 16px 16px;
+}
+
+.more-info-box {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+    height: fit-content;
+    display: none;
+}
+
+.individual-info {
+    position: relative;
+    margin-bottom: 20px;
+    height: 20px;
+}
+
+.individual-info .info-l {
+    position: absolute;
+    left: 50px;
+    text-transform: uppercase;
+}
+
+.individual-info .info-r {
+    position: absolute;
+    left: 180px;
+    text-transform: uppercase;
+}
+
+.other_service {
+    background: #f8f8f8;
+    padding: 60px 0px;
+}
+
+.other_service .pricing-box .pri-box-img {
+    width: 71px;
+}
+
+
+.other_service .pri-box-Txt {
+    margin-left:0px;
+}
+.other_service .pri-box-Txt h5 {
+    font-size: 15px;
+    margin-bottom: 3px;
+    line-height: 15px;
+	color: #212529;
+}
+.other_service .pri-box-Txt img {
+    max-width: 92px;
+}
+.other_service .pri-box-Txt span {
+    font-size: 16px;
+    font-weight: 400;
+}
+.other_service .pricing-box {
+    max-width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 1px 4px 6px #e1e1e1;
+	height: 92px;
+    display: flex;
+    align-items: center;
+}
+
+.other_service .service-container{
+    width: 80%;
+    margin: auto;
+}
+
+.heaing-txt {
+    font-size: 4rem;
+}
+
+.set-pos {
+    left: 32px;
+    top: 6px;
+}
+
+.showProperty input {
+    visibility: hidden;
+}
+
+.showProperty input:checked ~ .land {
+    box-shadow: 0 0px 16px 4px #f4cd1e;
+}
+
+.get-quote-page input:focus {
+    outline: none !important;
+    border:1px solid rgb(244, 205, 30) !important;
+    box-shadow: 0 0 10px #f8f8f8;
+}
+
+div[data-id=branding] {
+    background-color: #f4cd1e;
+}
+
+input[name=own_charger] {
+    visibility: hidden;
+}
+
+input[name=own_charger]:checked ~ .charger-individual-box {
+    box-shadow: 0 0px 16px 4px #f4cd1e;
+}

@@ -28,13 +28,13 @@
 
 
         <!------- Header section End ------->
-
+        
         <section class="sec1 d-flex justify-content-center text-center bg-dark">
-            <img src="{{env('APP_URL')}}public/veh/assets/img/HomePage.jpg" alt="GET A QUOTE" style="width:100%;height:auto;">
-               <h1 class="mt-5">At Vehya, we took the guesswork<br>out of getting an EV charger</h1>
+            <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/PricingBackground.png" alt="Pricing Background" style="width:100%;height:auto;">
+            <h1 class="mt-5" style="top: auto">At Vehya, we took the guesswork<br>out of getting an EV charger</h1>
         </section>
         <div class=" text-center my-4">
-                <h1 style="font-size: 32px; font-weight: normal;" >Our pricing for EV chargers is transparent, and so is the cost for installation.</h1>
+                <h1 style="font-size: 44px; font-weight: 300;" >Our pricing for EV chargers is transparent,<br> and so is the cost for installation.</h1>
            </div>
 
         <!------- Hero Banner Section Start ------->
@@ -61,1314 +61,1024 @@
 
         <!------- How Can we Help Section As Equipment Pricing Section Starts ------->
 
-        <section class="pricing can-help">
-
-            <!-- Equipment-Category 1 -->
-
-            <div class="eq-cat cat-1 pt-0">
-
-                <!------- Equipment Category Section Title ------->
-
-                <div class="title mt-lg-5 text-center russo-font position-relative">
-
-                    <h1 class="text-truncate-by-2">Level 2 ev chargers</h1>
-
-                </div>
-
-
-
-                <!----- Equipment Section Card ----->
-
-                <div class="row gx-lg-5 gx-0 gy-5 justify-content-between align-items-center pt-2 pt-lg-5">
-                    @foreach($pricelist as $list)
-                    <div class="col-lg-4 col-12">
-                       
-                        <div class="card basic-card border-0">
-
-                            <div class="basic-card-img position-relative">
-
-                                <img src="{{env('APP_URL').'public/uploads/'}}image/{{$list['product_image']}}"
-
-                                    class="card-img-top default-img img-cover" alt="Product">
-
-
-
-                                <div class="img-overlay-rating">
-
-                                    <h3 class="mb-1">4.0</h3>
-
-                                    <span><i class="fas fa-star text-warning"></i></span>
-
-                                    <span><i class="fas fa-star text-warning"></i></span>
-
-                                    <span><i class="fas fa-star text-warning"></i></span>
-
-                                    <span><i class="fas fa-star text-warning"></i></span>
-
-                                    <span><i class="fas fa-star text-warning"></i></span>
-
-                                </div>
-
-
-
-                                <div class="img-overlay-price">
-
-                                    <p class="m-0">${{$list['price']}}</p>
-
-                                </div>
-
-                            </div>
-
-
-
-                            <div class="card-body py-5 px-5">
-
-                                <h3 class="card-title russo-font text-uppercase py-4">ChargePoint 250 Express</h3>
-
-
-
-                                <ul class="card-dis-list row list-unstyled gy-5 gx-lg-5 gx-4">
-
-                                    <li class="col-4">
-
-                                        <p class="text-muted text-truncate mb-0">Max. Charge</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['max_charge']}}Kw</h3>
-
-                                    </li>
-
-
-
-                                    <li class="col-4">
-
-                                        <p class="text-muted text-truncate mb-0">Amperage</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['amperage']}}A</h3>
-
-                                    </li>
-
-
-
-                                    <li class="col-4">
-
-                                        <p class="text-muted text-truncate mb-0">Input Voltage</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['voltage']}}V</h3>
-
-                                    </li>
-
-
-
-                                    <li class="col-4">
-
-                                        <p class="text-muted text-truncate mb-0">Safety</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['safety']}}</h3>
-
-                                    </li>
-
-
-
-                                    <li class="col-4">
-
-                                        <p class="text-muted text-truncate mb-0">Warranty</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['warranty']}}</h3>
-
-                                    </li>
-
-
-
-                                    <li class="col-4">
-
-                                        <p class="text-muted text-truncate mb-0">Cable Length</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['cable_length']}}+</h3>
-
-                                    </li>
-
-
-
-                                    <li class="col-6">
-
-                                        <p class="text-muted text-truncate mb-0">Connectivity</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['connectivity']}}</h3>
-
-                                    </li>
-
-
-
-                                    <li class="col-6">
-
-                                        <p class="text-muted text-truncate mb-0">Efficiency</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['efficiency']}}</h3>
-
-                                    </li>
-
-                                </ul>
-                                
-
-                            </div>
-
+        <section class="charger-group-container">
+            <h1 class="text-center text-uppercase charger-lv-caption">level 2 ev chargers</h1>
+            <div class="charger-group-box">
+                <div class="charger-individual-box">
+                    <div class="charger-sub-box">
+                        <div class="charger-caption-image">
+                            <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/2.png" alt="">
                         </div>
-                       
+                        <div class="cap-price-container">
+                            <p class="cap-title text-capitalize">blink home level 2</p>
+                            <div class="position-relative">
+                                <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/11.png" alt="" style="width: 120px;">
+                                <span class="price-label position-absolute">549.99$</span>
+                            </div>
+                        </div>
                     </div>
-                    @endforeach
-                                
+                    <div class="asset-group-box">
+                        <div class="asset-individual bg-dark">
+                            <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/5.png" alt="">
+                            <span class="text-white"> 11.2kW </span>
+                        </div>
+                        <div class="asset-individual bg-dark">
+                            <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/6.png" alt="">
+                            <span class="text-white"> 25ft Cable </span>
+                        </div>
+                        <div class="asset-individual bg-dark">
+                            <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/7.png" alt="">
+                            <span class="text-white"> Power Share </span>
+                        </div>
+                    </div>
+                    <div id="id-more-information1" class="more-info-box">
+                        <div class="individual-info">
+                            <span class="info-l">Max. Charge</span>
+                            <span class="info-r">11.5kW</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Amperage</span>
+                            <span class="info-r">60amp</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Input Voltage</span>
+                            <span class="info-r">240v</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Connectivity</span>
+                            <span class="info-r">Wi-Fi/Smartphone</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Warranty</span>
+                            <span class="info-r">3 years</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Cabel Length</span>
+                            <span class="info-r">25ft</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Safety</span>
+                            <span class="info-r">UL Listed</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Efficiency</span>
+                            <span class="info-r">Energy Star Certified</span>
+                        </div>
+                    </div>
+                    <div id="readMore1" class="show-more-less" onclick="showMoreOrLess(1)">SHOW MORE</div>
                 </div>
-
+                <div class="charger-individual-box">
+                    <div class="charger-sub-box">
+                        <div class="charger-caption-image">
+                            <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/3.png" alt="">
+                        </div>
+                        <div class="cap-price-container">
+                            <p class="cap-title text-capitalize">Charge point homeflex</p>
+                            <div class="position-relative">
+                                <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/11.png" alt="" style="width: 120px;">
+                                <span class="price-label position-absolute">699.99$</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="asset-group-box">
+                        <div class="asset-individual bg-dark">
+                            <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/5.png" alt="">
+                            <span class="text-white"> 11.2kW </span>
+                        </div>
+                        <div class="asset-individual bg-dark">
+                            <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/6.png" alt="">
+                            <span class="text-white"> 25ft Cable </span>
+                        </div>
+                        <div class="asset-individual bg-dark">
+                            <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/7.png" alt="">
+                            <span class="text-white"> Power Share </span>
+                        </div>
+                    </div>
+                    <div id="id-more-information2" class="more-info-box">
+                        <div class="individual-info">
+                            <span class="info-l">Max. Charge</span>
+                            <span class="info-r">11.5kW</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Amperage</span>
+                            <span class="info-r">60amp</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Input Voltage</span>
+                            <span class="info-r">240v</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Connectivity</span>
+                            <span class="info-r">Wi-Fi/Smartphone</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Warranty</span>
+                            <span class="info-r">3 years</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Cabel Length</span>
+                            <span class="info-r">25ft</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Safety</span>
+                            <span class="info-r">UL Listed</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Efficiency</span>
+                            <span class="info-r">Energy Star Certified</span>
+                        </div>
+                    </div>
+                    <div id="readMore2" class="show-more-less" onclick="showMoreOrLess(2)">SHOW MORE</div>
+                </div>
+                <div class="charger-individual-box">
+                    <div class="charger-sub-box">
+                        <div class="charger-caption-image">
+                            <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/4.png" alt="">
+                        </div>
+                        <div class="cap-price-container">
+                            <p class="cap-title text-capitalize">Enel X Juicebox</p>
+                            <div class="position-relative">
+                                <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/11.png" alt="" style="width: 120px;">
+                                <span class="price-label position-absolute">649.99$</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="asset-group-box">
+                        <div class="asset-individual bg-dark">
+                            <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/5.png" alt="">
+                            <span class="text-white"> 11.2kW </span>
+                        </div>
+                        <div class="asset-individual bg-dark">
+                            <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/6.png" alt="">
+                            <span class="text-white"> 25ft Cable </span>
+                        </div>
+                        <div class="asset-individual bg-dark">
+                            <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/7.png" alt="">
+                            <span class="text-white"> Power Share </span>
+                        </div>
+                    </div>
+                    <div id="id-more-information3" class="more-info-box">
+                        <div class="individual-info">
+                            <span class="info-l">Max. Charge</span>
+                            <span class="info-r">11.5kW</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Amperage</span>
+                            <span class="info-r">60amp</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Input Voltage</span>
+                            <span class="info-r">240v</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Connectivity</span>
+                            <span class="info-r">Wi-Fi/Smartphone</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Warranty</span>
+                            <span class="info-r">3 years</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Cabel Length</span>
+                            <span class="info-r">25ft</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Safety</span>
+                            <span class="info-r">UL Listed</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Efficiency</span>
+                            <span class="info-r">Energy Star Certified</span>
+                        </div>
+                    </div>
+                    <div id="readMore3" class="show-more-less" onclick="showMoreOrLess(3)">SHOW MORE</div>
+                </div>
             </div>
-                                
-
-
-            <!-- Equipment-Category 2 -->
-
-            <div class="eq-cat cat-2 mt-5 pt-3">
-
-                <!------- Equipment Category Section Title ------->
-
-                <div class="title mt-lg-5 text-center russo-font position-relative">
-
-                    <h1>Level 2+ / High Power EV Chargers</h1>
-
-                </div>
-
-
-
-                <!----- Equipment Section Card ----->
-
-                <div class="row gx-lg-5 gx-0 gy-5 justify-content-between align-items-center pt-2 pt-lg-5">
-
-                    @foreach($pricelist as $list)
-                    <div class="col-lg-4 col-12">
-                       
-                        <div class="card basic-card border-0">
-
-                            <div class="basic-card-img position-relative">
-
-                                <img src="{{env('APP_URL').'public/uploads/'}}image/{{$list['product_image']}}"
-
-                                    class="card-img-top default-img img-cover" alt="Product">
-
-
-
-                                <div class="img-overlay-rating">
-
-                                    <h3 class="mb-1">4.0</h3>
-
-                                    <span><i class="fas fa-star text-warning"></i></span>
-
-                                    <span><i class="fas fa-star text-warning"></i></span>
-
-                                    <span><i class="fas fa-star text-warning"></i></span>
-
-                                    <span><i class="fas fa-star text-warning"></i></span>
-
-                                    <span><i class="fas fa-star text-warning"></i></span>
-
-                                </div>
-
-
-
-                                <div class="img-overlay-price">
-
-                                    <p class="m-0">${{$list['price']}}</p>
-
-                                </div>
-
-                            </div>
-
-
-
-                            <div class="card-body py-5 px-5">
-
-                                <h3 class="card-title russo-font text-uppercase py-4">ChargePoint 250 Express</h3>
-
-
-
-                                <ul class="card-dis-list row list-unstyled gy-5 gx-lg-5 gx-4">
-
-                                    <li class="col-4">
-
-                                        <p class="text-muted text-truncate mb-0">Max. Charge</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['max_charge']}}Kw</h3>
-
-                                    </li>
-
-
-
-                                    <li class="col-4">
-
-                                        <p class="text-muted text-truncate mb-0">Amperage</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['amperage']}}A</h3>
-
-                                    </li>
-
-
-
-                                    <li class="col-4">
-
-                                        <p class="text-muted text-truncate mb-0">Input Voltage</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['voltage']}}V</h3>
-
-                                    </li>
-
-
-
-                                    <li class="col-4">
-
-                                        <p class="text-muted text-truncate mb-0">Safety</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['safety']}}</h3>
-
-                                    </li>
-
-
-
-                                    <li class="col-4">
-
-                                        <p class="text-muted text-truncate mb-0">Warranty</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['warranty']}}</h3>
-
-                                    </li>
-
-
-
-                                    <li class="col-4">
-
-                                        <p class="text-muted text-truncate mb-0">Cable Length</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['cable_length']}}+</h3>
-
-                                    </li>
-
-
-
-                                    <li class="col-6">
-
-                                        <p class="text-muted text-truncate mb-0">Connectivity</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['connectivity']}}</h3>
-
-                                    </li>
-
-
-
-                                    <li class="col-6">
-
-                                        <p class="text-muted text-truncate mb-0">Efficiency</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['efficiency']}}</h3>
-
-                                    </li>
-
-                                </ul>
-
-                            </div>
-
-                        </div>
-                       
-                    </div>
-                    @endforeach
-
-                </div>
-
-            </div>
-
-
-
-            <!-- Equipment-Category 3 -->
-
-            <div class="eq-cat cat-3 mt-5 pt-3">
-
-                <!------- Equipment Category Section Title ------->
-
-                <div class="title mt-lg-5 text-center russo-font position-relative">
-
-                    <h1>Level 3 / DCFC EV Charger</h1>
-
-                </div>
-
-
-
-                <!----- Equipment Section Card ----->
-
-                <div class="row gx-lg-5 gx-0 gy-5 align-items-center pt-2 pt-lg-5">
-
-                   
-                    <div class="col-lg-4 col-12">
-                       
-                        <div class="card basic-card border-0">
-
-                            <div class="basic-card-img position-relative">
-
-                                <img src="{{env('APP_URL').'public/uploads/'}}image/{{$list['product_image']}}"
-
-                                    class="card-img-top default-img img-cover" alt="Product">
-
-
-
-                                <div class="img-overlay-rating">
-
-                                    <h3 class="mb-1">4.0</h3>
-
-                                    <span><i class="fas fa-star text-warning"></i></span>
-
-                                    <span><i class="fas fa-star text-warning"></i></span>
-
-                                    <span><i class="fas fa-star text-warning"></i></span>
-
-                                    <span><i class="fas fa-star text-warning"></i></span>
-
-                                    <span><i class="fas fa-star text-warning"></i></span>
-
-                                </div>
-
-
-
-                                <div class="img-overlay-price">
-
-                                    <p class="m-0">${{$list['price']}}</p>
-
-                                </div>
-
-                            </div>
-
-
-
-                            <div class="card-body py-5 px-5">
-
-                                <h3 class="card-title russo-font text-uppercase py-4">ChargePoint 250 Express</h3>
-
-
-
-                                <ul class="card-dis-list row list-unstyled gy-5 gx-lg-5 gx-4">
-
-                                    <li class="col-4">
-
-                                        <p class="text-muted text-truncate mb-0">Max. Charge</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['max_charge']}}Kw</h3>
-
-                                    </li>
-
-
-
-                                    <li class="col-4">
-
-                                        <p class="text-muted text-truncate mb-0">Amperage</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['amperage']}}A</h3>
-
-                                    </li>
-
-
-
-                                    <li class="col-4">
-
-                                        <p class="text-muted text-truncate mb-0">Input Voltage</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['voltage']}}V</h3>
-
-                                    </li>
-
-
-
-                                    <li class="col-4">
-
-                                        <p class="text-muted text-truncate mb-0">Safety</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['safety']}}</h3>
-
-                                    </li>
-
-
-
-                                    <li class="col-4">
-
-                                        <p class="text-muted text-truncate mb-0">Warranty</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['warranty']}}</h3>
-
-                                    </li>
-
-
-
-                                    <li class="col-4">
-
-                                        <p class="text-muted text-truncate mb-0">Cable Length</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['cable_length']}}+</h3>
-
-                                    </li>
-
-
-
-                                    <li class="col-6">
-
-                                        <p class="text-muted text-truncate mb-0">Connectivity</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['connectivity']}}</h3>
-
-                                    </li>
-
-
-
-                                    <li class="col-6">
-
-                                        <p class="text-muted text-truncate mb-0">Efficiency</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['efficiency']}}</h3>
-
-                                    </li>
-
-                                </ul>
-
-                            </div>
-
-                        </div>
-                       
-                    </div>
-                    <div class="col-lg-4 col-12">
-                       
-                        <div class="card basic-card border-0">
-
-                            <div class="basic-card-img position-relative">
-
-                                <img src="{{env('APP_URL').'public/uploads/'}}image/{{$list['product_image']}}"
-
-                                    class="card-img-top default-img img-cover" alt="Product">
-
-
-
-                                <div class="img-overlay-rating">
-
-                                    <h3 class="mb-1">4.0</h3>
-
-                                    <span><i class="fas fa-star text-warning"></i></span>
-
-                                    <span><i class="fas fa-star text-warning"></i></span>
-
-                                    <span><i class="fas fa-star text-warning"></i></span>
-
-                                    <span><i class="fas fa-star text-warning"></i></span>
-
-                                    <span><i class="fas fa-star text-warning"></i></span>
-
-                                </div>
-
-
-
-                                <div class="img-overlay-price">
-
-                                    <p class="m-0">${{$list['price']}}</p>
-
-                                </div>
-
-                            </div>
-
-
-
-                            <div class="card-body py-5 px-5">
-
-                                <h3 class="card-title russo-font text-uppercase py-4">ChargePoint 250 Express</h3>
-
-
-
-                                <ul class="card-dis-list row list-unstyled gy-5 gx-lg-5 gx-4">
-
-                                    <li class="col-4">
-
-                                        <p class="text-muted text-truncate mb-0">Max. Charge</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['max_charge']}}Kw</h3>
-
-                                    </li>
-
-
-
-                                    <li class="col-4">
-
-                                        <p class="text-muted text-truncate mb-0">Amperage</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['amperage']}}A</h3>
-
-                                    </li>
-
-
-
-                                    <li class="col-4">
-
-                                        <p class="text-muted text-truncate mb-0">Input Voltage</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['voltage']}}V</h3>
-
-                                    </li>
-
-
-
-                                    <li class="col-4">
-
-                                        <p class="text-muted text-truncate mb-0">Safety</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['safety']}}</h3>
-
-                                    </li>
-
-
-
-                                    <li class="col-4">
-
-                                        <p class="text-muted text-truncate mb-0">Warranty</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['warranty']}}</h3>
-
-                                    </li>
-
-
-
-                                    <li class="col-4">
-
-                                        <p class="text-muted text-truncate mb-0">Cable Length</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['cable_length']}}+</h3>
-
-                                    </li>
-
-
-
-                                    <li class="col-6">
-
-                                        <p class="text-muted text-truncate mb-0">Connectivity</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['connectivity']}}</h3>
-
-                                    </li>
-
-
-
-                                    <li class="col-6">
-
-                                        <p class="text-muted text-truncate mb-0">Efficiency</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['efficiency']}}</h3>
-
-                                    </li>
-
-                                </ul>
-
-                            </div>
-
-                        </div>
-                       
-                    </div>
-                    <div class="col-lg-4 col-12">
-                       
-                        <div class="card basic-card border-0">
-
-                            <div class="basic-card-img position-relative">
-
-                                <img src="{{env('APP_URL').'public/uploads/'}}image/{{$list['product_image']}}"
-
-                                    class="card-img-top default-img img-cover" alt="Product">
-
-
-
-                                <div class="img-overlay-rating">
-
-                                    <h3 class="mb-1">4.0</h3>
-
-                                    <span><i class="fas fa-star text-warning"></i></span>
-
-                                    <span><i class="fas fa-star text-warning"></i></span>
-
-                                    <span><i class="fas fa-star text-warning"></i></span>
-
-                                    <span><i class="fas fa-star text-warning"></i></span>
-
-                                    <span><i class="fas fa-star text-warning"></i></span>
-
-                                </div>
-
-
-
-                                <div class="img-overlay-price">
-
-                                    <p class="m-0">${{$list['price']}}</p>
-
-                                </div>
-
-                            </div>
-
-
-
-                            <div class="card-body py-5 px-5">
-
-                                <h3 class="card-title russo-font text-uppercase py-4">ChargePoint 250 Express</h3>
-
-
-
-                                <ul class="card-dis-list row list-unstyled gy-5 gx-lg-5 gx-4">
-
-                                    <li class="col-4">
-
-                                        <p class="text-muted text-truncate mb-0">Max. Charge</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['max_charge']}}Kw</h3>
-
-                                    </li>
-
-
-
-                                    <li class="col-4">
-
-                                        <p class="text-muted text-truncate mb-0">Amperage</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['amperage']}}A</h3>
-
-                                    </li>
-
-
-
-                                    <li class="col-4">
-
-                                        <p class="text-muted text-truncate mb-0">Input Voltage</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['voltage']}}V</h3>
-
-                                    </li>
-
-
-
-                                    <li class="col-4">
-
-                                        <p class="text-muted text-truncate mb-0">Safety</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['safety']}}</h3>
-
-                                    </li>
-
-
-
-                                    <li class="col-4">
-
-                                        <p class="text-muted text-truncate mb-0">Warranty</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['warranty']}}</h3>
-
-                                    </li>
-
-
-
-                                    <li class="col-4">
-
-                                        <p class="text-muted text-truncate mb-0">Cable Length</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['cable_length']}}+</h3>
-
-                                    </li>
-
-
-
-                                    <li class="col-6">
-
-                                        <p class="text-muted text-truncate mb-0">Connectivity</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['connectivity']}}</h3>
-
-                                    </li>
-
-
-
-                                    <li class="col-6">
-
-                                        <p class="text-muted text-truncate mb-0">Efficiency</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['efficiency']}}</h3>
-
-                                    </li>
-
-                                </ul>
-
-                            </div>
-
-                        </div>
-                       
-                    </div>
-                    <span id="dots"></span>
-                    <span id="more" style="display: none;" class="row gx-lg-5 gx-0 gy-5 align-items-center pt-2 pt-lg-5">
-                    <div class="col-lg-4 col-12">
-                       
-                        <div class="card basic-card border-0">
-
-                            <div class="basic-card-img position-relative">
-
-                                <img src="{{env('APP_URL').'public/uploads/'}}image/{{$list['product_image']}}"
-
-                                    class="card-img-top default-img img-cover" alt="Product">
-
-
-
-                                <div class="img-overlay-rating">
-
-                                    <h3 class="mb-1">4.0</h3>
-
-                                    <span><i class="fas fa-star text-warning"></i></span>
-
-                                    <span><i class="fas fa-star text-warning"></i></span>
-
-                                    <span><i class="fas fa-star text-warning"></i></span>
-
-                                    <span><i class="fas fa-star text-warning"></i></span>
-
-                                    <span><i class="fas fa-star text-warning"></i></span>
-
-                                </div>
-
-
-
-                                <div class="img-overlay-price">
-
-                                    <p class="m-0">${{$list['price']}}</p>
-
-                                </div>
-
-                            </div>
-
-
-
-                            <div class="card-body py-5 px-5">
-
-                                <h3 class="card-title russo-font text-uppercase py-4">ChargePoint 250 Express</h3>
-
-
-
-                                <ul class="card-dis-list row list-unstyled gy-5 gx-lg-5 gx-4">
-
-                                    <li class="col-4">
-
-                                        <p class="text-muted text-truncate mb-0">Max. Charge</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['max_charge']}}Kw</h3>
-
-                                    </li>
-
-
-
-                                    <li class="col-4">
-
-                                        <p class="text-muted text-truncate mb-0">Amperage</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['amperage']}}A</h3>
-
-                                    </li>
-
-
-
-                                    <li class="col-4">
-
-                                        <p class="text-muted text-truncate mb-0">Input Voltage</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['voltage']}}V</h3>
-
-                                    </li>
-
-
-
-                                    <li class="col-4">
-
-                                        <p class="text-muted text-truncate mb-0">Safety</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['safety']}}</h3>
-
-                                    </li>
-
-
-
-                                    <li class="col-4">
-
-                                        <p class="text-muted text-truncate mb-0">Warranty</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['warranty']}}</h3>
-
-                                    </li>
-
-
-
-                                    <li class="col-4">
-
-                                        <p class="text-muted text-truncate mb-0">Cable Length</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['cable_length']}}+</h3>
-
-                                    </li>
-
-
-
-                                    <li class="col-6">
-
-                                        <p class="text-muted text-truncate mb-0">Connectivity</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['connectivity']}}</h3>
-
-                                    </li>
-
-
-
-                                    <li class="col-6">
-
-                                        <p class="text-muted text-truncate mb-0">Efficiency</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['efficiency']}}</h3>
-
-                                    </li>
-
-                                </ul>
-
-                            </div>
-
-                        </div>
-                       
-                    </div>
-                    <div class="col-lg-4 col-12">
-                       
-                        <div class="card basic-card border-0">
-
-                            <div class="basic-card-img position-relative">
-
-                                <img src="{{env('APP_URL').'public/uploads/'}}image/{{$list['product_image']}}"
-
-                                    class="card-img-top default-img img-cover" alt="Product">
-
-
-
-                                <div class="img-overlay-rating">
-
-                                    <h3 class="mb-1">4.0</h3>
-
-                                    <span><i class="fas fa-star text-warning"></i></span>
-
-                                    <span><i class="fas fa-star text-warning"></i></span>
-
-                                    <span><i class="fas fa-star text-warning"></i></span>
-
-                                    <span><i class="fas fa-star text-warning"></i></span>
-
-                                    <span><i class="fas fa-star text-warning"></i></span>
-
-                                </div>
-
-
-
-                                <div class="img-overlay-price">
-
-                                    <p class="m-0">${{$list['price']}}</p>
-
-                                </div>
-
-                            </div>
-
-
-
-                            <div class="card-body py-5 px-5">
-
-                                <h3 class="card-title russo-font text-uppercase py-4">ChargePoint 250 Express</h3>
-
-
-
-                                <ul class="card-dis-list row list-unstyled gy-5 gx-lg-5 gx-4">
-
-                                    <li class="col-4">
-
-                                        <p class="text-muted text-truncate mb-0">Max. Charge</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['max_charge']}}Kw</h3>
-
-                                    </li>
-
-
-
-                                    <li class="col-4">
-
-                                        <p class="text-muted text-truncate mb-0">Amperage</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['amperage']}}A</h3>
-
-                                    </li>
-
-
-
-                                    <li class="col-4">
-
-                                        <p class="text-muted text-truncate mb-0">Input Voltage</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['voltage']}}V</h3>
-
-                                    </li>
-
-
-
-                                    <li class="col-4">
-
-                                        <p class="text-muted text-truncate mb-0">Safety</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['safety']}}</h3>
-
-                                    </li>
-
-
-
-                                    <li class="col-4">
-
-                                        <p class="text-muted text-truncate mb-0">Warranty</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['warranty']}}</h3>
-
-                                    </li>
-
-
-
-                                    <li class="col-4">
-
-                                        <p class="text-muted text-truncate mb-0">Cable Length</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['cable_length']}}+</h3>
-
-                                    </li>
-
-
-
-                                    <li class="col-6">
-
-                                        <p class="text-muted text-truncate mb-0">Connectivity</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['connectivity']}}</h3>
-
-                                    </li>
-
-
-
-                                    <li class="col-6">
-
-                                        <p class="text-muted text-truncate mb-0">Efficiency</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['efficiency']}}</h3>
-
-                                    </li>
-
-                                </ul>
-
-                            </div>
-
-                        </div>
-                       
-                    </div>
-                    <div class="col-lg-4 col-12">
-                       
-                        <div class="card basic-card border-0">
-
-                            <div class="basic-card-img position-relative">
-
-                                <img src="{{env('APP_URL').'public/uploads/'}}image/{{$list['product_image']}}"
-
-                                    class="card-img-top default-img img-cover" alt="Product">
-
-
-
-                                <div class="img-overlay-rating">
-
-                                    <h3 class="mb-1">4.0</h3>
-
-                                    <span><i class="fas fa-star text-warning"></i></span>
-
-                                    <span><i class="fas fa-star text-warning"></i></span>
-
-                                    <span><i class="fas fa-star text-warning"></i></span>
-
-                                    <span><i class="fas fa-star text-warning"></i></span>
-
-                                    <span><i class="fas fa-star text-warning"></i></span>
-
-                                </div>
-
-
-
-                                <div class="img-overlay-price">
-
-                                    <p class="m-0">${{$list['price']}}</p>
-
-                                </div>
-
-                            </div>
-
-
-
-                            <div class="card-body py-5 px-5">
-
-                                <h3 class="card-title russo-font text-uppercase py-4">ChargePoint 250 Express</h3>
-
-
-
-                                <ul class="card-dis-list row list-unstyled gy-5 gx-lg-5 gx-4">
-
-                                    <li class="col-4">
-
-                                        <p class="text-muted text-truncate mb-0">Max. Charge</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['max_charge']}}Kw</h3>
-
-                                    </li>
-
-
-
-                                    <li class="col-4">
-
-                                        <p class="text-muted text-truncate mb-0">Amperage</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['amperage']}}A</h3>
-
-                                    </li>
-
-
-
-                                    <li class="col-4">
-
-                                        <p class="text-muted text-truncate mb-0">Input Voltage</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['voltage']}}V</h3>
-
-                                    </li>
-
-
-
-                                    <li class="col-4">
-
-                                        <p class="text-muted text-truncate mb-0">Safety</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['safety']}}</h3>
-
-                                    </li>
-
-
-
-                                    <li class="col-4">
-
-                                        <p class="text-muted text-truncate mb-0">Warranty</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['warranty']}}</h3>
-
-                                    </li>
-
-
-
-                                    <li class="col-4">
-
-                                        <p class="text-muted text-truncate mb-0">Cable Length</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['cable_length']}}+</h3>
-
-                                    </li>
-
-
-
-                                    <li class="col-6">
-
-                                        <p class="text-muted text-truncate mb-0">Connectivity</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['connectivity']}}</h3>
-
-                                    </li>
-
-
-
-                                    <li class="col-6">
-
-                                        <p class="text-muted text-truncate mb-0">Efficiency</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['efficiency']}}</h3>
-
-                                    </li>
-
-                                </ul>
-
-                            </div>
-
-                        </div>
-                       
-                    </div>
-                    </span>
-                   
-                </div>
-     <div class=" text-center mt-5"><button class="btn-yellow-lg" onclick="myFunction()" id="myBtn">SEE MORE</button></div>
-            </div>
-
-
-
-            <!-- Equipment-Category 4 -->
-
-            <div class="eq-cat cat-4 mt-5 pt-3">
-
-                <!------- Equipment Category Section Title ------->
-
-                <div class="title mt-lg-5 text-center russo-font position-relative">
-
-                    <h1>Level 4 / High Power EV Chargers</h1>
-
-                </div>
-
-
-
-                <!----- Equipment Section Card ----->
-
-                <div class="row gx-lg-5 gx-0 gy-5 justify-content-between align-items-center pt-2 pt-lg-5">
-
-                    @foreach($pricelist as $list)
-                    <div class="col-lg-4 col-12">
-                       
-                        <div class="card basic-card border-0">
-
-                            <div class="basic-card-img position-relative">
-
-                                <img src="{{env('APP_URL').'public/uploads/'}}image/{{$list['product_image']}}"
-
-                                    class="card-img-top default-img img-cover" alt="Product">
-
-
-
-                                <div class="img-overlay-rating">
-
-                                    <h3 class="mb-1">4.0</h3>
-
-                                    <span><i class="fas fa-star text-warning"></i></span>
-
-                                    <span><i class="fas fa-star text-warning"></i></span>
-
-                                    <span><i class="fas fa-star text-warning"></i></span>
-
-                                    <span><i class="fas fa-star text-warning"></i></span>
-
-                                    <span><i class="fas fa-star text-warning"></i></span>
-
-                                </div>
-
-
-
-                                <div class="img-overlay-price">
-
-                                    <p class="m-0">${{$list['price']}}</p>
-
-                                </div>
-
-                            </div>
-
-
-
-                            <div class="card-body py-5 px-5">
-
-                                <h3 class="card-title russo-font text-uppercase py-4">ChargePoint 250 Express</h3>
-
-
-
-                                <ul class="card-dis-list row list-unstyled gy-5 gx-lg-5 gx-4">
-
-                                    <li class="col-4">
-
-                                        <p class="text-muted text-truncate mb-0">Max. Charge</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['max_charge']}}Kw</h3>
-
-                                    </li>
-
-
-
-                                    <li class="col-4">
-
-                                        <p class="text-muted text-truncate mb-0">Amperage</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['amperage']}}A</h3>
-
-                                    </li>
-
-
-
-                                    <li class="col-4">
-
-                                        <p class="text-muted text-truncate mb-0">Input Voltage</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['voltage']}}V</h3>
-
-                                    </li>
-
-
-
-                                    <li class="col-4">
-
-                                        <p class="text-muted text-truncate mb-0">Safety</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['safety']}}</h3>
-
-                                    </li>
-
-
-
-                                    <li class="col-4">
-
-                                        <p class="text-muted text-truncate mb-0">Warranty</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['warranty']}}</h3>
-
-                                    </li>
-
-
-
-                                    <li class="col-4">
-
-                                        <p class="text-muted text-truncate mb-0">Cable Length</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['cable_length']}}+</h3>
-
-                                    </li>
-
-
-
-                                    <li class="col-6">
-
-                                        <p class="text-muted text-truncate mb-0">Connectivity</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['connectivity']}}</h3>
-
-                                    </li>
-
-
-
-                                    <li class="col-6">
-
-                                        <p class="text-muted text-truncate mb-0">Efficiency</p>
-
-                                        <h3 class="text-truncate mb-0">{{$list['efficiency']}}</h3>
-
-                                    </li>
-
-                                </ul>
-
-                            </div>
-
-                        </div>
-                       
-                    </div>
-                    @endforeach
-
-                </div>
-
-            </div>
-
         </section>
+
+        <section class="charger-group-container">
+            <h1 class="text-center text-uppercase charger-lv-caption">level 2+ / High Power ev chargers</h1>
+            <div class="charger-group-box">
+                <div class="charger-individual-box">
+                    <div class="charger-sub-box">
+                        <div class="charger-caption-image">
+                            <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/3.png" alt="">
+                        </div>
+                        <div class="cap-price-container">
+                            <p class="cap-title text-capitalize">Abb Terra AC Wallbox</p>
+                            <div class="position-relative">
+                                <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/11.png" alt="" style="width: 150px;height: 60px;">
+                                <span class="price-label1 position-absolute">14,239.99$</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="asset-group-box">
+                        <div class="asset-individual bg-dark">
+                            <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/5.png" alt="">
+                            <span class="text-white"> 11.2kW </span>
+                        </div>
+                        <div class="asset-individual bg-dark">
+                            <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/6.png" alt="">
+                            <span class="text-white"> 25ft Cable </span>
+                        </div>
+                        <div class="asset-individual bg-dark">
+                            <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/7.png" alt="">
+                            <span class="text-white"> Power Share </span>
+                        </div>
+                    </div>
+                    <div id="id-more-information11" class="more-info-box">
+                        <div class="individual-info">
+                            <span class="info-l">Max. Charge</span>
+                            <span class="info-r">22.5kW</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Amperage</span>
+                            <span class="info-r">80amp</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Input Voltage</span>
+                            <span class="info-r">240v</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Connectivity</span>
+                            <span class="info-r">Wi-Fi/Smartphone</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Warranty</span>
+                            <span class="info-r">2 years</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Cabel Length</span>
+                            <span class="info-r">24ft</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Safety</span>
+                            <span class="info-r">UL Listed</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Efficiency</span>
+                            <span class="info-r">Energy Star Certified</span>
+                        </div>
+                    </div>
+                    <div id="readMore11" class="show-more-less" onclick="showMoreOrLess(11)">SHOW MORE</div>
+                </div>
+                <div class="charger-individual-box">
+                    <div class="charger-sub-box">
+                        <div class="charger-caption-image">
+                            <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/3.png" alt="">
+                        </div>
+                        <div class="cap-price-container">
+                            <p class="cap-title text-capitalize">Blink IQ 200 Level 2</p>
+                            <div class="position-relative">
+                                <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/11.png" alt="" style="width: 150px;height: 60px;">
+                                <span class="price-label1 position-absolute">3,499.99$</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="asset-group-box">
+                        <div class="asset-individual bg-dark">
+                            <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/5.png" alt="">
+                            <span class="text-white"> 11.2kW </span>
+                        </div>
+                        <div class="asset-individual bg-dark">
+                            <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/6.png" alt="">
+                            <span class="text-white"> 25ft Cable </span>
+                        </div>
+                        <div class="asset-individual bg-dark">
+                            <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/7.png" alt="">
+                            <span class="text-white"> Power Share </span>
+                        </div>
+                    </div>
+                    <div id="id-more-information12" class="more-info-box">
+                        <div class="individual-info">
+                            <span class="info-l">Max Charge</span>
+                            <span class="info-r">19.2kW</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Amperage</span>
+                            <span class="info-r">100amp</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Input Voltage</span>
+                            <span class="info-r">240v</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Connectivity</span>
+                            <span class="info-r">Wi-Fi/Smartphone</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Warranty</span>
+                            <span class="info-r">3 years</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Cabel Length</span>
+                            <span class="info-r">25ft</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Safety</span>
+                            <span class="info-r">UL Listed</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Efficiency</span>
+                            <span class="info-r">Energy Star Certified</span>
+                        </div>
+                    </div>
+                    <div id="readMore12" class="show-more-less" onclick="showMoreOrLess(12)">SHOW MORE</div>
+                </div>
+                <div class="charger-individual-box">
+                    <div class="charger-sub-box">
+                        <div class="charger-caption-image">
+                            <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/3.png" alt="">
+                        </div>
+                        <div class="cap-price-container">
+                            <p class="cap-title text-capitalize">Enel X Juicebox Pro 80</p>
+                            <div class="position-relative">
+                                <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/11.png" alt="" style="width: 150px;height: 60px;">
+                                <span class="price-label1 position-absolute">1,599.99$</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="asset-group-box">
+                        <div class="asset-individual bg-dark">
+                            <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/5.png" alt="">
+                            <span class="text-white"> 11.2kW </span>
+                        </div>
+                        <div class="asset-individual bg-dark">
+                            <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/6.png" alt="">
+                            <span class="text-white"> 25ft Cable </span>
+                        </div>
+                        <div class="asset-individual bg-dark">
+                            <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/7.png" alt="">
+                            <span class="text-white"> Power Share </span>
+                        </div>
+                    </div>
+                    <div id="id-more-information13" class="more-info-box">
+                        <div class="individual-info">
+                            <span class="info-l">Max. Charge</span>
+                            <span class="info-r">19.2kW</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Amperage</span>
+                            <span class="info-r">80amp</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Input Voltage</span>
+                            <span class="info-r">240v</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Connectivity</span>
+                            <span class="info-r">Wi-Fi/Smartphone</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Warranty</span>
+                            <span class="info-r">3 years</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Cabel Length</span>
+                            <span class="info-r">25ft</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Safety</span>
+                            <span class="info-r">UL Listed</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Efficiency</span>
+                            <span class="info-r">Energy Star Certified</span>
+                        </div>
+                    </div>
+                    <div id="readMore13" class="show-more-less" onclick="showMoreOrLess(13)">SHOW MORE</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="charger-group-container">
+            <h1 class="text-center text-uppercase charger-lv-caption">level 3 / DCFC ev chargers</h1>
+            <div class="charger-group-box">
+                <div class="charger-individual-box">
+                    <div class="charger-sub-box">
+                        <div class="charger-caption-image">
+                            <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/3.png" alt="">
+                        </div>
+                        <div class="cap-price-container">
+                            <p class="cap-title text-capitalize">Abb Terra DC Wallbox</p>
+                            <div class="position-relative">
+                                <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/11.png" alt="" style="width: 150px;height: 60px;">
+                                <span class="price-label1 position-absolute">19,308.00$</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="asset-group-box">
+                        <div class="asset-individual bg-dark">
+                            <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/5.png" alt="">
+                            <span class="text-white"> 11.2kW </span>
+                        </div>
+                        <div class="asset-individual bg-dark">
+                            <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/6.png" alt="">
+                            <span class="text-white"> 25ft Cable </span>
+                        </div>
+                        <div class="asset-individual bg-dark">
+                            <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/7.png" alt="">
+                            <span class="text-white"> Power Share </span>
+                        </div>
+                    </div>
+                    <div id="id-more-information4" class="more-info-box">
+                        <div class="individual-info">
+                            <span class="info-l">Max. Charge</span>
+                            <span class="info-r">24kW</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Amperage</span>
+                            <span class="info-r">60amp</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Input Voltage</span>
+                            <span class="info-r">480v</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Connectivity</span>
+                            <span class="info-r">Cellular Modem</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Warranty</span>
+                            <span class="info-r">2 years</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Cabel Length</span>
+                            <span class="info-r">23ft</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Safety</span>
+                            <span class="info-r">UL Listed</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Efficiency</span>
+                            <span class="info-r">Energy Star Certified</span>
+                        </div>
+                    </div>
+                    <div id="readMore4" class="show-more-less" onclick="showMoreOrLess(4)">SHOW MORE</div>
+                </div>
+                <div class="charger-individual-box">
+                    <div class="charger-sub-box">
+                        <div class="charger-caption-image">
+                            <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/3.png" alt="">
+                        </div>
+                        <div class="cap-price-container">
+                            <p class="cap-title text-capitalize">ABB Terra DC 54</p>
+                            <div class="position-relative">
+                                <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/11.png" alt="" style="width: 150px;height: 60px;">
+                                <span class="price-label1 position-absolute">37,640.00$</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="asset-group-box">
+                        <div class="asset-individual bg-dark">
+                            <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/5.png" alt="">
+                            <span class="text-white"> 11.2kW </span>
+                        </div>
+                        <div class="asset-individual bg-dark">
+                            <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/6.png" alt="">
+                            <span class="text-white"> 25ft Cable </span>
+                        </div>
+                        <div class="asset-individual bg-dark">
+                            <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/7.png" alt="">
+                            <span class="text-white"> Power Share </span>
+                        </div>
+                    </div>
+                    <div id="id-more-information5" class="more-info-box">
+                        <div class="individual-info">
+                            <span class="info-l">Max Charge</span>
+                            <span class="info-r">50kW</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Amperage</span>
+                            <span class="info-r">125amp</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Input Voltage</span>
+                            <span class="info-r">480v</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Connectivity</span>
+                            <span class="info-r">Cellular/Ethernet</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Warranty</span>
+                            <span class="info-r">2 years</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Cabel Length</span>
+                            <span class="info-r">20ft</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Safety</span>
+                            <span class="info-r">UL Listed</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Efficiency</span>
+                            <span class="info-r">Energy Star Certified</span>
+                        </div>
+                    </div>
+                    <div id="readMore5" class="show-more-less" onclick="showMoreOrLess(5)">SHOW MORE</div>
+                </div>
+                <div class="charger-individual-box">
+                    <div class="charger-sub-box">
+                        <div class="charger-caption-image">
+                            <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/3.png" alt="">
+                        </div>
+                        <div class="cap-price-container">
+                            <p class="cap-title text-capitalize">Blink DCFC 50kW</p>
+                            <div class="position-relative">
+                                <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/11.png" alt="" style="width: 150px;height: 60px;">
+                                <span class="price-label1 position-absolute">35,999.00$</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="asset-group-box">
+                        <div class="asset-individual bg-dark">
+                            <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/5.png" alt="">
+                            <span class="text-white"> 11.2kW </span>
+                        </div>
+                        <div class="asset-individual bg-dark">
+                            <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/6.png" alt="">
+                            <span class="text-white"> 25ft Cable </span>
+                        </div>
+                        <div class="asset-individual bg-dark">
+                            <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/7.png" alt="">
+                            <span class="text-white"> Power Share </span>
+                        </div>
+                    </div>
+                    <div id="id-more-information6" class="more-info-box">
+                        <div class="individual-info">
+                            <span class="info-l">Max. Charge</span>
+                            <span class="info-r">50kW</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Amperage</span>
+                            <span class="info-r">120amp</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Input Voltage</span>
+                            <span class="info-r">480v</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Connectivity</span>
+                            <span class="info-r">Cellular/Ethernet</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Warranty</span>
+                            <span class="info-r">3 years</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Cabel Length</span>
+                            <span class="info-r">25ft</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Safety</span>
+                            <span class="info-r">UL Listed</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Efficiency</span>
+                            <span class="info-r">Energy Star Certified</span>
+                        </div>
+                    </div>
+                    <div id="readMore6" class="show-more-less" onclick="showMoreOrLess(6)">SHOW MORE</div>
+                </div>
+            </div>
+            <div class="charger-group-box">
+                <div class="charger-individual-box">
+                    <div class="charger-sub-box">
+                        <div class="charger-caption-image">
+                            <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/3.png" alt="">
+                        </div>
+                        <div class="cap-price-container">
+                            <p class="cap-title text-capitalize">Chargepoint 250 Express</p>
+                            <div class="position-relative">
+                                <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/11.png" alt="" style="width: 150px;height: 60px;">
+                                <span class="price-label1 position-absolute">36,999.00$</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="asset-group-box">
+                        <div class="asset-individual bg-dark">
+                            <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/5.png" alt="">
+                            <span class="text-white"> 11.2kW </span>
+                        </div>
+                        <div class="asset-individual bg-dark">
+                            <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/6.png" alt="">
+                            <span class="text-white"> 25ft Cable </span>
+                        </div>
+                        <div class="asset-individual bg-dark">
+                            <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/7.png" alt="">
+                            <span class="text-white"> Power Share </span>
+                        </div>
+                    </div>
+                    <div id="id-more-information7" class="more-info-box">
+                        <div class="individual-info">
+                            <span class="info-l">Max Charge</span>
+                            <span class="info-r">62kW</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Amperage</span>
+                            <span class="info-r">120amp</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Input Voltage</span>
+                            <span class="info-r">480v</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Connectivity</span>
+                            <span class="info-r">Cellular/Ethernet</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Warranty</span>
+                            <span class="info-r">3 years</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Cabel Length</span>
+                            <span class="info-r">25ft</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Safety</span>
+                            <span class="info-r">UL Listed</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Efficiency</span>
+                            <span class="info-r">Energy Star Certified</span>
+                        </div>
+                    </div>
+                    <div id="readMore7" class="show-more-less" onclick="showMoreOrLess(7)">SHOW MORE</div>
+                </div>
+                <div class="charger-individual-box">
+                    <div class="charger-sub-box">
+                        <div class="charger-caption-image">
+                            <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/3.png" alt="">
+                        </div>
+                        <div class="cap-price-container">
+                            <p class="cap-title text-capitalize">Enel X Juicepump 50</p>
+                            <div class="position-relative">
+                                <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/11.png" alt="" style="width: 150px;height: 60px;">
+                                <span class="price-label1 position-absolute">29,999.00$</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="asset-group-box">
+                        <div class="asset-individual bg-dark">
+                            <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/5.png" alt="">
+                            <span class="text-white"> 11.2kW </span>
+                        </div>
+                        <div class="asset-individual bg-dark">
+                            <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/6.png" alt="">
+                            <span class="text-white"> 25ft Cable </span>
+                        </div>
+                        <div class="asset-individual bg-dark">
+                            <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/7.png" alt="">
+                            <span class="text-white"> Power Share </span>
+                        </div>
+                    </div>
+                    <div id="id-more-information8" class="more-info-box">
+                        <div class="individual-info">
+                            <span class="info-l">Max Charge</span>
+                            <span class="info-r">50kW</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Amperage</span>
+                            <span class="info-r">120amp</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Input Voltage</span>
+                            <span class="info-r">480v</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Connectivity</span>
+                            <span class="info-r">Cellular/Ethernet</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Warranty</span>
+                            <span class="info-r">3 years</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Cabel Length</span>
+                            <span class="info-r">25ft</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Safety</span>
+                            <span class="info-r">UL Listed</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Efficiency</span>
+                            <span class="info-r">Energy Star Certified</span>
+                        </div>
+                    </div>
+                    <div id="readMore8" class="show-more-less" onclick="showMoreOrLess(8)">SHOW MORE</div>
+                </div>
+                <!-- hidden one -->
+                <div class="charger-individual-box" style="visibility: hidden">
+                    <div class="charger-sub-box">
+                        <div class="charger-caption-image" style="display: none">
+                            <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/3.png" alt="">
+                        </div>
+                        <div class="cap-price-container">
+                            <p class="cap-title text-capitalize">Enel X Juicepump 50</p>
+                            <div class="position-relative">
+                                <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/11.png" alt="" style="width: 150px;height: 60px;">
+                                <span class="price-label1 position-absolute">29,999.00$</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="asset-group-box">
+                        <div class="asset-individual bg-dark">
+                            <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/5.png" alt="">
+                            <span class="text-white"> 11.2kW </span>
+                        </div>
+                        <div class="asset-individual bg-dark">
+                            <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/6.png" alt="">
+                            <span class="text-white"> 25ft Cable </span>
+                        </div>
+                        <div class="asset-individual bg-dark">
+                            <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/7.png" alt="">
+                            <span class="text-white"> Power Share </span>
+                        </div>
+                    </div>
+                    <div id="id-more-information9" class="more-info-box">
+                        <div class="individual-info">
+                            <span class="info-l">Max Charge</span>
+                            <span class="info-r">11.5kW</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Amperage</span>
+                            <span class="info-r">60amp</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Input Voltage</span>
+                            <span class="info-r">240v</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Connectivity</span>
+                            <span class="info-r">Wi-Fi/Smartphone</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Warranty</span>
+                            <span class="info-r">3 years</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Cabel Length</span>
+                            <span class="info-r">25ft</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Safety</span>
+                            <span class="info-r">UL Listed</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Efficiency</span>
+                            <span class="info-r">Energy Star Certified</span>
+                        </div>
+                    </div>
+                    <div id="readMore9" class="show-more-less" onclick="showMoreOrLess(9)">SHOW MORE</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="charger-group-container">
+            <h1 class="text-center text-uppercase charger-lv-caption">level 4 / High Power ev chargers</h1>
+            <div class="charger-group-box">
+                <div class="charger-individual-box">
+                    <div class="charger-sub-box">
+                        <div class="charger-caption-image">
+                            <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/2.png" alt="">
+                        </div>
+                        <div class="cap-price-container">
+                            <p class="cap-title text-capitalize">ABB Terra HP 175</p>
+                            <div class="position-relative">
+                                <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/11.png" alt="" style="width: 160px;height: 64px;">
+                                <span class="price-label2 position-absolute">143,130.00$</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="asset-group-box">
+                        <div class="asset-individual bg-dark">
+                            <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/5.png" alt="">
+                            <span class="text-white"> 11.2kW </span>
+                        </div>
+                        <div class="asset-individual bg-dark">
+                            <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/6.png" alt="">
+                            <span class="text-white"> 25ft Cable </span>
+                        </div>
+                        <div class="asset-individual bg-dark">
+                            <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/7.png" alt="">
+                            <span class="text-white"> Power Share </span>
+                        </div>
+                    </div>
+                    <div id="id-more-information10" class="more-info-box">
+                        <div class="individual-info">
+                            <span class="info-l">Max Charge</span>
+                            <span class="info-r">175kW</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Amperage</span>
+                            <span class="info-r">300amp</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Input Voltage</span>
+                            <span class="info-r">480v</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Connectivity</span>
+                            <span class="info-r">Cellular/Ethernet</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Warranty</span>
+                            <span class="info-r">2 years</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Cabel Length</span>
+                            <span class="info-r">20ft</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Safety</span>
+                            <span class="info-r">UL Listed</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Efficiency</span>
+                            <span class="info-r">Energy Star Certified</span>
+                        </div>
+                    </div>
+                    <div id="readMore10" class="show-more-less" onclick="showMoreOrLess(10)">SHOW MORE</div>
+                </div>
+                <div class="charger-individual-box" style="visibility: hidden">
+                    <div class="charger-sub-box">
+                        <div class="charger-caption-image" style="display: none">
+                            <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/3.png" alt="">
+                        </div>
+                        <div class="cap-price-container">
+                            <p class="cap-title text-capitalize">Charge point homeflex</p>
+                            <div class="position-relative">
+                                <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/11.png" alt="" style="width: 120px;">
+                                <span class="price-label position-absolute">699.99$</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="asset-group-box">
+                        <div class="asset-individual bg-dark">
+                            <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/5.png" alt="">
+                            <span class="text-white"> 11.2kW </span>
+                        </div>
+                        <div class="asset-individual bg-dark">
+                            <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/6.png" alt="">
+                            <span class="text-white"> 25ft Cable </span>
+                        </div>
+                        <div class="asset-individual bg-dark">
+                            <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/7.png" alt="">
+                            <span class="text-white"> Power Share </span>
+                        </div>
+                    </div>
+                    <div id="id-more-information2" class="more-info-box">
+                        <div class="individual-info">
+                            <span class="info-l">Max Charge</span>
+                            <span class="info-r">11.5kW</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Amperage</span>
+                            <span class="info-r">60amp</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Input Voltage</span>
+                            <span class="info-r">240v</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Connectivity</span>
+                            <span class="info-r">Wi-Fi/Smartphone</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Warranty</span>
+                            <span class="info-r">3 years</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Cabel Length</span>
+                            <span class="info-r">25ft</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Safety</span>
+                            <span class="info-r">UL Listed</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Efficiency</span>
+                            <span class="info-r">Energy Star Certified</span>
+                        </div>
+                    </div>
+                    <div id="readMore2" class="show-more-less" onclick="showMoreOrLess(2)">SHOW MORE</div>
+                </div>
+                <div class="charger-individual-box" style="visibility: hidden">
+                    <div class="charger-sub-box">
+                        <div class="charger-caption-image" style="display: none">
+                            <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/4.png" alt="">
+                        </div>
+                        <div class="cap-price-container">
+                            <p class="cap-title text-capitalize">Enel X Juicebox</p>
+                            <div class="position-relative">
+                                <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/11.png" alt="" style="width: 120px;">
+                                <span class="price-label position-absolute">649.99$</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="asset-group-box">
+                        <div class="asset-individual bg-dark">
+                            <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/5.png" alt="">
+                            <span class="text-white"> 11.2kW </span>
+                        </div>
+                        <div class="asset-individual bg-dark">
+                            <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/6.png" alt="">
+                            <span class="text-white"> 25ft Cable </span>
+                        </div>
+                        <div class="asset-individual bg-dark">
+                            <img src="{{env('APP_URL')}}public/veh/assets/img/pricingpage/7.png" alt="">
+                            <span class="text-white"> Power Share </span>
+                        </div>
+                    </div>
+                    <div id="id-more-information3" class="more-info-box">
+                        <div class="individual-info">
+                            <span class="info-l">Max Charge</span>
+                            <span class="info-r">11.5kW</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Amperage</span>
+                            <span class="info-r">60amp</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Input Voltage</span>
+                            <span class="info-r">240v</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Connectivity</span>
+                            <span class="info-r">Wi-Fi/Smartphone</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Warranty</span>
+                            <span class="info-r">3 years</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Cabel Length</span>
+                            <span class="info-r">25ft</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Safety</span>
+                            <span class="info-r">UL Listed</span>
+                        </div>
+                        <div class="individual-info">
+                            <span class="info-l">Efficiency</span>
+                            <span class="info-r">Energy Star Certified</span>
+                        </div>
+                    </div>
+                    <div id="readMore3" class="show-more-less" onclick="showMoreOrLess(3)">SHOW MORE</div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="other_service">
+            <div class="service-container">
+                <h1 class="heaing-txt mb-5" style="z-index:2">Other Services</h1>
+                <div class="row align-items-center">
+                    <div class="col-lg-3">
+                        <div class="pricing-box mb-5">
+                            <div class="d-flex align-items-center">
+                                <div class="pri-box-img">
+                                    <img src="{{env('APP_URL')}}public/veh/assets/img/img1.png" alt="">
+                                </div>						
+                                <div class="pri-box-Txt">
+                                    <h5 class="text-center">BLINK HOME
+                                    LEVEL 2</h5>
+                                    <div class="position-relative">
+                                        <img src="{{env('APP_URL')}}public/veh/assets/img/price-bg-shape.png">
+                                        <span class="position-absolute set-pos">$700</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pricing-box">
+                            <div class="d-flex align-items-center">
+                                <div class="pri-box-img">
+                                    <img src="{{env('APP_URL')}}public/veh/assets/img/img2.png" alt="">
+                                </div>						
+                                <div class="pri-box-Txt">
+                                    <h5 class="text-center">Electrical Panel Upgrade</h5>
+                                    <div class="position-relative">
+                                        <img src="{{env('APP_URL')}}public/veh/assets/img/price-bg-shape.png">
+                                        <span class="position-absolute set-pos">$2500</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <img src="{{env('APP_URL')}}public/veh/assets/img/other_service.png" style="margin-top: -70px;z-index:1">
+                    </div>
+                    <div class="col-lg-5 text-center ">
+                        <h2 class="heaing-txt" style="margin-bottom: 20px;">Installation</h2>
+                        <button type="button" class="btn">GET A QUOTE</button>
+                    </div>
+                </div>
+            </div>
+        </section>  
 
         <!------- How Can we Help Section As Equipment Pricing Section End ------->
 
@@ -1376,7 +1086,7 @@
 
         <!------- Have a question Section Starts ------->
 
-        <section class="have-question bg-warning">
+        <!-- <section class="have-question bg-warning">
 
             <div class="row g-0">
 
@@ -1444,7 +1154,7 @@
 
             </div>
 
-        </section>
+        </section> -->
 
         <!------- Have a question Section End ------->
 
